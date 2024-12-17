@@ -2,9 +2,9 @@
   "short_name": "Ace",
   "name": "Ace",
   "description": "Ace Web Application Template",
-  "display": "standalone",
   "background_color": "#222222",
   "theme_color": "#222222",
+  "display": "standalone",
   "scope": "./",
   "start_url": "./?utm_source=homescreen",
   "shortcuts": [
