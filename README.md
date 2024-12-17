@@ -1,12 +1,12 @@
-# HTML Web Template
+# Ace Web Application Template
 > Fundamental base for websites and apps
 ---
 
-Template : HTML Web Template  
-Codename : html - v0.1.0  
+Template : Ace Web Application Template  
+Codename : ace - v0.1.0  
 Author   : Techie Joe  
 
-URL      : https://github.com/techie-joe/html  
+URL      : https://github.com/techie-joe/ace  
 
 ---
 
