@@ -10,14 +10,16 @@ Permission is granted to users to use the content as explicitly permitted by
 the author.   Any attempt to access,  use,  or modify any content other than
 what is permitted, is strictly forbidden.
 
-----------------------------------------------------------------------------
+Users must have  a verifiable direct approval  from  the author  to use  the
+software as a valid licensee.  Owning a copy of this license alone  does not
+imply that permission is granted.
 
-PERMITTED SCOPE : The software are meant for creating personal or commercial
-website and application within the domain owned by the licensee.
+----------------------------------------------------------------------------
 
 USERS ARE ALLOWED
   
-  1. To use the software within the permitted scope.
+  1. To use  the software for creating websites  or  web-applications within
+  the domain owned by the user.
   
   2. To modify and customize the content of the template however you like.
   
@@ -26,13 +28,11 @@ USERS ARE ALLOWED
 
 USERS ARE NOT ALLOWED
 
-  1. To use the software out of the permitted scope.
-
-  2. To copy, share or distribute the software to other person in any format
+  1. To copy, share or distribute the software to other person in any format
   without the author's explicit written permission.  Thus,  you cannot sell,
   resale, rent, lease, license, or sub-license, without author's permission.
   
-  3. To remove or change attribution links, backlinks  and copyright notices
+  2. To remove or change attribution links,  backlinks and copyright notices
   of third-party contents present within the software.
 
 ----------------------------------------------------------------------------
