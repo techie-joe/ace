@@ -10,4 +10,4 @@ URL      : https://github.com/techie-joe/ace
 
 ---
 
-Copyright © 2024 Tidloo.com
+Copyright (c) 2024 Tidloo.com
