@@ -1,9 +1,9 @@
-# Ace Web Application Template
-> Fundamental base for websites and apps
+# Ace Template
+> A solid template for building websites and application
 ---
 
-Template : Ace Web Application Template  
-Codename : ace - v0.1.0  
+Template : Ace Template  
+Codename : ace - v0.1.2  
 Author   : Techie Joe  
 
 URL      : https://github.com/techie-joe/ace  

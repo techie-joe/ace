@@ -1,6 +1,6 @@
 Copyright (c) 2024 Tidloo.com
 
-LICENSE AGREEMENT for Ace Web Application Template
+LICENSE AGREEMENT for Ace Template
 
 This software  and  its  content  are  the  exclusive property of the owner.
 By using  this  software,  you agree to abide by the terms and conditions of
