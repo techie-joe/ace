@@ -1,12 +1,12 @@
 # Ace Template
-> A solid template for building websites and application
+> A solid foundation to start building your website and application
 ---
 
-Template : Ace Template  
-Codename : ace - v0.1.3  
+Project  : Ace Template  
+Codename : ace - v0.1.4  
 Author   : Techie Joe  
 
-URL      : https://github.com/techie-joe/ace  
+URL      : https://techie-joe.github.io/ace/  
 
 ---
 
