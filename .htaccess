@@ -1,3 +1,2 @@
 ErrorDocument 400 /ace/400.html
 ErrorDocument 500 /ace/500.html
-ErrorDocument 503 /ace/e503.html
