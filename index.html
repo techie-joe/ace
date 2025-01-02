@@ -40,7 +40,6 @@
       ._dark #_header    { color: #aaa; background: #111; }
       ._dark #_header h1 { color: #fff; }
       
-      #_html .pages    { margin:1.5em 0 3em 0; }
       #_html .pages  a { text-decoration:none; padding:0.2em 0.3em; border-radius:5px; cursor:pointer; white-space: nowrap }
       #_html .pages .a { padding:0.2em 0.3em; font-weight:bold; }
       #_html       .pages a       { color:inherit; }
@@ -94,27 +93,13 @@
           <main id="_main">
             <div class="_main_layout">
               <article>
-                <section>
+                <section class="_mv">
                   <nav class="pages" id="_nav">
                     <div class="_nav_layout"> <a href="/ace/demo/views.html">Views</a> <a href="/ace/demo/layout.html">Layout</a> <a href="/ace/demo/grid.html">Grid</a> <a href="/ace/demo/colors.html">Colors</a> <a href="/ace/demo/containers.html">Containers</a> <a href="/ace/demo/texts.html">Texts</a> <a href="/ace/demo/images.html">Image</a> <a href="/ace/demo/video.html">Video</a> <a href="/ace/demo/buttons.html">Buttons</a> <a href="/ace/demo/background.html">Background</a> <a href="/ace/demo/form.html">Form</a> <a href="/ace/demo/transitions.html">Transitions</a> <a href="/ace/demo/animations.html">Animations</a> <a href="/ace/demo/menu.html">Menu</a> <a href="/ace/demo/popups.html">Popups</a> <a href="/ace/demo/dialogs.html">Dialogs</a> <a href="/ace/demo/theme.html">Theme</a> <a href="/ace/demo/helpers.html">Helpers</a> <a href="/ace/demo/blank_demo.html">Blank</a>
                     </div>
                   </nav>
                 </section>
-                <section>
-                  <h2>Available in light and dark</h2>
-                  <div class="_mb-2">
-                    <div class="_grid">
-                      <div class="_6-1">
-                        <p><a class="_btnlink _small" onclick="base.theme.change()">Change Theme</a>
-                        </p>
-                      </div>
-                      <div class="_6-5">
-                        <p>Use <code class="_code _no-wrap">Ctrl + Alt + T</code> or <code class="_code _no-wrap">base.theme.change()</code> to swap between light and dark.</p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section>
+                <section class="_mv-2">
                   <h2>Quick start templates</h2>
                   <nav class="pages">
                     <div class="g">
@@ -142,12 +127,18 @@
                     </div>
                   </nav>
                 </section>
+                <section class="_mv-2">
+                  <h2>Available in light and dark</h2>
+                  <p class="_text-justify">Both light and dark themes are readily available. You can easily switch between the two by using the keyboard shortcut <code class="_code _no-wrap">Ctrl + Alt + T</code> or click a button that execute <code class="_code _no-wrap">base.theme.change()</code>, like this one:</p>
+                  <p><a class="_btnlink _small" onclick="base.theme.change()">Change Theme</a>
+                  </p>
+                </section>
                 <section>
                   <h2>Pre-made building components</h2>
                   <p class="_text-justify">Our web template is equipped with helpers and pre-made building components to ensure an intuitive and easy building experience. We simplify web creation to make it accessible to everyone, even for those who may not have technical expertise. No lengthy manuals or confusing rules -- just dive in and start building. And if you're curious or need a bit more guidance, we have comprehensive <a class="_no-wrap" href="demo">demo articles</a> to help you out.
                   </p>
-                  <div class="_mb-2 _text-right"><a class="_btnlink" href="demo">View Demo</a>
-                  </div>
+                  <p class="_mb-2 _text-right"><a class="_btnlink" href="demo">View Demo</a>
+                  </p>
                 </section>
               </article>
             </div>
