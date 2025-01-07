@@ -38,12 +38,12 @@
         flex-direction: column;
       }
       
-      #_header .hero { font-size:3em; width:10em; margin:38vh auto; }
-      #_header .hero2 { margin:2em auto; max-width:640px; }
+      #_header .hero { font-size:1.6em; margin:38vh auto; width:10em; }
+      #_header .hero2 { margin:2em 1em; max-width:640px; }
       
-      @media only screen and (max-width: 499px) {
-        #_header .hero { font-size:1.8em; }
-        #_header .hero2 { margin:2em 1em; }
+      @media only screen and (min-width: 500px) {
+        #_header .hero { font-size:3em; }
+        #_header .hero2 { margin:2em auto; }
       }
     </style>
   </head>
@@ -52,7 +52,7 @@
       <div class="_view">
         <div class="_view_layout">
           <nav class="pages" id="_nav">
-            <div class="_nav_layout"> <a href="/ace/">Home</a> <a href="blank_template.html">Blank</a> <a href="full_screen.html">Full</a> <a href="split_screen.html">Split</a> <a href="full_grid.html">Grid</a> <a href="classic_page.html">Page</a> <a href="classic_list.html">List</a> <a href="closed.html">Closed</a> <a href="/ace/404.html">404</a> <a href="/ace/500.html">500</a>
+            <div class="_nav_layout"> <a href="/ace/">Home</a> <a href="blank_template.html">Blank</a> <a href="full_screen.html">Full</a> <a href="split_screen.html">Split</a> <a href="full_flex.html">Flex</a> <a href="classic_page.html">Page</a> <a href="classic_list.html">List</a> <a href="closed.html">Closed</a> <a href="/ace/404.html">404</a> <a href="/ace/500.html">500</a>
             </div>
           </nav>
           <header class="_fullscreen _bg-1-2 _tc-1-2" id="_header">
