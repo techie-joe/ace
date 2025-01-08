@@ -28,7 +28,8 @@
     <style>
       #logo {
         width: 6.2rem;
-        margin: 0.8rem;
+        margin: 0;
+        padding: 0.8rem;
         cursor: pointer;
         transition: background-color 0.5s;
       }
@@ -56,13 +57,11 @@
           </div>
           <header id="_header">
             <div class="_header_layout">
-              <div class="g _bg-1">
-                <div class="u">
-                  <h1 class="_radius-1r _text-center _numb" id="logo">
-                    <div id="logos"><span class="_color">LO</span><span class="_color-1">GO</span></div> 
-                    <div class="_uppercase _b" id="tagline">Your tagline</div>
-                  </h1>
-                </div>
+              <div class="_flex _bg-1">
+                <h1 class="_text-center _numb" id="logo">
+                  <div id="logos"><span class="_color">LO</span><span class="_color-1">GO</span></div> 
+                  <div class="_uppercase _b" id="tagline">Your tagline</div>
+                </h1>
               </div>
               <hr class="_no-margin">
             </div>
@@ -70,37 +69,39 @@
           <main id="_main">
             <div class="_main_layout">
               <article>
-                <div class="g">
-                  <div class="u-1-3">
-                    <div class="_text-justify _mh">
+                <div class="_flex">
+                  <div class="_3-1">
+                    <div class="_mh _text-justify">
                       <h3 class="_h6 _color">Lorem ipsum dolor</h3>
                       <p>Sit amet, consectetur adipiscing elit. Praesent vehicula, justo vitae bibendum vestibulum, lacus elit luctus dolor, a aliquam massa elit at purus. Mauris vel magna et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros. Nullam vehicula arcu vitae ligula sollicitudin, sit amet viverra sapien consectetur.</p>
-                      <h3 class="_h6 _color-1">Curabitur auctor</h3>
+                      <h3 class="_h6 _color-1 _mt-2">Curabitur auctor</h3>
                       <p>Nunc nec sem pellentesque, ut facilisis justo dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae ac turpis egestas. Mauris vel magna et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros.</p>
                     </div>
                   </div>
-                  <div class="u-1-3">
-                    <div class="_text-justify _mh">
+                  <div class="_3-1">
+                    <div class="_mh _text-justify">
                       <h3 class="_h6 _color-1">Curabitur auctor</h3>
                       <p>Nunc nec sem pellentesque, ut facilisis justo dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                      <h3 class="_h6 _color">Proin scelerisque</h3>
+                      <h3 class="_h6 _color _mt-2">Proin scelerisque</h3>
                       <p>Lacus at sollicitudin sagittis, nunc eros cursus nulla, a venenatis nulla sapien non velit. Integer condimentum, odio nec tristique malesuada, metus ligula laoreet lorem, ut malesuada lectus sapien in lacus morbi tristique senectus et netus et fames.</p>
                       <p>Praesent vehicula, justo vitae bibendum vestibulum, lacus elit luctus dolor, a aliquam massa elit at purus.</p>
                     </div>
                   </div>
-                  <div class="u-1-3">
-                    <div class="_m _fg _radius _pad">
-                      <h3 class="_h7">Mauris vel magna</h3>
-                      <p>Et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros. Nullam vehicula arcu vitae ligula sollicitudin, sit amet viverra sapien consectetur.</p>
-                    </div>
-                    <div class="_m _fg-1 _radius _pad">
-                      <h3 class="_h7">Mauris vel magna</h3>
-                      <p>Et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros. Nullam vehicula arcu vitae ligula sollicitudin, sit amet viverra sapien consectetur.</p>
+                  <div class="_3-1">
+                    <div class="_mh _text-justify">
+                      <div class="_radius _pad _bg-2-2 _tc-2-2 _mv">
+                        <h3 class="_h7">Mauris vel magna</h3>
+                        <p>Et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros. Nullam vehicula arcu vitae ligula sollicitudin, sit amet viverra sapien consectetur.</p>
+                      </div>
+                      <div class="_radius _pad _bg-2-2 _tc-2-2 _mv">
+                        <h3 class="_h7">Mauris vel magna</h3>
+                        <p>Et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros. Nullam vehicula arcu vitae ligula sollicitudin, sit amet viverra sapien consectetur.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="g">
-                  <div class="u-1-2">
+                <div class="_flex">
+                  <div class="_g">
                     <div class="_pad">
                       <style>.buttons ._btnlink { width: 5rem; margin: .2rem; text-align: center; }</style>
                       <h3>Buttons</h3>
@@ -112,7 +113,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="u-1-2">
+                  <div class="_f">
                     <div class="_pad _text-justify">
                       <h3>Texts and Hyperlinks</h3>
                       <div class="section links">
@@ -131,8 +132,8 @@
           </main>
           <footer class="_bg-1-2 _tc-1-2" id="_footer">
             <div class="_footer_layout">
-              <div class="g">
-                <div class="u-1-3">
+              <div class="_flex">
+                <div class="_12-4">
                   <div class="_pad">
                     <h6 class="_h7 _no-margin">Company Name</h6>
                     <div>Street Address,<br>
@@ -142,19 +143,21 @@
                     </div>
                     <div class="_small">+PHONE 123 4567<br>
                       email@domain.com<br>
+                      
                     </div>
                   </div>
                 </div>
-                <div class="u-1-3">
+                <div class="_12-3">
                   <div class="_pad">
                     <h6 class="_h7 _no-margin">Primary Segment</h6>
                     <div><a class="_no-visited _no-u" href="#">Put some links</a><br>
                       <a class="_no-visited _no-u" href="#">To your posts</a><br>
                       <a class="_no-visited _no-u" href="#">And pages</a><br>
+                      
                     </div>
                   </div>
                 </div>
-                <div class="u-1-3">
+                <div class="_12-3">
                   <div class="_pad">
                     <h6 class="_h7 _no-margin">Secondary Segment</h6>
                     <div><a class="_no-visited _no-u" href="#">Put some links</a><br>
@@ -164,8 +167,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="_pad _small">&copy; Copyright 2025 Tidloo</div>
               </div>
+              <div class="_pad _small">&copy; Copyright 2025 Tidloo</div>
             </div>
           </footer>
         </div>
