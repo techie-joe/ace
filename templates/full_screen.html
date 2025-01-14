@@ -25,25 +25,31 @@
     <link rel="stylesheet" media="all" href="/ace/assets/css/flex.css?v=0.1.6"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.6"/>
     <style>
+      ._nav_layout,
       ._header_layout { max-width:none; padding:0; }
-      ._view_layout, #_header, ._header_layout, ._fullscreen { height:100% }
+      
+      #_header { height:0 }
+      ._fullscreen { margin-top:0 }
+      
+      #_header { position:relative; z-index:1 }
+      
+      #_header #_logo { margin:0; position:absolute; }
+      ._nav_layout { padding-left: 8rem }
+      
+              #_nav { background-color: rgba(100, 100, 100, 0.2); }
+      ._dark  #_nav { background-color: rgba(0,0,0,0.2); }
+      
+      ._nav_layout { overflow: hidden; height: 1.5em; }
+      
+      ._view_layout, ._fullscreen { height:100% }
       ._fullscreen {
         text-align: center;
         display: flex;
         flex-direction: column;
         background-color: rgba(0,0,0,0.2);
-        margin-top: -3.7em;
       }
       
-      #logo { position:absolute;z-index:2 }
-      
-      #_nav { position:relative; z-index:1; }
-      #_nav { background-color: rgba(100, 100, 100, 0.2); }
-      ._dark #_nav { background-color: rgba(0,0,0,0.2); }
-      
-      ._nav_layout { overflow: hidden; height: 1.5em; }
-      
-      ._fullscreen .hero { font-size:1.6em; margin:31vh auto; width:10em; padding-top: 10vh; }
+      ._fullscreen .hero { font-size:1.6em; margin:31vh auto; width:10em; padding-top: 10vh }
       ._fullscreen .hero2 { margin:2em 1em; max-width:640px; }
       
       @media only screen and (min-width: 540px) {
@@ -60,31 +66,37 @@
           <header id="_header">
             <div class="_header_layout">
               <style>
-                #logo {
+                #_logo {
                   display:block;
                   width: 6.2rem;
-                  margin: 0;
-                  padding: 0.8rem;
+                  margin: 0 auto;
+                  padding:.8rem;
                   cursor: pointer;
                   transition: background-color 0.5s;
+                  color:inherit !important;
+                  text-decoration:none !important;
+                  text-align:center !important;
                 }
-                        #logo:hover { background:#ccc; transition: none; }
-                ._dark #logo:hover { background:#333 }
-                #logos   { font-size: 32px; font-weight: bold; }
-                #tagline { font-size:11px; padding-bottom: 0.4rem; letter-spacing: 0.05em; margin-top: -0.6em; }
-              </style><a class="_text-center _numb _no-color _no-u" href="/ace/" id="logo">
-                <div id="logos"><span class="_color">LO</span><span class="_color-1">GO</span></div> 
-                <div class="_uppercase _b" id="tagline">Your tagline</div></a>
+                        #_logo:hover { background:#ccc; transition: none; }
+                ._dark  #_logo:hover { background:#333 }
+                #_text_logo   { font-size: 2rem; font-weight: 600; }
+                #_text_logo,
+                #_text_logo ._part_1,
+                #_text_logo ._part_2 { line-height:1; }
+                #_tagline { font-size:.7rem; letter-spacing: 0.05em; }
+              </style><a class="_numb" href="/ace/" id="_logo">
+                <div id="_text_logo"><span class="_part_1">LO</span><span class="_part_2">GO</span></div>
+                <div class="_uppercase _b" id="_tagline">Your tagline</div></a>
               <nav class="pages" id="_nav">
                 <div class="_nav_layout"> <a href="/ace/">Home</a> <a href="full_screen.html">Full</a> <a href="split_screen.html">Split</a> <a href="full_flex.html">Flex</a> <a href="classic_page.html">Page</a> <a href="classic_list.html">List</a> <a href="blank_template.html">Blank</a> <a href="closed.html">Closed</a> <a href="/ace/404.html">404</a> <a href="/ace/500.html">500</a>
                 </div>
               </nav>
-              <div class="_fullscreen">
-                <h1 class="_h1 hero">Full Screen Display of Awesomeness</h1>
-                <p class="_m">A full_screen seamlessly stretches across the entire screen, for an exceptional first impression.</p>
-              </div>
             </div>
           </header>
+          <article class="_fullscreen">
+            <h1 class="_h1 hero">Full Screen Display of Awesomeness</h1>
+            <p class="_m">A full_screen seamlessly stretches across the entire screen, for an exceptional first impression.</p>
+          </article>
           <main id="_main">
             <div class="_main_layout">
               <article class="_mv">
