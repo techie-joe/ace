@@ -24,30 +24,16 @@
     <link rel="stylesheet" media="all" href="/ace/assets/css/style.css?v=0.1.6"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/flex.css?v=0.1.6"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.6"/>
-    <style>
-      #logo {
-        width: 6.2rem;
-        margin: 0;
-        padding: 0.8rem;
-        cursor: pointer;
-        transition: background-color 0.5s;
-      }
-             #logo:hover { background:#ccc; transition: none; }
-      ._dark #logo:hover { background:#333 }
-      #logos   { font-size: 32px; font-weight: bold; }
-      #tagline { font-size:11px; padding-bottom: 0.4rem; letter-spacing: 0.05em; margin-top: -0.6em; }
-      #logo ._color { color: # }
-      
-    </style>
+    <style></style>
   </head>
   <body id="_body">
     <div id="_contents">
       <div class="_view">
         <div class="_view_layout">
           <div class="_flex">
-            <div class="_g _pad"><a class="_btnlink _small" href="/ace/">Home</a>
+            <div class="_f _pad"><a class="_btnlink _small" href="/ace/">Home</a>
             </div>
-            <div class="_f">
+            <div class="_fill" style="min-width:10rem">
               <nav class="pages" id="_nav">
                 <div class="_nav_layout"> <a href="/ace/demo/views.html">Views</a> <a href="/ace/demo/flex.html">Flex</a> <a href="/ace/demo/containers.html">Containers</a> <a href="/ace/demo/colors.html">Colors</a> <a href="/ace/demo/texts.html">Texts</a> <a href="/ace/demo/theme.html">Theme</a> <a href="/ace/demo/blank_demo.html">Blank</a>
                 </div>
@@ -56,11 +42,22 @@
           </div>
           <header id="_header">
             <div class="_header_layout">
-              <div class="_flex _bg-1">
-                <h1 class="_text-center _numb" id="logo">
+              <div class="_flex">
+                <style>
+                  #logo {
+                    width: 6.2rem;
+                    margin: 0;
+                    padding: 0.8rem;
+                    cursor: pointer;
+                    transition: background-color 0.5s;
+                  }
+                          #logo:hover { background:#ccc; transition: none; }
+                  ._dark #logo:hover { background:#333 }
+                  #logos   { font-size: 32px; font-weight: bold; }
+                  #tagline { font-size:11px; padding-bottom: 0.4rem; letter-spacing: 0.05em; margin-top: -0.6em; }
+                </style><a class="_text-center _numb _no-color _no-u" href="/ace/" id="logo">
                   <div id="logos"><span class="_color">LO</span><span class="_color-1">GO</span></div> 
-                  <div class="_uppercase _b" id="tagline">Your tagline</div>
-                </h1>
+                  <div class="_uppercase _b" id="tagline">Your tagline</div></a>
               </div>
               <hr class="_no-margin">
             </div>
@@ -69,7 +66,7 @@
             <div class="_main_layout">
               <article>
                 <div class="_flex">
-                  <div class="_3-1">
+                  <div class="_f-3-1">
                     <div class="_mh _text-justify">
                       <h3 class="_h6 _color">Lorem ipsum dolor</h3>
                       <p>Sit amet, consectetur adipiscing elit. Praesent vehicula, justo vitae bibendum vestibulum, lacus elit luctus dolor, a aliquam massa elit at purus. Mauris vel magna et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros. Nullam vehicula arcu vitae ligula sollicitudin, sit amet viverra sapien consectetur.</p>
@@ -77,7 +74,7 @@
                       <p>Nunc nec sem pellentesque, ut facilisis justo dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae ac turpis egestas. Mauris vel magna et felis pharetra pretium. Donec bibendum scelerisque metus, in tincidunt eros.</p>
                     </div>
                   </div>
-                  <div class="_3-1">
+                  <div class="_f-3-1">
                     <div class="_mh _text-justify">
                       <h3 class="_h6 _color-1">Curabitur auctor</h3>
                       <p>Nunc nec sem pellentesque, ut facilisis justo dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
@@ -86,7 +83,7 @@
                       <p>Praesent vehicula, justo vitae bibendum vestibulum, lacus elit luctus dolor, a aliquam massa elit at purus.</p>
                     </div>
                   </div>
-                  <div class="_3-1">
+                  <div class="_f-3-1">
                     <div class="_mh _text-justify">
                       <div class="_radius _pad _bg-2-2 _tc-2-2 _mv">
                         <h3 class="_h7">Mauris vel magna</h3>
@@ -100,7 +97,7 @@
                   </div>
                 </div>
                 <div class="_flex">
-                  <div class="_f" style="flex-basis:410px">
+                  <div class="_fill" style="flex-basis:410px">
                     <div class="_pad">
                       <style>.buttons ._btnlink { width: 5rem; margin: .2rem; text-align: center; }</style>
                       <h3>Buttons</h3>
@@ -112,7 +109,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="_f" style="flex-basis:450px">
+                  <div class="_fill" style="flex-basis:450px">
                     <div class="_pad _text-justify">
                       <h3>Texts and Hyperlinks</h3>
                       <div class="section links">
@@ -132,7 +129,7 @@
           <footer class="_bg-1-2 _tc-1-2" id="_footer">
             <div class="_footer_layout">
               <div class="_flex">
-                <div class="_12-4">
+                <div class="_f-12-4">
                   <div class="_pad">
                     <h6 class="_h7 _no-margin">Company Name</h6>
                     <div>Street Address,<br>
@@ -146,7 +143,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="_12-3">
+                <div class="_f-12-3">
                   <div class="_pad">
                     <h6 class="_h7 _no-margin">Primary Segment</h6>
                     <div><a class="_no-visited _no-u" href="#">Put some links</a><br>
@@ -156,7 +153,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="_12-3">
+                <div class="_f-12-3">
                   <div class="_pad">
                     <h6 class="_h7 _no-margin">Secondary Segment</h6>
                     <div><a class="_no-visited _no-u" href="#">Put some links</a><br>
