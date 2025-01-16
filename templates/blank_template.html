@@ -29,10 +29,34 @@
     <div id="_contents">
       <div class="_view">
         <div class="_view_layout">
-          <nav class="pages" id="_nav">
-            <div class="_nav_layout"> <a href="/ace/">Home</a> <a href="full_screen.html">Full</a> <a href="split_screen.html">Split</a> <a href="full_flex.html">Flex</a> <a href="classic_page.html">Page</a> <a href="classic_list.html">List</a> <a href="blank_template.html">Blank</a> <a href="closed.html">Closed</a> <a href="/ace/404.html">404</a> <a href="/ace/500.html">500</a>
-            </div>
-          </nav>
+          <div id="_navbar">
+            <style>
+              #_logo {
+                display:block;
+                width: 6.2rem;
+                padding:.9rem;
+                cursor: pointer;
+                transition: background-color 0.5s;
+                text-decoration:none !important;
+                text-align:center !important;
+              }
+              a#_logo { color:inherit }
+              
+              #_html       a#_logo:hover { background:#bbb; color:#000; transition: none }
+              #_html._dark a#_logo:hover { background:#444; color:#fff; }
+              
+              #_text_logo   { font-size: 2rem; font-weight: 600; }
+              #_text_logo,
+              #_text_logo ._part_1,
+              #_text_logo ._part_2 { line-height:1; }
+              
+            </style><a class="_numb" href="/ace/" id="_logo">
+              <div id="_text_logo"><span class="_part_1">LO</span><span class="_part_2">GO</span></div></a>
+            <nav class="pages" id="_nav">
+              <div class="_nav_layout"> <a href="full_screen.html">Full</a> <a href="split_screen.html">Split</a> <a href="full_flex.html">Flex</a> <a href="classic_page.html">Page</a> <a href="classic_list.html">List</a> <a href="blank_template.html">Blank</a> <a href="closed.html">Closed</a> <a href="/ace/404.html">404</a> <a href="/ace/500.html">500</a>
+              </div>
+            </nav>
+          </div>
           <main id="_main">
             <div class="_main_layout">
               <article class="_m">This is a blank_template</article>
