@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Views | Ace Template</title>
-    <meta name="description" content="Views controls how a page behave."/>
+    <meta name="description" content="Views controls how user perceive a page."/>
     <meta name="author" content="(unknown)"/>
     <meta name="publisher" content="Tidloo"/>
     <meta property="og:title" content="Views | Ace Template"/>
-    <meta property="og:description" content="Views controls how a page behave."/>
+    <meta property="og:description" content="Views controls how user perceive a page."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/demo/views.html"/>
     <meta property="og:image" content=""/>
@@ -20,18 +20,36 @@
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/ace/icons/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/ace/icons/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/><!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
-    <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/style.css?v=0.1.6"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/flex.css?v=0.1.6"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.6"/>
-    <style>
-      #nav table td { line-height:0 }
-      ._view { overflow: auto }
-      ._view h1 { text-align: center }
-    </style>
   </head>
   <body id="_body">
     <div id="_contents">
+      <style>
+        #nav table td { line-height:0 }
+        ._view { overflow: auto }
+        ._view h2 { text-align: center }
+        
+        #view-2 {
+          background: #0205;
+          position: absolute;
+          top: 0;
+          left: 100%;
+        }
+        
+        #view-3 {
+          background: #2005;
+        }
+        
+        #view-4 {
+          background: #0025;
+          position: absolute;
+          top: 100%;
+          left: 100%;
+        }
+        
+      </style>
       <div class="_view" id="view-1">
         <div class="_view_layout">
           <div class="_flex">
@@ -44,75 +62,56 @@
               </nav>
             </div>
           </div>
-          <main id="_main">
+          <h2 class="_h7">View #1</h2>
+          <hr>
+          <main class="_text-center" id="_main">
             <div class="_main_layout">
-              <article>
-                <h1 class="_h7">View #1</h1>
-                <p class="_text-center">main article</p>
-              </article>
+              <p>Views controls how user perceive a page.</p>
             </div>
           </main>
         </div>
       </div>
       <div class="_view" id="view-2">
         <div class="_view_layout">
-          <h1 class="_h7">View #2</h1>
+          <h2 class="_h7">View #2</h2>
         </div>
       </div>
       <div class="_view" id="view-3">
         <div class="_view_layout">
-          <h1 class="_h7">View #3</h1>
+          <h2 class="_h7">View #3</h2>
         </div>
       </div>
       <div class="_view" id="view-4">
         <div class="_view_layout">
-          <h1 class="_h7">View #4</h1>
+          <h2 class="_h7">View #4</h2>
         </div>
       </div>
     </div>
     <aside id="_widgets">
+      <style>
+        #nav-position {
+          display: block;
+          position: absolute;
+          bottom : 50%;
+          right: 50%;
+        }
+        
+        #nav {
+          box-shadow: 0 0 1px 1px #888 inset;
+          position:relative;
+          z-index:1000;
+          left: 50%;
+          top : 70px;
+          padding: 1rem;
+        }
+        
+        #nav a {
+          margin:1px;
+        }
+        
+      </style>
       <aside id="nav-position">
         <div class="_widget_layout">
-          <style>
-            #nav-position {
-              display: block;
-              position: absolute;
-              bottom : 50%;
-              right: 50%;
-            }
-            
-            #nav {
-              box-shadow: 0 0 1px 1px #888 inset;
-              position:relative;
-              z-index:1000;
-              left: 50%;
-              top : 70px;
-              padding: 1rem;
-            }
-            
-            #nav a {
-              margin:1px;
-            }
-            
-            #view-2 {
-              background: #0205;
-              position: absolute;
-              top: 0;
-              left: 100%;
-            }
-            
-            #view-3 {
-              background: #2005;
-            }
-            
-            #view-4 {
-              background: #0025;
-              position: absolute;
-              top: 100%;
-              left: 100%;
-            }
-            
-          </style>
           <nav class="_bg-2-2 _tc-2-2 _radius-2r" id="nav" style="width:116px">
             <table>
               <tbody>
