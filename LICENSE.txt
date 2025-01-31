@@ -1,18 +1,22 @@
-Copyright (c) 2025 Tidloo
+Copyright (c) 2025 Tidloo by Techie Joe
 
 LICENSE AGREEMENT for Ace Template
 
-This software  and  its  content  are  the  exclusive property of the owner.
+This software  and  its content  are  the  exclusive property of the author.
 By using  this  software,  you agree to abide by the terms and conditions of
 this License Agreement.
+
+Users must have  a verifiable direct approval  from  the author  to use  the
+software as a valid licensee.  Owning a copy of this license alone  does not
+imply that permission is granted.
 
 Permission is granted to users to use the content as explicitly permitted by
 the author.   Any attempt to access,  use,  or modify any content other than
 what is permitted, is strictly forbidden.
 
-Users must have  a verifiable direct approval  from  the author  to use  the
-software as a valid licensee.  Owning a copy of this license alone  does not
-imply that permission is granted.
+----------------------------------------------------------------------------
+
+This license can be terminated if you breach any of these conditions.
 
 ----------------------------------------------------------------------------
 
@@ -36,11 +40,11 @@ USERS ARE NOT ALLOWED
   of third-party contents present within the software.
 
 ----------------------------------------------------------------------------
-This license can be terminated if you breach any of these conditions.
-----------------------------------------------------------------------------
 
-This License Agreement  and  the above copyright notice shall be included in
-all copies or substantial portions of the software.
+This license and  the above copyright notice shall be included in all copies
+or substantial portions of the software.
+
+----------------------------------------------------------------------------
 
 THE SOFTWARE IS PROVIDED  "AS IS",  WITHOUT  WARRANTY  OF ANY  KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO  THE WARRANTIES OF MERCHANTABILITY,
