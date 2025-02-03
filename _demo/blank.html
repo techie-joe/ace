@@ -9,7 +9,7 @@
     <meta property="og:title" content="Blank Page | Ace Template"/>
     <meta property="og:description" content="Just a blank page to start building."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/demo/blank.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -26,19 +26,39 @@
       
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.10&amp;b=181.161"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.10&amp;b=181.161"/>
   </head>
   <body id="_body">
     <div id="_contents">
       <div class="_view">
         <div class="_view_layout">
-          <aside class="_page_layout" id="_pageData">
-            <p><a class="_btnlink _smaller" onclick="event.preventDefault();window.history.back()" title="Back to previous page">Back</a>
-            </p>
-            <hr/>
+          <div class="_flex" id="_navbar">
+            <div class="_f-12-1 _pa _nav-color"><a class="_btnlink _smaller" href="/ace/">Home</a>
+            </div>
+            <div class="_fill _nav-color" style="min-width:10rem">
+              <nav id="_nav">
+                <div class="_nav_layout"> <a class="_nav-item" href="/ace/_demo/blank.html">Blank</a> <a class="_nav-item" href="/ace/_demo/view.html">View</a> <a class="_nav-item" href="/ace/_demo/texts.html">Texts</a> <a class="_nav-item" href="/ace/_demo/icons.html">Icons</a> <a class="_nav-item" href="/ace/_demo/flex.html">Flex</a> <a class="_nav-item" href="/ace/_demo/containers.html">Containers</a> <a class="_nav-item" href="/ace/_demo/colors.html">Colors</a> <a class="_nav-item" href="/ace/_demo/menu.html">Menu</a> <a class="_nav-item" href="/ace/_demo/theme.html">Theme</a>
+                </div>
+              </nav>
+            </div>
+            <div class="_f-12-1 _text-right _pa _nav-color"><a class="_nav-item _nav-icon" onclick="base.theme.change()" title="Change color scheme"><i class="_isvg">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
+                  </svg></i></a>
+            </div>
+          </div>
+          <header id="_header">
+            <div class="_header_layout">
+              <h1 class="_h1 _h1" id="_heading">Blank Page
+              </h1>
+              <p>Just a blank page to start building.</p>
+              <hr>
+            </div>
+          </header>
+          <div class="_page_layout" id="_pageData">
             <aside>
               <div class="_pre_layout">
-                <pre class="_pre"><span class="_h7">Just a blank page to start building.</span>
-
+                <pre class="_pre">
 title          = Blank Page | Ace Template
 description    = Just a blank page to start building.
 
@@ -53,20 +73,25 @@ publisher      = Tidloo
 output         = ace
 version        = 0.1.10
 
-url            = https://techie-joe.github.io/ace/
+url            = https://techie-joe.github.io/ace/demo/blank.html
 authorUrl      = https://techie-joe.github.io/
 
 og_title       = Blank Page | Ace Template
 og_description = Just a blank page to start building.
 og_type        = website
-og_url         = https://techie-joe.github.io/ace/?utm_source=homescreen
+og_url         = https://techie-joe.github.io/ace/demo/blank.html?utm_source=homescreen
 og_image       = 
 og_imageAlt    = 
 </pre>
               </div>
             </aside>
-            <hr/>
-          </aside>
+          </div>
+          <footer id="_footer">
+            <div class="_footer_layout">
+              <hr>
+              <p class="_text-centerx">&copy; Copyright 2025 Tidloo</p>
+            </div>
+          </footer>
         </div>
       </div>
     </div>

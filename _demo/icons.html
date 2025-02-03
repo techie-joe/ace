@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html class="_nojs _scrollbar _a" id="_html" lang="en"><!-- :template -->
+<html class="_nojs _scrollbar _a" id="_html" lang="en"><!-- layout:html/ace -->
   <head>
     <meta charset="utf-8"/>
-    <title>Icons | </title>
+    <title>Icons | Ace Template</title>
     <meta name="description" content="Visual elements like images, icons, and graphics add depth and interest to your website."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo"/>
-    <meta property="og:title" content="Icons | "/>
+    <meta property="og:title" content="Icons | Ace Template"/>
     <meta property="og:description" content="Visual elements like images, icons, and graphics add depth and interest to your website."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/demo/icons.html"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/demo/icons.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-    <meta id="color-scheme" name="color-scheme"/>
-    <meta id="theme-color" name="theme-color" content="#222"/>
-    <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/>
+    <meta id="_color-scheme" name="color-scheme"/>
+    <meta id="_theme-color" name="theme-color" content="#222222"/>
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/ace/icons/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/ace/icons/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/><!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
-    <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.6"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.6"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/pure/grid.css?v=0.1.6"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
+    <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/><!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+    <style>
+      html { background-color: #ddd; color: #666; } /* light theme - (default) */
+      @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } } /* dark theme */
+      
+    </style>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.10&amp;b=181.161"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.10&amp;b=181.161"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/pure/grid.css?v=0.1.10&amp;b=181.161"/>
     <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <style>
       .gridlines {
@@ -47,19 +52,20 @@
             </div>
             <div class="_fill _nav-color" style="min-width:10rem">
               <nav id="_nav">
-                <div class="_nav_layout"> <a class="_nav-item" href="/ace/_demo/view.html">View</a> <a class="_nav-item" href="/ace/demo/texts.html">Texts</a> <a class="_nav-item" href="/ace/demo/icons.html">Icons</a> <a class="_nav-item" href="/ace/demo/colors.html">Colors</a> <a class="_nav-item" href="/ace/demo/flex.html">Flex</a> <a class="_nav-item" href="/ace/demo/containers.html">Containers</a> <a class="_nav-item" href="/ace/demo/menu.html">Menu</a> <a class="_nav-item" href="/ace/demo/theme.html">Theme</a>
+                <div class="_nav_layout"> <a class="_nav-item" href="/ace/_demo/blank.html">Blank</a> <a class="_nav-item" href="/ace/_demo/view.html">View</a> <a class="_nav-item" href="/ace/_demo/texts.html">Texts</a> <a class="_nav-item" href="/ace/_demo/icons.html">Icons</a> <a class="_nav-item" href="/ace/_demo/flex.html">Flex</a> <a class="_nav-item" href="/ace/_demo/containers.html">Containers</a> <a class="_nav-item" href="/ace/_demo/colors.html">Colors</a> <a class="_nav-item" href="/ace/_demo/menu.html">Menu</a> <a class="_nav-item" href="/ace/_demo/theme.html">Theme</a>
                 </div>
               </nav>
             </div>
             <div class="_f-12-1 _text-right _pa _nav-color"><a class="_nav-item _nav-icon" onclick="base.theme.change()" title="Change color scheme"><i class="_isvg">
                   <svg viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-opacity="1" d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z"></path>
+                    <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                   </svg></i></a>
             </div>
           </div>
           <header id="_header">
             <div class="_header_layout">
-              <h1 class="_h1">Icons</h1>
+              <h1 class="_h1 _h1" id="_heading">Icons
+              </h1>
               <p>Visual elements like images, icons, and graphics add depth and interest to your website.</p>
               <hr>
             </div>
@@ -103,82 +109,82 @@
                   </style>
                   <div class="_mv _icons"><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z"></path>
+                        <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z"></path>
+                        <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"></path>
+                        <path d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M10,17L15,12L10,7V17Z"></path>
+                        <path d="M10,17L15,12L10,7V17Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                        <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"></path>
+                        <path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M21,3H3C2,3 1,4 1,5V19A2,2 0 0,0 3,21H21C22,21 23,20 23,19V5C23,4 22,3 21,3M5,17L8.5,12.5L11,15.5L14.5,11L19,17H5Z"></path>
+                        <path d="M21,3H3C2,3 1,4 1,5V19A2,2 0 0,0 3,21H21C22,21 23,20 23,19V5C23,4 22,3 21,3M5,17L8.5,12.5L11,15.5L14.5,11L19,17H5Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></path>
+                        <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i>
                   </div>
                   <div class="_mv">
                     <div class="ibox"><i class="_isvg">
                         <svg viewBox="0 0 24 24">
-                          <path fill="currentColor" fill-opacity="1" d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z"></path>
+                          <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
                         </svg></i><i class="_isvg">
                         <svg viewBox="0 0 24 24">
-                          <path fill="currentColor" fill-opacity="1" d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z"></path>
+                          <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                         </svg></i>H
                     </div>
                   </div>
                   <div class="_mv"><i class="_isvg _rotate-0">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-45">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-90">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-135">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-180">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-225">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-270">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-315">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg _rotate-360">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg __spin">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i><i class="_isvg __spin">
                       <svg viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-opacity="1" d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"></path>
+                        <path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" fill="currentColor" fill-opacity="1"></path>
                       </svg></i>
                   </div>
                   <p class="_text-right _small"><a class="_no-u" href="https://pictogrammers.com/library/mdi/" target="pictogrammers">More icons at Pictogrammers ...</a>
@@ -414,7 +420,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.6" defer="defer">
+    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.10&amp;b=181.161" defer="defer">
     </script><!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
   </body>
 </html>
