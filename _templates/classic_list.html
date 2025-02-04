@@ -2,14 +2,14 @@
 <html class="_nojs _scrollbar _a" id="_html" lang="en"><!-- layout:html/ace -->
   <head>
     <meta charset="utf-8"/>
-    <title>Full Screen | Ace Template</title>
-    <meta name="description" content="This template stretches across the entire screen, for an exceptional first impression."/>
+    <title>Classic List | Ace Template</title>
+    <meta name="description" content="This template is designed to display lists of articles and pages."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo"/>
-    <meta property="og:title" content="Full Screen | Ace Template"/>
-    <meta property="og:description" content="This template stretches across the entire screen, for an exceptional first impression."/>
+    <meta property="og:title" content="Classic List | Ace Template"/>
+    <meta property="og:description" content="This template is designed to display lists of articles and pages."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/templates/full_screen.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/templates/classic_list.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -25,30 +25,25 @@
       @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } } /* dark theme */
       
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.12&amp;b=164.15"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.12&amp;b=164.15"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.12&amp;b=164.16"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.12&amp;b=164.16"/>
     <style>.nav-button { min-width: 10rem; }</style>
     <style>
-      ._fullscreen { margin-top:-10rem } #_navbar { height:10rem }
-      ._fullscreen, ._view_layout { height:100% }
-      ._fullscreen {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0,0,0,0.2);
+      #_html .list { max-width:500px; }
+      
+      #_html .item { margin-bottom:1.5em; }
+      #_html .item a.title {
+        text-decoration:none;
+        font-size:1.2em;
+        padding:0 0.3em;
+        margin: 0 -.3em;
+        border-radius:5px;
+        cursor:pointer;
+        display:inline-block;
       }
       
-      ._fullscreen .hero { font-size:1.6em; margin:31vh auto; width:10em; padding-top:10vh; }
-      ._fullscreen .hero2 { margin:2em 1em; max-width:640px; }
-      
-      @media only screen and (min-width: 540px) {
-        ._fullscreen .hero { font-size:3em; }
-        ._fullscreen .hero2 { margin:2em auto; }
-      }
-      
-    </style>
-    <style>
-      ._nav_layout { height:1.7em; overflow:hidden }
+      #_html       .item a.title:hover { background:#ccc; color:#000; }
+      #_html._dark .item a.title:hover { background:#333; color:#fff; }
       
     </style>
   </head>
@@ -93,49 +88,49 @@
                   </svg></i></a>
             </div>
           </div>
-          <header class="_fullscreen" id="_header">
+          <header id="_header">
             <div class="_header_layout">
-              <h1 class="_h1 hero">Full Screen Display of Awesomeness</h1>
-              <p>This template stretches across the entire screen, for an exceptional first impression.</p>
+              <h1 class="_h1" id="_heading">Classic List &mdash; links to articles and pages
+              </h1>
+              <p>This template is designed to display lists of articles and pages.</p>
+              <hr class="_no-margin">
             </div>
           </header>
           <main id="_main">
             <div class="_main_layout">
-              <article class="_mv">
-                <div class="_flex">
-                  <div class="_fill">
-                    <div class="gu">
-                      <div class="o o2-4"></div>
-                    </div>
+              <article>
+                <p class="ni _smaller">Articles written here are abricated examples, meant to serve as placeholder for your content. </p>
+                <hr>
+                <div class="list">
+                  <div class="item"><a class="title" href="#1164.16">Tech Innovators Hub</a>
+                    <div class="p">Discover the latest in tech trends, product reviews, and industry news to stay ahead in the digital age.</div>
                   </div>
-                  <div class="_fill">
-                    <div class="gu">
-                      <div class="o o2-4"></div>
-                    </div>
+                  <div class="item"><a class="title" href="#2164.16">Wanderlust Chronicles</a>
+                    <div class="p">Your ultimate travel guide, offering tips, destination reviews, and itineraries to inspire your next adventure.</div>
                   </div>
-                  <div class="_fill">
-                    <div class="gu">
-                      <div class="o o2-4"></div>
-                    </div>
+                  <div class="item"><a class="title" href="#3164.16">Health &amp; Wellness Oasis</a>
+                    <div class="p">A resource for healthy living, featuring expert advice on fitness, nutrition, mental health, and overall well-being.</div>
                   </div>
-                </div>
-                <div class="hero2 _text-center"> 
-                  <h2 class="_h2">Featured Contents and Success Stories</h2>
-                  <p>Show the incredible accomplishments that are shaping your world today.</p>
-                </div>
-                <div class="_flex">
-                  <div class="_fill">
-                    <div class="gu">
-                      <div class="o o2-3"></div>
-                    </div>
+                  <div class="item"><a class="title" href="#4164.16">Home &amp; Garden Haven</a>
+                    <div class="p">Transform your living space with our home improvement ideas, gardening tips, and interior design inspiration.</div>
                   </div>
-                  <div class="_fill" style="max-width:20em">
-                    <div class="gu">
-                      <div class="o o1-3"></div>
-                    </div>
-                    <div class="gu">
-                      <div class="o o1-3"></div>
-                    </div>
+                  <div class="item"><a class="title" href="#5164.16">Culinary Creations</a>
+                    <div class="p">Explore delicious recipes, cooking techniques, and culinary trends to elevate your home-cooked meals.</div>
+                  </div>
+                  <div class="item"><a class="title" href="#6164.16">Finance Freedom Network</a>
+                    <div class="p">Empowering you with the tools and knowledge to take control of your finances, investments, and financial future.</div>
+                  </div>
+                  <div class="item"><a class="title" href="#7164.16">Fashion Forward</a>
+                    <div class="p">Stay stylish with the latest fashion trends, outfit ideas, and beauty tips to enhance your personal style.</div>
+                  </div>
+                  <div class="item"><a class="title" href="#8164.16">Educational Insights</a>
+                    <div class="p">A platform dedicated to lifelong learning, providing resources, courses, and tips for personal and professional development.</div>
+                  </div>
+                  <div class="item"><a class="title" href="#9164.16">Eco-Friendly Living</a>
+                    <div class="p">Embrace sustainability with our eco-friendly tips, green product reviews, and environmental news to live a greener life.</div>
+                  </div>
+                  <div class="item"><a class="title" href="#10164.16">Art &amp; Culture Collective</a>
+                    <div class="p">Dive into the world of arts and culture with news, interviews, and features on artists, exhibitions, and cultural events.</div>
                   </div>
                 </div>
               </article>
@@ -150,7 +145,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.12&amp;b=164.15" defer="defer">
+    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.12&amp;b=164.16" defer="defer">
     </script><!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
   </body>
 </html>
