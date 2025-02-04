@@ -3,8 +3,8 @@
 ---
 
 Title    : Ace Template  
-Version  : v0.1.10  
-Build    : b181.161  
+Version  : v0.1.11  
+Build    : b184.164  
 Author   : Techie Joe  
 
 URL      : https://techie-joe.github.io/ace/  

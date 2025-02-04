@@ -25,34 +25,40 @@
       @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } } /* dark theme */
       
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.10&amp;b=181.161"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.10&amp;b=181.161"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.11&amp;b=164.14"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.11&amp;b=164.14"/>
     <style>
-      #_html { min-width:320px }
-      
-      #_footer ._footer_layout,
-      #_main ._main_layout   { padding: 1em; }
-      #_header ._header_layout { padding: 2rem 1rem 2rem; }
-      
+      #_header ._header_layout { padding: 2rem 1rem; }
       @media (min-width: 530px) {
-      
-        #_footer ._footer_layout,
-        #_main ._main_layout   { padding: 0 3rem; }
-        #_header ._header_layout { padding: 2rem 3rem 3rem; }
-      
+      #_header ._header_layout { padding: 2rem 3rem; }
       }
       
-      #_header { padding: 1px 0; }
+      #_header ._header_layout { position:relative }
+      #_header ._header_layout:before {
+        content: 'A';
+        font-family: serif;
+        font-weight: bold;
+        font-size: 40rem;
+        display: block;
+        line-height: 0.7;
+        position: absolute;
+        top: -55%;
+        right: 4%;
+        opacity: 0.1;
+        user-select: none;
+      }
+      #_main,
+      #intro { position:relative; z-index:1 }
       
-      #_header    { color: #333; background: #ccc; }
-      #_header h1 { color: #000; }
+      #intro { max-width: 30rem; }
       
-      ._dark #_header    { color: #aaa; background: #111; }
+      html   #_header { background: #ccc; }
+      ._dark #_header { background: #111; }
+      
+      html   #_header h1 { color: #000; }
       ._dark #_header h1 { color: #fff; }
       
       #_html .pages ul { list-style-type: none; padding-inline-start: 0; }
-      
-      #_header .intro { max-width: 30em; }
       
     </style>
   </head>
@@ -62,7 +68,7 @@
         <div class="_view_layout">
           <header id="_header">
             <div class="_header_layout">
-              <div class="intro">
+              <div id="intro">
                 <h1 class="_hero-1">Ace Template</h1>
                 <p class="_smaller">by <a href="https://techie-joe.github.io/">Techie Joe</a>
                 </p>
@@ -75,12 +81,13 @@
               <article>
                 <section class="_mv-2">
                   <p class="_text-justify">This web template is equipped with <b class="_h7">pre-made building components</b> and <b class="_h7">helper classes</b> to give you an easy building experience. We have simplified web creation to make it accessible to everyone, even for those who may not have technical expertise. Dive in and start building your website straight away.</p>
-                  <div class="_mv _nav-color">
+                  <div class="_mv _nav-color _radius-x5r">
                     <nav id="_nav">
-                      <div class="_nav_layout"><b>Template Components : &nbsp;</b> <a class="_nav-item" href="/ace/_demo/blank.html">Blank</a> <a class="_nav-item" href="/ace/_demo/view.html">View</a> <a class="_nav-item" href="/ace/_demo/texts.html">Texts</a> <a class="_nav-item" href="/ace/_demo/icons.html">Icons</a> <a class="_nav-item" href="/ace/_demo/flex.html">Flex</a> <a class="_nav-item" href="/ace/_demo/containers.html">Containers</a> <a class="_nav-item" href="/ace/_demo/colors.html">Colors</a> <a class="_nav-item" href="/ace/_demo/menu.html">Menu</a> <a class="_nav-item" href="/ace/_demo/theme.html">Theme</a>
+                      <div class="_nav_layout"><b class="_nav-label">Template Components : &nbsp;</b> <a class="_nav-item" href="/ace/_demo/blank.html">Blank</a> <a class="_nav-item" href="/ace/_demo/view.html">View</a> <a class="_nav-item" href="/ace/_demo/texts.html">Texts</a> <a class="_nav-item" href="/ace/_demo/icons.html">Icons</a> <a class="_nav-item" href="/ace/_demo/flex.html">Flex</a> <a class="_nav-item" href="/ace/_demo/containers.html">Containers</a> <a class="_nav-item" href="/ace/_demo/colors.html">Colors</a> <a class="_nav-item" href="/ace/_demo/menu.html">Menu</a> <a class="_nav-item" href="/ace/_demo/theme.html">Theme</a>
                       </div>
                     </nav>
                   </div>
+                  <hr>
                 </section>
                 <section class="_mv-2">
                   <h2>Examples</h2>
@@ -131,7 +138,7 @@
                 </section>
                 <hr>
                 <p class="_smaller">Some images on this website are courtesy of Matt at <a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">svgbackgrounds.com</a>. Thank you for providing them for free.</p>
-                <p class="_smaller">Version : v0.1.10 | b181.161</p>
+                <p class="_smaller">Version : v0.1.11 | b164.14</p>
                 <p class="_smaller">Live @ <a href="https://techie-joe.github.io/ace/" target="techie-joes-github">https://techie-joe.github.io/ace/</a><br>
                   Source @ <a href="https://github.com/techie-joe/ace" target="techie-joes-github">https://github.com/techie-joe/ace</a>
                 </p>
@@ -147,7 +154,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.10&amp;b=181.161" defer="defer">
+    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.11&amp;b=164.14" defer="defer">
     </script><!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
   </body>
 </html>
