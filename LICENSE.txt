@@ -1,43 +1,47 @@
-Copyright (c) 2025 Tidloo by Techie Joe
+Copyright (c) 2025 -- Tidloo
+
+SOFTWARE : Ace Template - v0.1.20
+AUTHOR   : Developed and owned by Techie Joe
 
 LICENSE AGREEMENT for Ace Template
+----------------------------------------------------------------------------
 
-This software  and  its content  are  the  exclusive property of the author.
-By using  this  software,  you agree to abide by the terms and conditions of
-this License Agreement.
+This software and its contents are exclusively owned by the author. By using
+this software,  you agree to abide the terms and conditions of this license.
 
-Users must have  a verifiable direct approval  from  the author  to use  the
-software as a valid licensee.  Owning a copy of this license alone  does not
-imply that permission is granted.
-
-Permission is granted to users to use the content as explicitly permitted by
-the author.   Any attempt to access,  use,  or modify any content other than
-what is permitted, is strictly forbidden.
+Owning a copy of this license alone OR the software OR parts of it, does not
+imply that a permission is granted. A verifiable record of a direct approval
+from the author is needed before using this software.
 
 ----------------------------------------------------------------------------
 
-This license can be terminated if you breach any of these conditions.
+Permission is granted to  users  with a valid approval to use the content as
+explicitly permitted by the author.  Any attempt to  access,  use, or modify
+any content other than what is permitted, is strictly forbidden.
+
+This license can be terminated if you breach any of the following condition.
 
 ----------------------------------------------------------------------------
 
 USERS ARE ALLOWED
   
-  1. To use  the software for creating websites  or  web-applications within
-  the domain owned by the user.
+  1. To use the software to develop websites or web applications for domains
+  exclusively owned by the user.
   
-  2. To modify and customize the content of the template however you like.
+  2. To modify and customize the content of the software as fit.
   
-  3. To intergrate, combine or use the template with any other software.
+  3. To intergrate, combine or use the software with any other software.
 
 
 USERS ARE NOT ALLOWED
 
-  1. To copy, share or distribute the software to other person in any format
-  without the author's explicit written permission.  Thus,  you cannot sell,
-  resale, rent, lease, license, or sub-license, without author's permission.
+  1. To copy, share or distribute the software OR any part of it in any form
+  without an explicit verifiable approval from the author. You cannot lease,
+  sell, rent, license, or sub-license, without the author's permission.
   
-  2. To remove or change attribution links,  backlinks and copyright notices
-  of third-party contents present within the software.
+  2. To remove or change attribution links, backlinks, copyright notices and
+  attributions of third-party contents present within the software.
+
 
 ----------------------------------------------------------------------------
 
