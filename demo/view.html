@@ -37,7 +37,7 @@
       <div class="_view" id="view-1">
         <div class="_view_layout">
           <div class="_flex" id="_navbar">
-            <div class="_f_12_1 _pa _nav_color _text_center"><a class="_btnlink _smaller" href="/ace/">Home</a>
+            <div class="_f_min _pa _nav_color _text_center"><a class="_btnlink _smaller" href="/ace/" style="width:80%;">Home</a>
             </div>
             <div class="_fill _nav_color" style="flex-basis:20rem">
               <nav class="_no_print_href" id="_nav">
@@ -45,7 +45,7 @@
                 </div>
               </nav>
             </div>
-            <div class="_f_12_1 _text_right _pa_x5r _nav_color _no_print"><a class="_navChangeThemeLink _link _nav_icon" onclick="base.theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
+            <div class="_f_min _text_right _pa_x5r _nav_color _no_print"><a class="_navChangeThemeLink _link _nav_icon" onclick="base.theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
                   <svg viewBox="0 0 24 24">
                     <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                   </svg></i></a>
@@ -87,7 +87,7 @@ publisher        = Tidloo
 
 version          = 0.1.24
 build            = 218.189.3
-now              = Thu Feb 13 2025 01:48:27 GMT+0800 (Malaysia Time)
+now              = Thu Feb 13 2025 11:16:05 GMT+0800 (Malaysia Time)
 
 og_title       = View | Ace Template
 og_description = View controls how user perceive a page.
@@ -138,31 +138,32 @@ authorUrl      = https://techie-joe.github.io/
           left: 50%;
           top: 20rem;
           padding: 1rem;
-          margin: -6rem -4.5rem 0;
+          margin: -6rem -6.05rem 0;
         }
         
         #nav a { margin:1px }
+        #nav .backbtn { width: 98%; padding: .2em 0; }
         
       </style>
       <aside class="_no_print" id="nav-box">
         <div class="_widget_layout">
-          <nav class="_bg_2_2 _tc_2_2 _radius_x25r" id="nav" style="width:116px">
+          <nav class="_bg_2_2 _tc_2_2 _radius_x25r" id="nav">
             <table>
               <tbody>
                 <tr>
-                  <td colspan="2"><a class="_btnlink" href="/ace/" style="width:75px;"><i class="_itext"><i class="itext">←</i></i> Back &nbsp;</a>
+                  <td colspan="2"><a class="backbtn _btnlink" href="/ace/"><i class="_itext"><i class="itext">←</i></i> <span class="_btnlabel _btnpad">Back</span></a>
                   </td>
                 </tr>
                 <tr>
-                  <td><a class="_btnlink" href="#view-1">#1</a>
+                  <td><a class="_btnlink" href="#view-1">1</a>
                   </td>
-                  <td><a class="_btnlink" href="#view-2">#2</a>
+                  <td><a class="_btnlink" href="#view-2">2</a>
                   </td>
                 </tr>
                 <tr>
-                  <td><a class="_btnlink" href="#view-3">#3</a>
+                  <td><a class="_btnlink" href="#view-3">3</a>
                   </td>
-                  <td><a class="_btnlink" href="#view-4">#4</a>
+                  <td><a class="_btnlink" href="#view-4">4</a>
                   </td>
                 </tr>
               </tbody>
