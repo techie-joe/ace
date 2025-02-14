@@ -37,11 +37,11 @@
       <div class="_view" id="view-1">
         <div class="_view_layout">
           <div class="_flex" id="_navbar">
-            <div class="_f_min _pa _nav_color _text_center"><a class="_btnlink" href="/ace/">Home</a>
+            <div class="_f_min _pa _nav_color _text_center _no_wrap"><a class="_link" href="/ace/" title="Back to Ace Template">Home</a> | <a class="_link" href="/ace/demo/" title="View Demo">Demo</a>
             </div>
             <div class="_fill _nav_color" style="flex-basis:20rem">
               <nav class="_no_print_href" id="_nav">
-                <div class="_nav_layout"> <a class="_link" href="/ace/demo/view.html">View</a> <a class="_link" href="/ace/demo/flex.html">Flex</a> <a class="_link" href="/ace/demo/texts.html">Texts</a> <a class="_link" href="/ace/demo/icons.html">Icons</a> <a class="_link" href="/ace/demo/colors.html">Colors</a> <a class="_link" href="/ace/demo/menu.html">Menu</a> <a class="_link" href="/ace/demo/theme.html">Theme</a> <a class="_link" href="/ace/demo/starter.html">Starter</a>
+                <div class="_nav_layout"> <a class="_link" href="/ace/demo/view.html">View</a> <a class="_link" href="/ace/demo/flex.html">Flex</a> <a class="_link" href="/ace/demo/texts.html">Texts</a> <a class="_link" href="/ace/demo/icons.html">Icons</a> <a class="_link" href="/ace/demo/colors.html">Colors</a> <a class="_link" href="/ace/demo/menu.html">Menu</a> <a class="_link" href="/ace/demo/theme.html">Theme</a>
                 </div>
               </nav>
             </div>
@@ -87,17 +87,17 @@ publisher        = Tidloo
 
 version          = 0.1.24
 build            = 320.6
-now              = Fri Feb 14 2025 12:39:57 GMT+0800 (Malaysia Time)
+now              = Sat Feb 15 2025 01:44:59 GMT+0800 (Malaysia Time)
 
-og_title       = View | Ace Template
-og_description = View controls how user perceive a page.
-og_type        = website
-og_url         = https://techie-joe.github.io/ace/demo/view.html?utm_source=homescreen
-og_image       = 
-og_imageAlt    = 
+og_title         = View | Ace Template
+og_description   = View controls how user perceive a page.
+og_type          = website
+og_url           = https://techie-joe.github.io/ace/demo/view.html?utm_source=homescreen
+og_image         = 
+og_imageAlt      = 
 
-url            = https://techie-joe.github.io/ace/demo/view.html
-authorUrl      = https://github.com/techie-joe/
+url              = https://techie-joe.github.io/ace/demo/view.html
+authorUrl        = https://github.com/techie-joe/
 </pre>
             </div>
           </aside>
@@ -131,40 +131,42 @@ authorUrl      = https://github.com/techie-joe/
     </div>
     <aside id="_widgets">
       <style>
+        #nav-box {
+          position:absolute;
+          top:50%;
+          left:50%;
+        }
+        
         #nav {
           box-shadow: 0 0 1px 1px #888 inset;
           position: absolute;
           z-index: 1000;
-          left: 50%;
-          top: 20rem;
           padding: .5rem;
-          margin: -6rem -4.7rem 0;
+          margin: -7em 0 0 -4.3em;
         }
         
         #nav a { margin:1px }
         
       </style>
       <aside class="_no_print" id="nav-box">
-        <div class="_widget_layout">
-          <nav class="_bg_2_2 _tc_2_2 _radius_x25r" id="nav">
-            <table>
-              <tbody>
-                <tr>
-                  <td><a class="_btnlink" href="#view-1">1</a>
-                  </td>
-                  <td><a class="_btnlink" href="#view-2">2</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a class="_btnlink" href="#view-3">3</a>
-                  </td>
-                  <td><a class="_btnlink" href="#view-4">4</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </nav>
-        </div>
+        <nav class="_bg_2_2 _tc_2_2 _radius_x25r" id="nav">
+          <table>
+            <tbody>
+              <tr>
+                <td><a class="_btnlink" href="#view-1"><span class="_btnlabel">1</span></a>
+                </td>
+                <td><a class="_btnlink" href="#view-2"><span class="_btnlabel">2</span></a>
+                </td>
+              </tr>
+              <tr>
+                <td><a class="_btnlink" href="#view-3"><span class="_btnlabel">3</span></a>
+                </td>
+                <td><a class="_btnlink" href="#view-4"><span class="_btnlabel">4</span></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </nav>
       </aside>
     </aside>
     <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.24&b=320.6" defer="defer">

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Texts | Ace Template</title>
-    <meta name="description" content="Font sizes and spacings has been meticulously adjusted to pixel precision for optimal adaptability."/>
+    <meta name="description" content="Text sizes and spacings has been carefully adjusted to pixel precision for optimum adaptability."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo"/>
     <meta property="og:title" content="Texts | Ace Template"/>
-    <meta property="og:description" content="Font sizes and spacings has been meticulously adjusted to pixel precision for optimal adaptability."/>
+    <meta property="og:description" content="Text sizes and spacings has been carefully adjusted to pixel precision for optimum adaptability."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/demo/texts.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -27,7 +27,6 @@
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.24&b=320.6"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/demo.css?v=0.1.24&b=320.6"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/pure/grid.css?v=0.1.24&b=320.6"/>
     <style>
       .gridlines {
         min-height: 100px;
@@ -35,6 +34,9 @@
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1" height="12"><rect width="1" height="1" fill="%23A9790688" /></svg>');
         background-repeat: repeat;
       }
+      
+      .g{display:flex;flex-flow:row wrap;align-content:flex-start}
+      .u{display:inline-block;vertical-align:top}
       .demo .u { margin: 0 2px; padding-bottom: 10px; }
       
       .io1  { background: #66668844; box-shadow:0 1px orange; }
@@ -47,11 +49,11 @@
       <div class="_view">
         <div class="_view_layout">
           <div class="_flex" id="_navbar">
-            <div class="_f_min _pa _nav_color _text_center"><a class="_btnlink" href="/ace/">Home</a>
+            <div class="_f_min _pa _nav_color _text_center _no_wrap"><a class="_link" href="/ace/" title="Back to Ace Template">Home</a> | <a class="_link" href="/ace/demo/" title="View Demo">Demo</a>
             </div>
             <div class="_fill _nav_color" style="flex-basis:20rem">
               <nav class="_no_print_href" id="_nav">
-                <div class="_nav_layout"> <a class="_link" href="/ace/demo/view.html">View</a> <a class="_link" href="/ace/demo/flex.html">Flex</a> <a class="_link" href="/ace/demo/texts.html">Texts</a> <a class="_link" href="/ace/demo/icons.html">Icons</a> <a class="_link" href="/ace/demo/colors.html">Colors</a> <a class="_link" href="/ace/demo/menu.html">Menu</a> <a class="_link" href="/ace/demo/theme.html">Theme</a> <a class="_link" href="/ace/demo/starter.html">Starter</a>
+                <div class="_nav_layout"> <a class="_link" href="/ace/demo/view.html">View</a> <a class="_link" href="/ace/demo/flex.html">Flex</a> <a class="_link" href="/ace/demo/texts.html">Texts</a> <a class="_link" href="/ace/demo/icons.html">Icons</a> <a class="_link" href="/ace/demo/colors.html">Colors</a> <a class="_link" href="/ace/demo/menu.html">Menu</a> <a class="_link" href="/ace/demo/theme.html">Theme</a>
                 </div>
               </nav>
             </div>
@@ -65,7 +67,7 @@
             <div class="_header_layout">
               <h1 class="_h1" id="_heading">Texts
               </h1>
-              <p id="_about">Font sizes and spacings has been meticulously adjusted to pixel precision for optimal adaptability.</p>
+              <p id="_about">Text sizes and spacings has been carefully adjusted to pixel precision for optimum adaptability.</p>
               <hr>
             </div>
           </header>
@@ -157,7 +159,7 @@
                         <div class="io1">&nbsp;</div>
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">7</sub></div>
                   </div>
-                  <div class="u _hero">
+                  <div class="u _hero_1">
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">1</sub></div>
                         <div class="io1">&nbsp;</div>
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">3</sub></div>
@@ -168,7 +170,7 @@
                         <div class="io1">&nbsp;</div>
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">9</sub></div>
                   </div>
-                  <div class="u _hero_1">
+                  <div class="u _hero_2">
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">1</sub></div>
                         <div class="io1">&nbsp;</div>
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">3</sub></div>
@@ -178,7 +180,7 @@
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">7</sub></div>
                         <div class="io1">&nbsp;</div>
                   </div>
-                  <div class="u _hero_2">
+                  <div class="u _hero_3">
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">1</sub></div>
                         <div class="io1">&nbsp;</div>
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">3</sub></div>
@@ -188,11 +190,12 @@
                         <div class="io2">H<sup class="_sup">H</sup>g<sub class="_sub">7</sub></div>
                   </div>
                 </section>
+                <hr>
                 <section class="gridlinesx _text_center">
-                  <hr>
-                  <p class="_hero_2"> Text Sample 3</p>
-                  <p class="_hero_1"> Text Sample 2</p>
-                  <p class="_hero">   Text Sample 1</p>
+                  <p>Helper classes allow you to customize the visual appearance of individual headings. They separate visual appearance from semantics, giving you better control over both content and design. Use <code class="_code">_hero_1</code> to <code class="_code">_hero_3</code> or <code class="_code">_h1</code> to <code class="_code">_h7</code> to style your headings.</p>
+                  <p class="_hero_3"> Text Sample 3</p>
+                  <p class="_hero_2"> Text Sample 2</p>
+                  <p class="_hero_1"> Text Sample 1</p>
                   <h1 class="_h1"> Text Sample 1</h1>
                   <h2 class="_h2"> Text Sample 2</h2>
                   <h3 class="_h3"> Text Sample 3</h3>
@@ -203,7 +206,6 @@
                   <p>Normal Text</p>
                   <p><span>Normal</span> <span class="_small">Small</span> <span class="_smaller">Smaller</span>
                   </p>
-                  <p>Sizing classes from <code class="_code">_h1</code> to <code class="_code">_h7</code> separates visual appearance from semantics, giving you better control over both content and design.</p>
                 </section>
                 <section>
                   <hr>
