@@ -147,20 +147,6 @@
                     </div>
                   </nav>
                 </section>
-                <section class="_mv_2">
-                  <nav class="pages">
-                    <div class="_flex">
-                      <div class="_f_12_4">
-                        <ul class="_no_margin">
-                          <li><a class="_link" href="404.html" title="When a browser lands on a missing page.">404 -- Not found</a> <a class="_link _nav_icon _no_print" href="---" title="Simulate Real 404">&middot;&middot;&middot;</a>
-                          </li>
-                          <li><a class="_link" href="500.html" title="When your server encounters an error.">500 -- Oops!</a></li>
-                          <li><a class="_link" href="blank.html" title="Just a blank page to start building.">Blank Page</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-                </section>
                 <hr>
                 <div class="_flex _gap_2">
                   <div class="_f_2_1">
@@ -187,6 +173,7 @@
                   </div>
                 </div>
                 <hr>
+                <div id="acelinks"></div>
               </article>
             </div>
           </main>
@@ -220,12 +207,24 @@
       document.getElementById('_needjs').innerHTML='';
       
     </script>
-    <script>(function(){ if( sourceref && window.location.hostname === 'localhost' ) {
-        sourceref.innerHTML = [
-          '|<a class="_link _b" href="https://github.com/techie-joe/ace/" target="page_source">SOURCE</a>',
-          '|<a class="_link _b" href="https://github.com/techie-joe/_ace/" target="page_builder">BUILDER</a>',
-        ].join('');
-      }})();
+    <script>
+      (function(w){
+        if( w.location.hostname === 'localhost' ) {
+          if( sourceref ) {
+            sourceref.innerHTML = [
+              '|<a class="_link _b" href="https://github.com/techie-joe/ace/" target="page_source">SOURCE</a>',
+              '|<a class="_link _b" href="https://github.com/techie-joe/_ace/" target="page_builder">BUILDER</a>',
+            ].join('');
+          }
+          if( acelinks ) {
+            acelinks.innerHTML = [
+              '<div class="_pa _nav_color _radius_x5r">',
+              '<a class="_link" href="intro.html">Intro</a> ',
+              '</div><hr/>',
+            ].join('');
+          }
+        }
+      })(window);
     </script><!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
   </body>
 </html>
