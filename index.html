@@ -25,8 +25,8 @@
       @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } } /* dark theme */
       
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=0.1.24&b=322.8"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/style.css?v=0.1.24&b=322.8"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=0.1.24&b=323.9"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/style.css?v=0.1.24&b=323.9"/>
     <style>
       #_header ._header_layout { padding: 2rem 3rem; margin-top:0; }
       @media (max-width: 530px) {
@@ -80,6 +80,7 @@
     <div id="_contents">
       <div class="_view">
         <div class="_view_layout">
+          <div id="acelinks"></div>
           <header id="_header">
             <div class="_header_layout">
               <div id="intro">
@@ -173,7 +174,6 @@
                   </div>
                 </div>
                 <hr>
-                <div id="acelinks"></div>
               </article>
             </div>
           </main>
@@ -184,7 +184,7 @@
                   <div class="_f_fit">
                     <p class="_small _mono" style="margin:0 -.3em;"><a class="_link _b" href="https://techie-joe.github.io/ace/">LIVE</a>|<a class="_link _b" href="http://localhost/ace/">LOCAL</a><span id="sourceref"></span>
                     </p>
-                    <p class="_smaller _mono">Version: 0.1.24 - <span class="_no_wrap">b322.8</span></p>
+                    <p class="_smaller _mono">Version: 0.1.24 - <span class="_no_wrap">b323.9</span></p>
                   </div>
                   <div class="_f_12_4">
                     <div class="_smaller _text_justify">Some part of this site may come from external sources. Those files <b class="_tc_contra">may not be included</b> in the distributed packages of this template due to the original author's terms. References to obtain them directly from the author will be provided.
@@ -200,7 +200,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.24&b=322.8" defer="defer">
+    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.24&b=323.9" defer="defer">
     </script>
     <style id="_needjs">._needjs { display: none !important; }</style>
     <script>
@@ -218,9 +218,9 @@
           }
           if( acelinks ) {
             acelinks.innerHTML = [
-              '<div class="_pa _nav_color _radius_x5r">',
-              '<a class="_link" href="intro.html">Intro</a> ',
-              '</div><hr/>',
+              '<div class="_relative"><div class="_pa _absolute">',
+              '<a class="_link _nav_icon" href="intro.html">&bull;</a> ',
+              '</div></div>',
             ].join('');
           }
         }
