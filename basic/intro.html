@@ -21,12 +21,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
     <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/><!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
     <style>
-      html { background-color: #ddd; color: #666; } /* light theme - (default) */
-      @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } } /* dark theme */
+      html { background-color: #ddd; color: #666; }
+      a { color:inherit; }
+      hr { border-top: 0; border-color: #888; }
+      @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } }
       
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=0.1.24&b=323.12"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/basic_style.css?v=0.1.24&b=323.12"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=1.0.0&b=323.12"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/basic_style.css?v=1.0.0&b=323.12"/>
     <style>
       #_header ._header_layout { padding: 2rem 3rem; margin-top:0; }
       @media (max-width: 530px) {
@@ -120,11 +122,49 @@
                     </ul>
                   </div>
                 </div>
+                <hr>
+                <div class="_flex _gap_2">
+                  <div class="_f_2_1">
+                    <section class="_mb_2">
+                      <h2>Available in light and dark</h2>
+                      <p class="_text_justify">This template is readily available in both light and dark color schemes. You can easily switch between the two by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code>. You may also use a button or a script to programmatically execute <code class="_code _no_wrap">base.theme.change()</code>.</p>
+                      <p class="_no_print _needjs"><a class="_needjs _btnlink" href="" onclick="event.preventDefault();base.theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
+                            </svg></i> <span class="_btnlabel">Change Theme</span></a>
+                      </p>
+                    </section>
+                  </div>
+                  <div class="_f_2_1">
+                    <section class="_mb_2">
+                      <h2>Good design, even in print</h2>
+                      <p class="_text_justify">You will want a website that looks great when printed. This template excel on paper. Enjoy good design and functionality, viewed digitally or in print. Elevate your professionalism with a website that stand out in every medium.</p>
+                      <p class="_no_print _needjs"><a class="_btnlink" href="" title="Print Page (Ctrl+P)" onclick="event.preventDefault();window.print();"><i class="_isvg">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M18,3H6V7H18M19,12A1,1 0 0,1 18,11A1,1 0 0,1 19,10A1,1 0 0,1 20,11A1,1 0 0,1 19,12M16,19H8V14H16M19,8H5A3,3 0 0,0 2,11V17H6V21H18V17H22V11A3,3 0 0,0 19,8Z" fill="currentColor" fill-opacity="1"></path>
+                            </svg></i> <span class="_btnlabel">Print Page</span></a>
+                      </p>
+                    </section>
+                  </div>
+                </div>
+                <hr>
               </article>
             </div>
           </main>
           <footer id="_footer">
             <div class="_footer_layout">
+              <div class="_pa _nav_color _radius_x5r">
+                <div class="_flex _gap_a">
+                  <div class="_f_fit">
+                    <div class="_smaller _mono">Basic Template by Techie Joe <br/>
+                      Version: 1.0.0 - <span class="_no_wrap">b323.12</span>
+                    </div>
+                  </div>
+                  <div class="_f_12_4">
+                    <div class="_smaller _text_justify">Some part of this site may come from external sources. Those files <b class="_tc_contra">may not be included</b> in the distributed packages of this template due to the original author's terms. References to obtain them directly from the author will be provided.</div>
+                  </div>
+                </div>
+              </div>
               <hr>
               <p class="_small _system">&copy; Copyright 2025 Tidloo</p>
             </div>
@@ -132,14 +172,14 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.24&b=323.12">
+    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=1.0.0&b=323.12">
     </script>
     <script>
       (function(w){
         if( w.location.hostname === 'localhost' ) {
           if( acelinks ) {
             acelinks.innerHTML = [
-              '<div class="_relative"><div class="_pa _absolute" style="z-index:1;">',
+              '<div class="_relative _no_print"><div class="_pa _absolute" style="z-index:1;">',
               '<a class="_link _nav_icon" href=".." title="Back to Ace Template"><i class="_itext"><i class="itext">&larr;</i></i></a> ',
               '</div></div>',
             ].join('');
