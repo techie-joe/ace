@@ -25,8 +25,8 @@
       @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } } /* dark theme */
       
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=0.1.24&b=323.9"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/basic_style.css?v=0.1.24&b=323.9"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=0.1.24&b=323.10"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/basic_style.css?v=0.1.24&b=323.10"/>
     <style>
       #_header ._header_layout { padding: 2rem 3rem; margin-top:0; }
       @media (max-width: 530px) {
@@ -80,7 +80,7 @@
     <div id="_contents">
       <div class="_view">
         <div class="_view_layout">
-          <div id="acelinks"></div>
+          <aside id="acelinks"></aside>
           <header id="_header">
             <div class="_header_layout">
               <div id="intro">
@@ -101,7 +101,7 @@
               <article>
                 <section class="_mv_2">
                   <p class="_text_justify" style="min-height:5rem">This template comes with <b class="_h7">pre-made components</b> and <b class="_h7">helper classes</b>, giving you an easy building experience. We have simplified web creation to make it accessible to everyone, even those without technical expertise. Dive in and start building your website right away. With a variety of customization options, you can create a professional and unique website tailored to your needs.</p>
-                  <div class="_mv _nav_color _radius_x5r _pa_x5r _ph"><a class="_btnlink download" href="" title="Get the template" onclick="event.preventDefault();undefined"><span class="_btnlabel">Download</span></a><a class="_btnlink viewdemo" href="/ace/demo/" title="Explore demo"><span class="_btnlabel">Explore</span></a>
+                  <div class="_mv _nav_color _radius_x5r _pa_x5r _ph _no_print"><a class="_btnlink download" href="" title="Get the template" onclick="event.preventDefault();undefined"><span class="_btnlabel">Download</span></a><a class="_btnlink viewdemo" href="/ace/demo/" title="Explore demo"><span class="_btnlabel">Explore</span></a>
                   </div>
                 </section>
                 <hr>
@@ -116,7 +116,7 @@
                       </div>
                       <div class="_f_12_4">
                         <ul class="_no_margin">
-                          <li><a class="_link" href="/ace/basic/intro.html">Ace Basic</a></li>
+                          <li><a class="_link" href="/ace/basic/intro.html">Basic Template</a></li>
                         </ul>
                       </div>
                     </div>
@@ -159,12 +159,12 @@
                     <p class="_small _mono" style="margin:0 -.3em;"><a class="_link _b" href="https://techie-joe.github.io/ace/">LIVE</a>|<a class="_link _b" href="http://localhost/ace/">LOCAL</a><span id="sourceref"></span>
                     </p>
                     <p class="_smaller _mono">Ace Template by Techie Joe <br/>
-                      Version: 0.1.24 - <span class="_no_wrap">b323.9</span>
+                      Version: 0.1.24 - <span class="_no_wrap">b323.10</span>
                     </p>
                   </div>
                   <div class="_f_12_4">
                     <div class="_smaller _text_justify">Some part of this site may come from external sources. Those files <b class="_tc_contra">may not be included</b> in the distributed packages of this template due to the original author's terms. References to obtain them directly from the author will be provided.
-                      <span class="_no_wrap">• Thanks to</span> Matt at <a class="_no_color" href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">SVGBackgrounds</a> for free SVG images.
+                      <span class="_no_wrap">&bull; Thanks to</span> Matt at <a class="_no_color" href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">SVGBackgrounds</a> for free SVG images.
                     </div>
                   </div>
                 </div>
@@ -176,7 +176,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.24&b=323.9">
+    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.24&b=323.10">
     </script>
     <style id="_needjs">._needjs { display: none !important; }</style>
     <script>
@@ -195,7 +195,7 @@
           if( acelinks ) {
             acelinks.innerHTML = [
               '<div class="_relative"><div class="_pa _absolute">',
-              '<a class="_link _nav_icon" href="info.html" title="Info page">&bull;</a> ',
+              '<a class="_link _nav_icon" href="info.html" title="Info page"><i class="_itext"><i class="itext">&middot;</i></i></a> ',
               '</div></div>',
             ].join('');
           }
