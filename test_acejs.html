@@ -24,6 +24,7 @@
       ._inline { display:inline }
       ._small  { font-size:.9em }
       ._mono   { font-family: 'Consolas',monospace; }
+      ._pre    {  }
       #nav .icon { text-align:center }
       #nav ._link {
         text-decoration: none;
@@ -36,6 +37,10 @@
         color:inherit;
       }
       #nav ._link:hover { outline: 2px solid #888; }
+      .h { color:#000 }
+      @media (prefers-color-scheme: dark) {
+        .h { color:#fff }
+      }
       
     </style>
     <style>
@@ -59,9 +64,9 @@
                 </section>
                 <hr>
                 <section>
-                  <h1 class="_h7 _small _mono">Test AceJs</h1>
-                  <div class="_p _mono _small _scrollable _full_width _text_left">
-                    <div id="jsout"></div>
+                  <h1 class="_h7 h _small _mono">Test AceJs</h1>
+                  <div class="_p _mono _scrollable _full_width _text_left">
+                    <pre id="jsout"></pre>
                   </div>
                 </section>
                 <hr>
