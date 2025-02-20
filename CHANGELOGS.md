@@ -1,8 +1,9 @@
 ## Change logs
 
-### Feb 20, 2025 - v0.1.24 b323.16
+### Feb 20, 2025 - v0.1.24 b323.17
 - build: acejs.
 - improve content & packages: basic, ace.
+- update: site content structure & copyright vars
 - update: demo navbar.
 
 ### Feb 16, 2025 - v0.1.24 b322.8
