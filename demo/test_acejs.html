@@ -2,14 +2,14 @@
 <html class="_nojs _scrollbar _a" id="_html" lang="en"><!-- layout:html -->
   <head>
     <meta charset="utf-8"/>
-    <title>Test CSS</title>
+    <title>Test AceJs</title>
     <meta name="description" content="Test page."/>
-    <meta name="author" content="(unknown)"/>
+    <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo"/>
-    <meta property="og:title" content="Test CSS"/>
+    <meta property="og:title" content="Test AceJs"/>
     <meta property="og:description" content="Test page."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/test_css.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/demo/test_acejs.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -24,6 +24,9 @@
       ._inline { display:inline }
       ._small  { font-size:.9em }
       ._mono   { font-family: 'Consolas',monospace; }
+      ._pre    {  }
+      ._scrollable { overflow:auto; scroll-behavior:smooth; }
+      ._m0 { margin:0 }
       #nav .icon { text-align:center }
       #nav ._link {
         text-decoration: none;
@@ -37,6 +40,23 @@
       }
       #nav ._link:hover { outline: 2px solid #888; }
       
+      #jso {
+        height:30em;
+        background-color: #181818;
+        color: #ddd;
+        border-radius: .5rem;
+        box-shadow: 0 0 10px #080808 inset;
+      }
+      
+      #jsout { padding:.5rem; margin:0; }
+      
+      #jsout hr { border-color:#333; }
+      
+      .h { color:#000 }
+      @media (prefers-color-scheme: dark) {
+        .h { color:#fff }
+      }
+      
     </style>
     <style>
       html { font-family: system-ui, sans-serif; background-color: #ddd; color: #666; }
@@ -44,6 +64,7 @@
       @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } a { color:#7a8eea; } }
       
     </style>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/scrollbar.css?v=0.1.24&b=323.15"/>
   </head>
   <body id="_body">
     <div id="_contents">
@@ -59,21 +80,39 @@
                 </section>
                 <hr>
                 <section>
-                  <h1 class="_h7 _small _mono">Test CSS</h1>
-                  <div class="_p _mono _small _scrollable _full_width _text_left"></div>
+                  <h1 class="_h7 h _small _mono">Test AceJs</h1>
+                  <div class="_mono _scrollable _full_width _text_left" id="jso">
+                    <pre id="jsout"></pre>
+                  </div>
                 </section>
-                <hr>
               </article>
             </div>
           </main>
+          <footer id="_footer">
+            <div class="_footer_layout">
+              <hr>
+              <p class="_small _system">&copy; Copyright 2025 Tidloo</p>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=0.1.24&b=323.14" defer="defer">
+    <script type="text/javascript" src="/_ace/scripts/ts_js/ace.js?v=0.1.24&b=323.15" defer="defer">
+    </script>
+    <script type="text/javascript" src="/_ace/scripts/test_js/test_ace.js?v=0.1.24&b=323.15" defer="defer">
     </script>
     <script>
       (function(){
+      
+        var jstest = document.getElementById('jstest');
         jstest && (jstest.setAttribute('style','color:green;'),jstest.innerHTML = '[JS OK]');
+      
+        // Automatically scroll to the bottom of the page when the page loads
+        var jso = document.getElementById('jso');
+        window.onload = function() {
+            jso.scrollTo(0, jso.scrollHeight);
+        };
+      
       })();
     </script><!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
   </body>

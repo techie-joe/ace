@@ -1,11 +1,11 @@
 
-Copyright (c) 2025 - Tidloo
+Copyright (c) 2025 - Techie Joe
 
-SOFTWARE : Ace Template - v0.1.24
+SOFTWARE : Basic Template - v1.0.0
 AUTHOR   : Developed and owned by Techie Joe
 
 ----------------------------------------------------------------------------
-LICENSE AGREEMENT for Ace Template
+LICENSE AGREEMENT for Basic Template
 ----------------------------------------------------------------------------
 
 This software and its contents are exclusively owned by the author. By using
