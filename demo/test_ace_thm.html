@@ -2,11 +2,11 @@
 <html class="_nojs _scrollbar _a" id="_html" lang="en"><!-- layout:html -->
   <head>
     <meta charset="utf-8"/>
-    <title>Test AceJs</title>
+    <title>Testing AceJs Theme</title>
     <meta name="description" content="Test page."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Test AceJs"/>
+    <meta property="og:title" content="Testing AceJs Theme"/>
     <meta property="og:description" content="Test page."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/demo/test_ace_thm.html?utm_source=homescreen"/>
@@ -21,14 +21,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
     <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/><!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
     <style>
+      ._hidden { display:none }
       ._inline { display:inline }
       ._small  { font-size:.9em }
       ._mono   { font-family: 'Consolas',monospace; }
       ._pre    {  }
       ._scrollable { overflow:auto; }
       ._m0 { margin:0 }
-      #nav .icon { text-align:center }
-      #nav ._link {
+      
+      .nav .icon { text-align:center }
+      .nav ._link {
         text-decoration: none;
         padding:.1em .3em;
         border-radius: .2em;
@@ -38,7 +40,7 @@
         font-weight: bold;
         color:inherit;
       }
-      #nav ._link:hover { outline: 2px solid #888; }
+      .nav ._link:hover { outline: 2px solid #888; }
       
       #jso {
         height:30em;
@@ -50,11 +52,12 @@
       
       ._dark #jso {
         background-color: #181818;
-        color: #ddd;
+        color: #aaa;
         box-shadow: 0 0 10px #080808 inset;
       }
       
       #jsout { padding:.5rem; margin:0; }
+      #jsout * { line-height:1; }
       
       #jsout hr { border-color:#333; border-bottom:0; }
       
@@ -62,6 +65,9 @@
       @media (prefers-color-scheme: dark) {
         .h { color:#fff }
       }
+      
+      #_html.pink { background-color: pink; }
+      #_html.light { background-color: antiquewhite; }
       
     </style>
     <style>
@@ -80,17 +86,25 @@
           <main id="_main">
             <div class="_main_layout">
               <article>
-                <section class="_p">
-                  <div class="_inline _mono" id="nav"><a class="_needjs _link icon" href="#" onclick="event.preventDefault();window.history.back();" title="Back to previous page">&larr;</a> <a class="_link" href="/ace/" title="Back to Ace Template">Ace</a> <a class="_link" href="/ace/demo/" title="Go to Ace Template Demo">Demo</a> <a class="_link icon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();ace.theme.change()">&bull;</a>
+                <section class="nav _p">
+                  <div class="_inline _mono"><a class="_needjs _link icon" href="#" onclick="event.preventDefault();window.history.back();" title="Back to previous page">&larr;</a> <a class="_link" href="/ace/" title="Back to Ace Template">Ace</a> <a class="_link" href="/ace/demo/" title="Go to Ace Template Demo">Demo</a> <a class="_link icon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
                   </div>
-                  <div class="_inline _small"><b><span id="jstest" style="color:red;">[JS KO]</span></b></div>
+                  <div class="_inline _mono _small"><b><span id="jstest" style="color:red;">[JS:OF]</span></b></div>
+                </section>
+                <hr>
+                <section class="nav">
+                  <div class="_inline _mono"> <a class="_link icon" href="#" title="Clear Test" onclick="event.preventDefault();test.clear();">Clear</a> <a class="_link icon" href="#" title="Run Test" onclick="event.preventDefault();test.run();">Run &raquo;</a> <a class="_link icon" href="#" title="Run updateClass" onclick="event.preventDefault();test.run_updateClass();">updateClass</a> <a class="_link icon" href="#" title="Run Theme Set" onclick="event.preventDefault();test.run_set();">Set</a> <a class="_link icon" href="#" title="Run Theme Change" onclick="event.preventDefault();test.run_change();">Change</a> <a class="_link icon" href="#" title="Reset Theme Change" onclick="event.preventDefault();test.run_change_reset();">=</a>
+                  </div>
                 </section>
                 <hr>
                 <section>
-                  <h1 class="_h7 h _small _mono">Test AceJs</h1>
+                  <h1 class="_h7 h _small _mono">Testing AceJs Theme</h1>
                   <div class="_mono _scrollable _full_width _text_left" id="jso">
-                    <pre id="jsout"></pre>
+                    <pre class="_smaller" id="jsout"></pre>
                   </div>
+                </section>
+                <section class="_hidden">
+                  <div id="element"></div>
                 </section>
               </article>
             </div>
@@ -112,13 +126,11 @@
       (function(){
       
         var jstest = document.getElementById('jstest');
-        jstest && (jstest.setAttribute('style','color:green;'),jstest.innerHTML = '[JS OK]');
+        jstest && (jstest.setAttribute('style','color:green;'),jstest.innerHTML = '[JS:OK]');
       
         // Automatically scroll to the bottom of the page when the page loads
         var jso = document.getElementById('jso');
-        window.onload = function() {
-            jso.scrollTo(0, jso.scrollHeight);
-        };
+        window.onload = function() { test.run(); };
       
       })();
     </script><!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
