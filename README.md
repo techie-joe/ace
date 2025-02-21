@@ -4,7 +4,7 @@
 
 Title    : Ace Template  
 Version  : 0.1.24  
-Build    : 324.18  
+Build    : 325.19  
 Author   : Techie Joe  
 
 WEBSITE  : https://techie-joe.github.io/ace/  
