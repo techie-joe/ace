@@ -1,1 +1,1 @@
-/*! Ace Template | v0.1.24 b326.20 | Copyright 2025 - Techie Joe | https://github.com/techie-joe/ace */
+/*! Ace Template | v0.1.24 b326.21 | Copyright 2025 - Techie Joe | https://github.com/techie-joe/ace */
