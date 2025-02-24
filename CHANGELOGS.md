@@ -1,5 +1,8 @@
 ## Change logs
 
+### Feb 23, 2025 - v0.1.25 b327.23
+- update: theme.v1.0
+
 ### Feb 21, 2025 - v0.1.24 b327.22
 - improve: ace_theme.v1.
 - build: acejs.

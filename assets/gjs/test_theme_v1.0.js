@@ -1,10 +1,15 @@
+/*! For license information please see theme_v1.0.min.js.LICENSE.txt */
+/* ===============================================================
+// TESTING ThemeJs
+// ============================================================ */
 (() => {
   const
     now = () => new Date().getMilliseconds(),
     RED = 'color:#e22200;',
     GREEN = 'color:#008800;',
     ORANGE = 'color:#916900;',
-    PURPLE = 'color:#9f40a9',
+    PURPLE = 'color:#9f40a9;',
+    BROWN = 'color:#a52a2a;',
     W = window,
     D = document,
     A = a => typeof a,
@@ -49,8 +54,8 @@
     jstest && (jstest.setAttribute('style', RED), jstest.innerHTML = '[JS:ER]');
   };
 
-  note('Initiate test.run() to begin.', ORANGE);
   note('Open developer console (Ctrl+Shift+J) for detailed info.', ORANGE);
+  note('Initiate test.run() to begin.', ORANGE);
 
   // ========================================================= run
   const run = () => {
@@ -58,6 +63,11 @@
     hr();
 
     log('Testing AceJs Theme');
+
+    // h = W.location.hostname;
+    // log(h);
+    // 'localhost'.replace(/\w/g,v=>v.charCodeAt(0))
+    // ((h)=>(h.split('').forEach((c)=>{c}),h))()
 
     const { ace, theme } = W;
 
@@ -95,7 +105,7 @@
         storage.set(KEY, value);
       },
       get: () => { hr(); note('get ' + KEY + ' = ' + storage.get(KEY)); roll(); },
-      remove: () => { hr(); note('remove ' + KEY + ' = ' + storage.remove(KEY)); roll(); },
+      remove: () => { hr(); note('remove ' + KEY + ' = ' + storage.remove(KEY), BROWN); roll(); },
       resetTheme: () => {
         hr();
         note('remove ' + TC + ' = ' + storage.remove(TC));
@@ -127,6 +137,15 @@
     const THEN = now();
     hr();
     const { ace } = W;
+
+    // =============================================== updateClass
+    if (!TEST(isFUN(ace.updateClass), 'window.ace.updateClass')) { return }
+
+    note(`DOC.className = ${DOC.className}`);
+    ace.updateClass(DOC, null, 'TEST');
+    note(`DOC.className = ${DOC.className}`);
+    ace.updateClass(DOC, 'TEST');
+    note(`DOC.className = ${DOC.className}`);
 
     note('testing logic for updateClass', ORANGE);
     const updateClass = (element, del, add) => {
@@ -161,7 +180,7 @@
 
         element.className = RES;
         return element;
-      } catch(e) { error('Error while executing updateClass : '+e); }
+      } catch (e) { error('Error while executing updateClass : ' + e); }
 
       hr();
 
@@ -180,15 +199,6 @@
       'A B C D',
       'E F'
     );
-
-    // =============================================== updateClass
-    if (!TEST(isFUN(ace.updateClass), 'window.ace.updateClass')) { return }
-
-    note(`DOC.className = ${DOC.className}`);
-    ace.updateClass(DOC, null, 'TEST');
-    note(`DOC.className = ${DOC.className}`);
-    ace.updateClass(DOC, 'TEST');
-    note(`DOC.className = ${DOC.className}`);
 
     hr();
     note(`Finished in ${now() - THEN}ms`);
@@ -253,7 +263,7 @@
     console.clear();
     jsout.innerHTML = '';
     jstest && (jstest.setAttribute('style', GREEN), jstest.innerHTML = '[JS:OK]');
-    note('Initiate test.run() to begin.', ORANGE);
+    note('Cleared.', ORANGE);
   }; // clear
 
   W.test = {

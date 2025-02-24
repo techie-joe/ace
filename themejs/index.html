@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8"/>
     <title>ThemeJs by Techie Joe</title>
-    <meta name="description" content="A web plugin to toggle through multiple themes."/>
+    <meta name="description" content="A universal web plugin that toggles through multiple themes."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="ThemeJs by Techie Joe"/>
-    <meta property="og:description" content="A web plugin to toggle through multiple themes."/>
+    <meta property="og:description" content="A universal web plugin that toggles through multiple themes."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/themejs/index.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://themejs.pages.dev/v1.0/index.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-    <meta id="_color_scheme" name="color-scheme"/>
+    <meta id="_color_scheme" name="color-scheme" content="light dark"/>
     <meta id="_theme_color" name="theme-color" content="#222222"/>
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/ace/icons/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/ace/icons/favicon-32x32.png"/>
@@ -26,10 +26,10 @@
       @media (prefers-color-scheme: dark) { html { background-color: #222; color: #999; } a { color:#7a8eea; } }
       
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=1.0.0&b=327.23"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/gcss/demo.css?v=1.0.0&b=327.23"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/ace.css?v=1.0.0&b=328.24"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/gcss/demo.css?v=1.0.0&b=328.24"/>
     <style>
-      #_header ._header_layout { padding: 2rem 3rem; margin-top:0; }
+      #_header ._header_layout { padding: 3rem 1rem 2rem 1rem; margin-top:0; }
       @media (max-width: 530px) {
       #_header ._header_layout { padding: 3rem 1rem 2rem; }
       }
@@ -37,21 +37,22 @@
       #_header ._header_layout { position:relative }
       #_header ._header_layout:before {
         content: 'tjs';
+        display: block;
+        position: absolute;
+        user-select: none;
+        opacity: 0.1;
+        line-height: 0.7;
         font-family: serif;
         font-weight: bold;
-        font-size: 30rem;
-        display: block;
-        line-height: 0.7;
-        position: absolute;
-        top: 0;
-        right: 4%;
-        opacity: 0.1;
-        user-select: none;
+        font-size: 36rem;
+        top: -10%;
+        right: 6rem;
+        letter-spacing: -0.12em;
       }
       #_main,
       #intro { position:relative; z-index:1 }
       
-      #intro { max-width: 25em; }
+      #intro { max-width: 16em; }
       
       #intro ._hero_1 span { line-height:1 }
       
@@ -88,9 +89,9 @@
                 <h1 class="_hero_2"><span class="t1">Theme</span><span class="t2 _tc_primary">Js</span></h1>
                 <p class="_smaller _system">by <a class="_stay_fresh" href="https://themeforest.net/user/techiejoe" target="page_author">Techie Joe</a>
                 </p>
-                <p class="_text_justify">A web plugin to toggle through multiple themes.</p>
+                <p class="_text_justify">A universal web plugin that toggles through multiple themes.</p>
               </div>
-              <div class="_no_print _needjs" id="topi"><a class="_needjs _link _nav_icon _hover_scale" href="#" onclick="event.preventDefault();base.theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
+              <div class="_no_print _needjs" id="topi"><a class="_needjs _link _nav_icon _hover_scale" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
                     <svg viewBox="0 0 24 24">
                       <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                     </svg></i></a>
@@ -102,34 +103,13 @@
               <article>
                 <div class="_mv _nav_color _radius_x5r _pa_x5r _ph _no_print"><a class="_btnlink download" href="#" title="Get the template" onclick="event.preventDefault();undefined"><span class="_btnlabel">Download</span></a><a class="_btnlink viewdemo" href="test_theme.html" title="Go to the test page"><span class="_btnlabel">Test It</span></a>
                 </div>
-                <div class="_flex pages _mv">
-                  <div class="_f_12_4">
-                    <ul class="_no_margin">
-                        <li><a class="_link" href="/ace/basic/index.html">Home Page</a></li>
-                        <li><a class="_link" href="/ace/basic/full_screen.html">Full Screen</a></li>
-                        <li><a class="_link" href="/ace/basic/split_screen.html">Split Screen</a></li>
-                        <li><a class="_link" href="/ace/basic/flex_gallery.html">Flex Gallery</a></li>
-                        <li><a class="_link" href="/ace/basic/classic_page.html">Classic Page</a></li>
-                        <li><a class="_link" href="/ace/basic/classic_list.html">Classic List</a></li>
-                    </ul>
-                  </div>
-                  <div class="_f_12_4">
-                    <ul class="_no_margin">
-                        <li><a class="_link" href="/ace/basic/coming_soon.html" title="Quickly setup a page to go live real soon.">Coming soon</a></li>
-                        <li><a class="_link" href="/ace/basic/closed.html" title="When you decide to temporarily close your website.">Temporary closed</a></li>
-                        <li><a class="_link" href="/ace/basic/404.html" title="When a browser lands on a missing page.">404 -- Not found</a></li>
-                        <li><a class="_link" href="/ace/basic/500.html" title="When your server encounters an error.">500 -- Oops!</a></li>
-                        <li><a class="_link" href="/ace/basic/blank.html" title="A blank page to start building.">Blank Page</a></li>
-                    </ul>
-                  </div>
-                </div>
                 <hr>
                 <div class="_flex _gap_2">
                   <div class="_f_2_1">
                     <section class="_mb_2">
-                      <h2>Available in light and dark and more ..</h2>
-                      <p class="_text_justify">This template is readily available in both light and dark color schemes. You can easily switch between the two by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code>. You may also use a button or a script to programmatically execute <code class="_code _no_wrap">base.theme.change()</code>.</p>
-                      <p class="_no_print _needjs"><a class="_needjs _btnlink" href="#" onclick="event.preventDefault();base.theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
+                      <h2>Available in light, dark and more ..</h2>
+                      <p class="_text_justify">This template is readily available in both light and dark theme, as well as other configurable themes in the menu. You can easily toggle through them by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code> or by clicking a button to that execute <code class="_code _no_wrap">theme.change()</code>.</p>
+                      <p class="_no_print _needjs"><a class="_needjs _btnlink" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
                             <svg viewBox="0 0 24 24">
                               <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                             </svg></i> <span class="_btnlabel">Change Theme</span></a>
@@ -158,7 +138,7 @@
                 <div class="_flex _gap_a">
                   <div class="_f_fit">
                     <div class="_smaller _mono">ThemeJs by Techie Joe <br/>
-                      Version: 1.0.0 - <span class="_no_wrap">b327.23</span>
+                      Version: 1.0.0 - <span class="_no_wrap">b328.24</span>
                     </div>
                   </div>
                   <div class="_f_12_4">
@@ -176,7 +156,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/cjs/thm.js?v=1.0.0&b=327.23" defer="defer">
+    <script type="text/javascript" src="/ace/assets/gjs/theme_v1.0.min.js?v=1.0.0&b=328.24" defer="defer">
     </script>
     <script>
       (function(w){
@@ -184,7 +164,7 @@
           if( acelinks ) {
             acelinks.innerHTML = [
               '<div class="_relative _no_print"><div class="_pa _absolute" style="z-index:1;">',
-              '<a class="_link _nav_icon" href=".." title="Back to parents page"><i class="_itext"><i class="itext">&larr;</i></i></a> ',
+              '<a class="_link _nav_icon" href=".." title="Go to parent\'s page"><i class="_itext"><i class="itext">&times;</i></i></a>',
               '</div></div>',
             ].join('');
           }
