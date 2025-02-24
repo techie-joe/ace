@@ -57,11 +57,6 @@
   note('Open developer console for detailed info. (Ctrl+Shift+J).', ORANGE);
   note('Initiate test.run() to begin.', ORANGE);
 
-  const
-    KEY = 'cuba',
-    TC = 'theme',
-    TL = 'themes';
-
   // ========================================================= run
   const run = () => {
     const THEN = now();
@@ -82,20 +77,31 @@
 
     // =================================================== storage
     if (!TEST(theme.fn.storage, 'window.theme.fn.storage')) { return }
-    const { storage:store } = theme.fn;
+    const { storage } = theme.fn;
     log(theme.fn.storage);
+    const
+      KEY = 'cuba',
+      TC = 'theme',
+      TL = 'themes';
     W.storage = {
       set: () => {
         var value = 'T' + now();
         hr(); note('set ' + KEY + ' = ' + value, PURPLE); roll();
-        store.set(KEY, value);
+        storage.set(KEY, value);
       },
-      get: () => { hr(); note('get ' + KEY + ' = ' + store.get(KEY)); roll(); },
-      remove: () => { hr(); note('remove ' + KEY + ' = ' + store.remove(KEY), BROWN); roll(); },
+      get: () => { hr(); note('get ' + KEY + ' = ' + storage.get(KEY)); roll(); },
+      remove: () => { hr(); note('remove ' + KEY + ' = ' + storage.remove(KEY), BROWN); roll(); },
+      resetTheme: () => {
+        hr();
+        note('remove ' + TC + ' = ' + storage.remove(TC), BROWN);
+        note('remove ' + TL + ' = ' + storage.remove(TL), BROWN);
+        theme.set(['_dark']);
+        roll();
+      },
     };
-    note('get ' + KEY + '   = ' + store.get(KEY));
-    note('get ' + TC + '  = ' + store.get(TC));
-    note('get ' + TL + ' = ' + store.get(TL));
+    note('get ' + KEY + '   = ' + storage.get(KEY));
+    note('get ' + TC + '  = ' + storage.get(TC));
+    note('get ' + TL + ' = ' + storage.get(TL));
 
     // ===================================================== theme
 
@@ -111,28 +117,11 @@
   const run_check = () => {
     hr();
 
-    if (!TEST(isFUN(theme.list), 'window.theme.list')) { return }
     if (!TEST(isFUN(theme.current), 'window.theme.current')) { return }
-
-    note(`theme.list    = [${theme.list()}]`);
     note(`theme.current = ${theme.current()}`);
 
-    roll();
-  }; // run_check
-
-  // =================================================== run_reset
-  const run_reset = () => {
-    hr();
-
-    if (!TEST(isFUN(theme.reset), 'window.theme.reset')) { return }
-    
-    const { storage:store } = theme.fn;
-
-    theme.reset();
-    note('remove ' + TC + ' = ' + store.remove(TC), BROWN);
-    note('remove ' + TL + ' = ' + store.remove(TL), BROWN);
+    if (!TEST(isFUN(theme.list), 'window.theme.list')) { return }
     note(`theme.list    = [${theme.list()}]`);
-    note(`theme.current = ${theme.current()}`);
 
     roll();
   }; // run_check
@@ -275,7 +264,6 @@
     clear,
     run,
     run_check,
-    run_reset,
     run_set,
     run_change,
     run_updateClass,
