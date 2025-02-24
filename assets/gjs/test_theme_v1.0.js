@@ -54,7 +54,7 @@
     jstest && (jstest.setAttribute('style', RED), jstest.innerHTML = '[JS:ER]');
   };
 
-  note('Open developer console (Ctrl+Shift+J) for detailed info.', ORANGE);
+  note('Open developer console for detailed info. (Ctrl+Shift+J).', ORANGE);
   note('Initiate test.run() to begin.', ORANGE);
 
   // ========================================================= run
@@ -78,20 +78,13 @@
     note(`theme.list    = [${theme.list()}]`);
     note(`DOC.className = ${DOC.className}`);
 
-    hr();
-    // ======================================================= ace
-    if (!TEST(ace, 'window.ace')) { return }
-    log(ace)
+    if (!TEST(isFUN(theme.set), 'window.theme.set')) {  }
 
-    // note(`Testing fail procedure. See console.`, ORANGE)
-    // const { _try, invalid, failTo } = ace;
-    // _try(invalid, 'err');
-    // _try(invalid, 'aaa', 'fff');
-    // _try(invalid, 'aaa', 'fff', 'ccc');
-    // _try(failTo, 'www');
+    // ======================================================= ace
+    if (!TEST(theme.fn, 'window.theme.fn')) {  }
 
     // =================================================== storage
-    if (!TEST(ace.storage, 'window.ace.storage')) { return }
+    if (!TEST(localStorage, 'window.localStorage')) { return }
     const { storage } = ace;
     log(storage);
     const
@@ -119,8 +112,7 @@
 
     // ===================================================== theme
 
-    hr();
-    note(`Finished in ${now() - THEN}ms`);
+    note(`Finished in ${now() - THEN}ms`, ORANGE);
     roll();
   }; // run
 
@@ -209,8 +201,6 @@
   const run_set = (n) => {
     hr();
 
-    if (!TEST(isFUN(theme.set), 'window.theme.set')) { return }
-
     var before = theme.current() || 'none';
 
     if (n == 1) {
@@ -263,7 +253,7 @@
     console.clear();
     jsout.innerHTML = '';
     jstest && (jstest.setAttribute('style', GREEN), jstest.innerHTML = '[JS:OK]');
-    note('Cleared.', ORANGE);
+    note('Cleared', ORANGE);
   }; // clear
 
   W.test = {

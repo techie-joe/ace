@@ -7,7 +7,7 @@ Version  : 1.0.0
 Build    : 328.24  
 Author   : Techie Joe  
 
-WEBSITE  : https://themejs.pages.dev/v1.0/  
+WEBSITE  : https://themejs.pages.dev/  
 
 AUTHOR   : https://themeforest.net/user/techiejoe  
 
