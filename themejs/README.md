@@ -4,7 +4,7 @@
 
 Title    : ThemeJs  
 Version  : 1.0.0  
-Build    : 329.25  
+Build    : 330.26  
 Author   : Techie Joe  
 
 WEBSITE  : https://themejs.pages.dev/  
