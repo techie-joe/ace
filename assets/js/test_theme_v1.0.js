@@ -281,4 +281,6 @@
     run_updateClass,
   };
 
+  W.onload = run;
+
 })();
