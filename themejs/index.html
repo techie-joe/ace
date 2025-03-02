@@ -55,7 +55,7 @@
       
       #intro ._hero_1 span { line-height:1 }
       
-      #topi { position: absolute; top: 3.3rem; right: 5rem; }
+      #topi { position: absolute; top: 3.3rem; right: 5rem; z-index:1; }
       #topi ._isvg { height: 2.5em; min-width: 2.5em; }
       @media (max-width: 530px) {
       #topi { top: 1rem; right: 1rem; }
@@ -66,6 +66,33 @@
       html   #_header { background: #ccc; }
       ._dark #_header { background: #111; }
       
+      #_html.pink .download { background-color: #ff4b6a; color:#fff; border-color:#ff2c4f; font-size: 1.2em; }
+      .pink  #_header { background: #ff4b6a; color:#ffd0db; }
+      .pink  #_header h1 { color: #5e101d; }
+      .pink  #_header ._tc_primary { color: #fff; }
+      .pink #_header ._header_layout:before { color:#fff }
+      .pink #acelinks ._link { color: #fff; }
+      .pink #cta {
+        margin:-1.8em -1.4em 0;
+        background-color:#ffc0cb;color: #7c3944;
+      }
+      .pink #intro { max-width: none; }
+      .pink #about {
+        font-size: 1.6em;
+        margin-top: -0.6em;
+        margin-bottom: 3em;
+      }
+      .pink #author {
+        position: absolute;
+        bottom: -6em;
+        right: 2em;
+      }
+      .pink #_header ._header_layout:before {
+        text-shadow: -0.015em 0 #840c20;
+      }
+      .pink #cta { border-radius: 1.7rem; }
+      .pink ._btnlink { border-radius: 3rem; }
+      
       html   #_header h1 { color: #000; }
       ._dark #_header h1 { color: #fff; }
       
@@ -73,7 +100,11 @@
       
       #_html       .download { background-color: #1b36b0; color:#fff; border-color: #3046a8; }
       #_html._dark .download { background-color: #7a8eea; color:#000; border-color: #5f72c5; }
-      .download, .viewdemo { min-width: 6em; margin: .5em .3em; }
+      .download, .viewdemo { min-width: 6em; margin: .3em; }
+      
+      @media (max-width: 425px) {
+        #cta { text-align:center; }
+      }
       
     </style>
   </head>
@@ -84,11 +115,11 @@
           <aside id="acelinks"></aside>
           <header id="_header">
             <div class="_header_layout">
-              <div id="intro">
-                <h1 class="_hero_2"><span class="t1">Theme</span><span class="t2 _tc_primary">Js</span></h1>
-                <p class="_smaller _system">by <a class="_stay_fresh" href="https://themeforest.net/user/techiejoe" target="page_author">Techie Joe</a>
+              <div class="_relative" id="intro">
+                <h1 class="_hero_2" id="heading"><span class="t1">Theme</span><span class="t2 _tc_primary">Js</span></h1>
+                <p class="_smaller _system" id="author">by <a class="_stay_fresh" href="https://themeforest.net/user/techiejoe" target="page_author">Techie Joe</a>
                 </p>
-                <p class="_text_justify">A universal web plugin that toggles through multiple themes.</p>
+                <p class="_text_justify" id="about">A universal web plugin that toggles through multiple themes.</p>
               </div>
               <div class="_no_print _needjs" id="topi"><a class="_needjs _link _nav_icon _hover_scale" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
                     <svg viewBox="0 0 24 24">
@@ -100,31 +131,47 @@
           <main id="_main">
             <div class="_main_layout">
               <article>
-                <div class="_mv _nav_color _radius_x5r _pa_x5r _ph _no_print"><a class="_btnlink download" href="#" title="Get the template" onclick="event.preventDefault();undefined"><span class="_btnlabel">Download</span></a><a class="_btnlink viewdemo" href="test_theme.html" title="Go to the test page"><span class="_btnlabel">Test It</span></a>
+                <div class="_mv _nav_color _radius_x5r _pa_x5r _ph _no_print" id="cta"><a class="_btnlink download" href="https://themeforest.net/user/techiejoe" title="Get the template" target="page_download"><span class="_btnlabel">Download</span></a><a class="_btnlink viewdemo" href="test_theme.html" title="Go to the test page"><span class="_btnlabel">Test It</span></a>
                 </div>
                 <hr>
                 <div class="_flex _gap_2">
-                  <div class="_f_2_1">
+                  <div class="_f_12">
                     <section class="_mb_2">
-                      <h2>Available in light, dark and more ..</h2>
-                      <p class="_text_justify">This template is readily available in both light and dark theme, as well as other configurable themes in the menu. You can easily toggle through them by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code> or by clicking a button to that execute <code class="_code _no_wrap">theme.change()</code>.</p>
-                      <p class="_no_print _needjs"><a class="_needjs _btnlink" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
+                      <h2 class="_h2">Open up new possibilities with ThemeJs</h2>
+                      <p class="_text_justify"><b>ThemeJs</b> is a lightweight, easy-to-use, and highly configurable theme switcher plugin for your website and web application. Built with the user experience in mind, it is designed to be simple, easy to use, with no external dependencies.  It is a perfect solution for those who want to give their users the ability to switch between different themes on their website. ThemeJs is fully customizable, compatible with all major browsers and devices, and can be easily integrated into any website and web application. </p>
+                    </section>
+                  </div>
+                </div>
+                <div class="_flex _gap_2">
+                  <div class="_f_12_7">
+                    <section class="_mb_2">
+                      <h2 class="_h2">Available in light, dark and more ..</h2>
+                      <p class="_text_justify">This demo is readily available in both light and dark theme, as well as other configurable themes in the menu. You can easily switch through them by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code> or by clicking these buttons.</p>
+                      <div class="_p _no_print _needjs _small"> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set();">Default</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set(&quot;_dark&quot;);">Dark</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set(&quot;light&quot;);">Sephia</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set(&quot;pink&quot;);">Pink</a>
+                      </div>
+                      <div class="_p _no_print _needjs"><a class="_needjs _btnlink" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
                             <svg viewBox="0 0 24 24">
                               <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                             </svg></i> <span class="_btnlabel">Change Theme</span></a>
-                      </p>
+                      </div>
                     </section>
                   </div>
-                  <div class="_f_2_1">
+                  <div class="_f_12_5">
                     <section class="_mb_2">
-                      <h2>Good design, even in print</h2>
-                      <p class="_text_justify">You will want a website that looks great when printed. This template excel on paper. Enjoy good design and functionality, viewed digitally or in print. Elevate your professionalism with a website that stand out in every medium.</p>
-                      <p class="_no_print _needjs"><a class="_btnlink" href="#" title="Print Page (Ctrl+P)" onclick="event.preventDefault();window.print();"><i class="_isvg">
-                            <svg viewBox="0 0 24 24">
-                              <path d="M18,3H6V7H18M19,12A1,1 0 0,1 18,11A1,1 0 0,1 19,10A1,1 0 0,1 20,11A1,1 0 0,1 19,12M16,19H8V14H16M19,8H5A3,3 0 0,0 2,11V17H6V21H18V17H22V11A3,3 0 0,0 19,8Z" fill="currentColor" fill-opacity="1"></path>
-                            </svg></i> <span class="_btnlabel">Print Page</span></a>
-                      </p>
+                      <h2 class="_h2">OS aware</h2>
+                      <p class="_text_justify">ThemeJs automatically identifies user's operating system preferences and adapts automatically. This feature can be seen in this demo. You can test it by changing your operating system theme preference.</p>
                     </section>
+                  </div>
+                </div>
+                <div class="_flex _gap_2">
+                  <div class="_f_12_7">
+                    <section class="_mb_2">
+                      <h2 class="_h2">Properly coded with simplicity in mind</h2>
+                      <p class="_text_justify">ThemeJs registers a global <code class="_code _no_wrap">theme</code> interface for its functions, automatically detect user's preferences and register appropriate listeners. In most cases, you would only need to interact with <code class="_code _no_wrap">theme.set()</code> and <code class="_code _no_wrap">theme.change()</code>.</p>
+                    </section>
+                  </div>
+                  <div class="_f_12_5">
+                    <section class="_mb_2"></section>
                   </div>
                 </div>
                 <hr>
@@ -134,14 +181,11 @@
           <footer id="_footer">
             <div class="_footer_layout">
               <div class="_pa _nav_color _radius_x5r">
-                <div class="_flex _gap_a">
+                <div class="_flex _gap_a _gap_h_2">
                   <div class="_f_fit">
                     <div class="_smaller _mono">ThemeJs by Techie Joe <br/>
                       Version: 1.0.0 - <span class="_no_wrap">b332.28</span>
                     </div>
-                  </div>
-                  <div class="_f_12_4">
-                    <div class="_smaller _text_justify">Some part of this site may come from external sources. Those files <b class="_tc_contra">may not be included</b> in the distributed packages of this template due to the original author's terms. References to obtain them directly from the author will be provided.</div>
                   </div>
                 </div>
               </div>
@@ -163,7 +207,7 @@
           if( acelinks ) {
             acelinks.innerHTML = [
               '<div class="_relative _no_print"><div class="_pa _absolute" style="z-index:1;">',
-              '<a class="_link _nav_icon" href=".." title="Go to parent\'s page"><i class="_itext"><i class="itext">&times;</i></i></a>',
+              '<a class="_link _nav_icon _tc_contra" href=".." title="Go to parent\'s page"><i class="_itext"><i class="itext">&times;</i></i></a>',
               '</div></div>',
             ].join('');
           }
