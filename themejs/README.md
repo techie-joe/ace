@@ -4,7 +4,7 @@
 
 Title    : ThemeJs  
 Version  : 1.0.0  
-Build    : 334.29  
+Build    : 335.31  
 Author   : Techie Joe  
 
 WEBSITE  : https://themejs.pages.dev/  
@@ -13,18 +13,28 @@ AUTHOR   : https://themeforest.net/user/techiejoe
 
 ------------------------------------------------------------------
 
-Give your visitors a theme they like to use, and they will stay on
-your site much longer.
+### Open new possibilities with ThemeJs
 
-Add a web plugin to toggle through multiple themes.  In a click or
-a tap on a keyboard,  user can switch between themes by clicking a
-button or using the keyboard shortcut `Ctrl + Alt + T`.
+ThemeJs  is  a lightweight,  easy to use,  and highly configurable
+theme switcher for your website  and  web application.  Built with
+user experience in mind, it is designed to be simple, easy to use,
+with no external dependencies.  It is a perfect solution for those
+who want  to give  their  users  the  ability  to  switch  between
+different themes on their website.
 
-Programmatically execute `theme.change()` or `theme.set()`
-to create a variety of options for your visitors.
+ThemeJs is fully customizable,  compatible with all major browsers
+and devices, and can be easily integrated into any website and web
+application.
 
-User preferences are stored locally. It will stay through refresh,
-closing or reloading of the page.
+ThemeJs makes it easy  to switch  between different themes on your
+website.  You can easily switch between them  by clicking a button
+or by using the keyboard shortcut `Ctrl + Alt + T`.
+
+With a simple use of  `theme.set()` and `theme.change()`,  you can
+create a unique experience for your websites and web applications.
+
+Give your users a theme they like, and they will stay on your site
+much longer.
 
 This plugin is coded fresh and compiled to ECMAScript 6 (ES6) 2015
 Standard,  without any dependency to other scripts. The plugin are
