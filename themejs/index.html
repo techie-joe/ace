@@ -51,8 +51,6 @@
       #_main,
       #intro { position:relative; z-index:1 }
       
-      #intro { max-width: 16em; }
-      
       #intro ._hero_1 span { line-height:1 }
       
       #topi { position: absolute; top: 3.3rem; right: 5rem; z-index:1; }
@@ -66,26 +64,35 @@
       html   #_header { background: #ccc; }
       ._dark #_header { background: #111; }
       
-      #_html.pink .download { background-color: #ff4b6a; color:#fff; border-color:#ff2c4f; font-size: 1.2em; }
+      html   #_header h1 { color: #000; }
+      ._dark #_header h1 { color: #fff; }
+      
+      #heading { font-size: 2.8em; }
+      #intro   { max-width: 32em; }
+      #about {
+        font-size: 1.6em;
+        margin-top: -0.6em;
+        margin-bottom: 3em;
+        text-align: left;
+      }
+      #author {
+        position: absolute;
+        bottom: -6em;
+        right: 2em;
+      }
+      
+      #_html.pink .download { background-color: #ff4b6a; color:#fff; border-color:#ff2c4f; font-size: 1.3em; }
       .pink  #_header { background: #ff4b6a; color:#ffd0db; }
       .pink  #_header h1 { color: #5e101d; }
       .pink  #_header ._tc_primary { color: #fff; }
       .pink #_header ._header_layout:before { color:#fff }
       .pink #acelinks ._link { color: #fff; }
+      .pink #heading { font-size: 3em; }
       .pink #cta {
-        margin:-1.8em -1.4em 0;
+        margin:0 -1rem;
         background-color:#ffc0cb;color: #7c3944;
-      }
-      .pink #intro { max-width: none; }
-      .pink #about {
-        font-size: 1.6em;
-        margin-top: -0.6em;
-        margin-bottom: 3em;
-      }
-      .pink #author {
-        position: absolute;
-        bottom: -6em;
-        right: 2em;
+        position: relative;
+        top: -1.5rem;
       }
       .pink #_header ._header_layout:before {
         text-shadow: -0.015em 0 #840c20;
@@ -93,8 +100,9 @@
       .pink #cta { border-radius: 1.7rem; }
       .pink ._btnlink { border-radius: 3rem; }
       
-      html   #_header h1 { color: #000; }
-      ._dark #_header h1 { color: #fff; }
+      #_html.light .download { background-color: #231a0f; color:#fff; border-color:#231a0f; }
+      .light  #_header { background: #dfd1be; color:#645d58; }
+      .light  #_header ._tc_primary { color: #645d58; }
       
       #_html .pages ul { list-style-type: none; padding-inline-start: 0; }
       
@@ -104,6 +112,11 @@
       
       @media (max-width: 425px) {
         #cta { text-align:center; }
+        .pink #about {
+          font-size: 1.1em;
+          margin-top: -0.6rem;
+          margin-bottom: 5rem;
+        }
       }
       
     </style>
@@ -137,7 +150,7 @@
                 <div class="_flex _gap_2">
                   <div class="_f_12">
                     <section class="_mb_2">
-                      <h2 class="_h2">Open up new possibilities with ThemeJs</h2>
+                      <h2 class="_h2">Open new possibilities with ThemeJs</h2>
                       <p class="_text_justify"><b>ThemeJs</b> is a lightweight, easy-to-use, and highly configurable theme switcher plugin for your website and web application. Built with the user experience in mind, it is designed to be simple, easy to use, with no external dependencies.  It is a perfect solution for those who want to give their users the ability to switch between different themes on their website. ThemeJs is fully customizable, compatible with all major browsers and devices, and can be easily integrated into any website and web application. </p>
                     </section>
                   </div>
@@ -145,25 +158,17 @@
                 <div class="_flex _gap_2">
                   <div class="_f_12_7">
                     <section class="_mb_2">
-                      <h2 class="_h2">Coded with simplicity in mind</h2>
-                      <p class="_text_justify">ThemeJs registers a global <code class="_code _no_wrap">theme</code> interface for its functions, automatically detect user's preferences and register appropriate listeners. With a simple use of <code class="_code _no_wrap">theme.set()</code> or <code class="_code _no_wrap">theme.change()</code>, you can create an interface that offers users the ability to switch between different themes.</p>
-                      <div class="_p _no_print _needjs"><a class="_needjs _btnlink" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
+                      <h2 class="_h2">Available in light, dark and more ..</h2>
+                      <p class="_text_justify">ThemeJs registers a global <code class="_code _no_wrap">theme</code> interface for its functions, automatically detect user's preferences and register appropriate listeners. With a simple use of <code class="_code _no_wrap">theme.set()</code> and <code class="_code _no_wrap">theme.change()</code>, you can create an interface that offers users the ability to switch between different themes.</p>
+                      <div class="_p _no_print _needjs _small"> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set(['_dark'],'');">Light</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set(['_dark']);">Dark</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set(['light','_dark']);">Sephia</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set(['pink','_dark']);">Pink</a>
+                      </div>
+                    </section>
+                    <section class="_mb_2">
+                      <p class="_text_justify">This demo is readily available in both light and dark theme, as well as other configurable themes in the menu. You can easily switch through them by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code> or by clicking a button.</p>
+                      <div class="_p _no_print _needjs _small"><a class="_needjs _btnlink" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
                             <svg viewBox="0 0 24 24">
                               <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
                             </svg></i> <span class="_btnlabel">Change Theme</span></a>
-                      </div>
-                    </section>
-                  </div>
-                  <div class="_f_12_5">
-                    <section class="_mb_2"></section>
-                  </div>
-                </div>
-                <div class="_flex _gap_2">
-                  <div class="_f_12_7">
-                    <section class="_mb_2">
-                      <h2 class="_h2">Available in light, dark and more ..</h2>
-                      <p class="_text_justify">This demo is readily available in both light and dark theme, as well as other configurable themes in the menu. You can easily switch through them by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code> or by clicking these buttons.</p>
-                      <div class="_p _no_print _needjs _small"> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set();">Default</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set('_dark');">Dark</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set('light');">Sephia</a> <a class="_btnlink" href="#" onclick="event.preventDefault();theme.set('pink');">Pink</a>
                       </div>
                     </section>
                   </div>
