@@ -1,5 +1,8 @@
 ## Change logs
 
+### March 6, 2025 - v0.1.25 b10.301
+- housekeep: core
+
 ### Feb 23, 2025 - v0.1.25 b327.23
 - update: theme.v1.0
 
