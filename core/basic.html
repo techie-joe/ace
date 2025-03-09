@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="_html _nojs _scrollbar _a" id="_html" lang="en">
+<html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
   
   <!-- Ace Template v0.1.25 b10 | (c) Copyright 2025 - Techie Joe -->
   <!-- layout:pages/core/html -->
@@ -27,8 +27,8 @@
     <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10"/>
     <style>
-      #_nav ._link { text-decoration:none; color:inherit; padding:0 .25em; }
-      #_nav ._link:hover { text-decoration:underline; color:initial; }
+      #_nav ._link { color: inherit; padding: .15em .3em; }
+      #_nav ._link:hover { outline: 1px solid #888; }
     </style>
   </head>
   <body class="_body" id="_body">
@@ -52,39 +52,197 @@
         <main id="_main">
           <div class="_main_layout">
             <article>
-              <div class="_scrollable _full_width _text_left" id="_pageData">
-                <aside>
-                  <div class="_pre_layout">
-                    <pre class="_pre">
-name             = Ace Template
-version          = 0.1.25
-build            = 10.306
-
-author           = Techie Joe
-publisher        = Tidloo Digital
-
-title            = Basic Elements | Ace Template
-description      = Styles for basic HTML elements.
-
-heading          = Basic Elements
-about            = Styles for basic HTML elements.
-
-siteUrl          = https://techie-joe.github.io/ace/core/basic.html
-og_url           = https://techie-joe.github.io/ace/core/basic.html?utm_source=homescreen
-og_title         = Basic Elements | Ace Template
-og_description   = Styles for basic HTML elements.
-og_type          = website
-og_image         = 
-og_imageAlt      = 
-
-homeUri          = /ace/
-assetsUri        = /ace/assets/
-
-layout           = pages/core/html
-</pre>
-                  </div>
-                </aside>
+              <details>
+                <summary>The visible summary or title.</summary>
+                <div>The collapsible content as used to create web pages.</div>
+              </details>
+              <hr>
+              <div class="_p">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Apple</td>
+                        <td>A sweet red fruit</td>
+                        <td>$1.00</td>
+                      </tr>
+                      <tr>
+                        <td>Banana</td>
+                        <td>A long yellow fruit</td>
+                        <td>$0.50</td>
+                      </tr>
+                      <tr>
+                        <td>Cherry</td>
+                        <td>A small red fruit</td>
+                        <td>$0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2">Total</td>
+                        <td>$1.70</td>
+                      </tr>
+                    </tfoot>
+                  </table>
               </div>
+              <div class="_p">
+                  <table class="_table_0">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Apple</td>
+                        <td>A sweet red fruit</td>
+                        <td>$1.00</td>
+                      </tr>
+                      <tr>
+                        <td>Banana</td>
+                        <td>A long yellow fruit</td>
+                        <td>$0.50</td>
+                      </tr>
+                      <tr>
+                        <td>Cherry</td>
+                        <td>A small red fruit</td>
+                        <td>$0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2">Total</td>
+                        <td>$1.70</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+              </div>
+              <div class="_p">
+                  <table class="_table">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Apple</td>
+                        <td>A sweet red fruit</td>
+                        <td>$1.00</td>
+                      </tr>
+                      <tr>
+                        <td>Banana</td>
+                        <td>A long yellow fruit</td>
+                        <td>$0.50</td>
+                      </tr>
+                      <tr>
+                        <td>Cherry</td>
+                        <td>A small red fruit</td>
+                        <td>$0.20</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2">Total</td>
+                        <td>$1.70</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+              </div>
+              <hr>
+              <div class="_p">
+                normal
+                <span>span</span>
+                <span class="_outline">outline</span>
+                <span class="_select">select</span>
+                <b>bold</b>
+                <span class="_b">span-bold</span>
+                <i>italic</i>
+                <span class="_i">span-italic</span>
+                <code>code</code>
+                <samp>samp</samp>
+                <kbd>keyboard</kbd>
+              </div>
+              <div class="_p">
+                <u>underlined</u>
+                <span class="_u">span-underlined</span>
+                <abbr title="abbreviation">abbr</abbr>
+                <span class="_u_dot">span-u-dot</span>
+                
+                <s>strikethrough</s>
+                <span class="_striked">span-striked</span>
+              </div>
+              <div class="_p"><a>anchor</a>
+                <a href="" id="newlink">link</a>
+                <a href="">visited</a>
+                <a class="_no_color" href="">no-color</a>
+              </div>
+              <script>
+                document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
+                
+              </script>
+              <div class="_p">
+                normal
+                <small>small</small>
+                <span class="_small">span-small</span>
+                <span class="_smaller">smaller</span>
+                <span class="_smallest">smallest</span>
+              </div>
+              <div class="_p">
+                text
+                <sub>sub</sub>
+                <sup>sup</sup>
+              </div>
+              <div class="_p"><span class="_uppercase">uppercase</span>
+                <span class="_capitalize">capitalized text</span>
+              </div>
+              <hr>
+              <p>paragraph</p>
+              <div class="_p">paragraph-div</div>
+              <pre>pre is in mono</pre>
+              <div class="_pre">pre-div is also in mono</div>
+              <dl>
+                <dt>term</dt>
+                <dd>description</dd>
+              </dl>
+              <blockquote>blockquote and 
+                <q>a quoted text</q> within a sentence.
+              </blockquote>
+              <hr>
+              <ul>
+                <li>un-ordered list</li>
+              </ul>
+              <ul class="_no_bullet">
+                <li>no-bullet</li>
+              </ul>
+              <ul class="_no_pad">
+                <li>no-pad</li>
+              </ul>
+              <ul class="_plain">
+                <li>plain</li>
+              </ul>
+              <ol>
+                <li>ordered list</li>
+              </ol>
+              <ol class="_no_bullet">
+                <li>no-bullet</li>
+              </ol>
+              <ol class="_no_pad">
+                <li>no-pad</li>
+              </ol>
+              <ol class="_plain">
+                <li>plain</li>
+              </ol>
               <hr>
             </article>
           </div>
