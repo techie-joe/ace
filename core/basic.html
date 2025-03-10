@@ -36,6 +36,7 @@
       <div class="_view_layout">
         <nav id="_nav">
           <div class="_nav_layout">
+<a class="_link" href="#" onclick="event.preventDefault();theme.change();"><i class="_itext"><i class="itext">&bull;</i></i></a>
 <a class="_link" href="index.html">Core</a>
 <a class="_link" href="basic.html">Basic</a>
             <hr>
@@ -52,10 +53,115 @@
         <main id="_main">
           <div class="_main_layout">
             <article>
+              <div class="_p">
+                normal
+                
+                <u>underlined</u>
+                <a>anchor</a>
+                <a href="" onclick="event.preventDefault();undefined" id="newlink">hyperlink</a>
+                <a href="" onclick="event.preventDefault();undefined">visited</a>
+                <a class="_no_color" href="" onclick="event.preventDefault();undefined">no-color</a>
+              </div>
+              <script>
+                document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
+                
+              </script>
+              <div class="_p"><a class="_link">link</a>
+                <a class="_link" href="" onclick="event.preventDefault();undefined">link</a>
+              </div>
+              <hr>
               <details>
                 <summary>The visible summary or title.</summary>
                 <div>The collapsible content as used to create web pages.</div>
               </details>
+              <hr>
+              <details class="_details">
+                <summary>The visible summary or title.</summary>
+                <div class="_detail">The collapsible content as used to create web pages.</div>
+              </details>
+              <hr>
+              <div class="_p">
+                normal
+                <span>span</span>
+                <b>bold</b>
+                <span class="_b">span-bold</span>
+                <i>italic</i>
+                <span class="_i">span-italic</span>
+                <code>code</code>
+                <samp>samp</samp>
+                <kbd>keyboard</kbd>
+              </div>
+              <div class="_p">
+                <u>underlined</u>
+                <span class="_u">span-underlined</span>
+                <abbr title="abbreviation">abbr</abbr>
+                <span class="_u_dot">span-u-dot</span>
+                
+                <s>strikethrough</s>
+                <span class="_striked">span-striked</span>
+              </div>
+              <div class="_p">
+                normal
+                <small>small</small>
+                <span class="_small">span-small</span>
+                <span class="_smaller">smaller</span>
+                <span class="_smallest">smallest</span>
+              </div>
+              <div class="_p">
+                text
+                <sub>sub</sub>
+                <sup>sup</sup>
+              </div>
+              <div class="_p"><span class="_uppercase">uppercase</span>
+                <span class="_capitalize">capitalized text</span>
+              </div>
+              <div class="_p"><span class="_tc_blue">blue</span>
+                <span class="_tc_purple">purple</span>
+                <span class="_tc_orange">orange</span>
+                <span class="_tc_red">red</span>
+                <span class="_tc_green">green</span>
+                <span class="_tc_contra">contra</span>
+                <span>normal</span>
+                <span class="_outline">outline</span>
+                <span class="_select">select</span>
+              </div>
+              <hr>
+              <p>paragraph</p>
+              <div class="_p">paragraph-div</div>
+              <pre>pre is in mono</pre>
+              <div class="_pre">pre-div is also in mono</div>
+              <dl>
+                <dt>term</dt>
+                <dd>description</dd>
+              </dl>
+              <blockquote>blockquote and 
+                <q>a quoted text</q> within a sentence.
+              </blockquote>
+              <hr>
+              <ul>
+                <li>un-ordered list</li>
+              </ul>
+              <ul class="_no_bullet">
+                <li>no-bullet</li>
+              </ul>
+              <ul class="_no_pad">
+                <li>no-pad</li>
+              </ul>
+              <ul class="_plain">
+                <li>plain</li>
+              </ul>
+              <ol>
+                <li>ordered list</li>
+              </ol>
+              <ol class="_no_bullet">
+                <li>no-bullet</li>
+              </ol>
+              <ol class="_no_pad">
+                <li>no-pad</li>
+              </ol>
+              <ol class="_plain">
+                <li>plain</li>
+              </ol>
               <hr>
               <div class="_p">
                   <table>
@@ -125,97 +231,6 @@
                     </tfoot>
                   </table>
               </div>
-              <hr>
-              <div class="_p">
-                normal
-                <span>span</span>
-                <b>bold</b>
-                <span class="_b">span-bold</span>
-                <i>italic</i>
-                <span class="_i">span-italic</span>
-                <code>code</code>
-                <samp>samp</samp>
-                <kbd>keyboard</kbd>
-              </div>
-              <div class="_p">
-                <u>underlined</u>
-                <span class="_u">span-underlined</span>
-                <abbr title="abbreviation">abbr</abbr>
-                <span class="_u_dot">span-u-dot</span>
-                
-                <s>strikethrough</s>
-                <span class="_striked">span-striked</span>
-              </div>
-              <div class="_p"><a href="" onclick="event.preventDefault();undefined" id="newlink">hyperlink</a>
-                <a href="" onclick="event.preventDefault();undefined">visited</a>
-                <a class="_no_color" href="" onclick="event.preventDefault();undefined">no-color</a>
-              </div>
-              <script>
-                document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
-                
-              </script>
-              <div class="_p">
-                normal
-                <small>small</small>
-                <span class="_small">span-small</span>
-                <span class="_smaller">smaller</span>
-                <span class="_smallest">smallest</span>
-              </div>
-              <div class="_p">
-                text
-                <sub>sub</sub>
-                <sup>sup</sup>
-              </div>
-              <div class="_p"><span class="_uppercase">uppercase</span>
-                <span class="_capitalize">capitalized text</span>
-              </div>
-              <div class="_p"><span class="_tc_blue">blue</span>
-                <span class="_tc_purple">purple</span>
-                <span class="_tc_orange">orange</span>
-                <span class="_tc_red">red</span>
-                <span class="_tc_green">green</span>
-                <span class="_tc_contra">contra</span>
-                <span>normal</span>
-                <span class="_outline">outline</span>
-                <span class="_select">select</span>
-              </div>
-              <hr>
-              <p>paragraph</p>
-              <div class="_p">paragraph-div</div>
-              <pre>pre is in mono</pre>
-              <div class="_pre">pre-div is also in mono</div>
-              <dl>
-                <dt>term</dt>
-                <dd>description</dd>
-              </dl>
-              <blockquote>blockquote and 
-                <q>a quoted text</q> within a sentence.
-              </blockquote>
-              <hr>
-              <ul>
-                <li>un-ordered list</li>
-              </ul>
-              <ul class="_no_bullet">
-                <li>no-bullet</li>
-              </ul>
-              <ul class="_no_pad">
-                <li>no-pad</li>
-              </ul>
-              <ul class="_plain">
-                <li>plain</li>
-              </ul>
-              <ol>
-                <li>ordered list</li>
-              </ol>
-              <ol class="_no_bullet">
-                <li>no-bullet</li>
-              </ol>
-              <ol class="_no_pad">
-                <li>no-pad</li>
-              </ol>
-              <ol class="_plain">
-                <li>plain</li>
-              </ol>
               <hr>
             </article>
           </div>
