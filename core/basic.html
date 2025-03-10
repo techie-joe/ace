@@ -129,8 +129,6 @@
               <div class="_p">
                 normal
                 <span>span</span>
-                <span class="_outline">outline</span>
-                <span class="_select">select</span>
                 <b>bold</b>
                 <span class="_b">span-bold</span>
                 <i>italic</i>
@@ -148,10 +146,9 @@
                 <s>strikethrough</s>
                 <span class="_striked">span-striked</span>
               </div>
-              <div class="_p"><a>anchor</a>
-                <a href="" id="newlink">link</a>
-                <a href="">visited</a>
-                <a class="_no_color" href="">no-color</a>
+              <div class="_p"><a href="" onclick="event.preventDefault();undefined" id="newlink">hyperlink</a>
+                <a href="" onclick="event.preventDefault();undefined">visited</a>
+                <a class="_no_color" href="" onclick="event.preventDefault();undefined">no-color</a>
               </div>
               <script>
                 document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
@@ -171,6 +168,16 @@
               </div>
               <div class="_p"><span class="_uppercase">uppercase</span>
                 <span class="_capitalize">capitalized text</span>
+              </div>
+              <div class="_p"><span class="_tc_blue">blue</span>
+                <span class="_tc_purple">purple</span>
+                <span class="_tc_orange">orange</span>
+                <span class="_tc_red">red</span>
+                <span class="_tc_green">green</span>
+                <span class="_tc_contra">contra</span>
+                <span>normal</span>
+                <span class="_outline">outline</span>
+                <span class="_select">select</span>
               </div>
               <hr>
               <p>paragraph</p>
