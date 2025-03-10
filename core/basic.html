@@ -26,14 +26,14 @@
     <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/>
     <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10"/>
-    <style>
-      #_nav ._link { color: inherit; padding: .15em .3em; }
-      #_nav ._link:hover { outline: 1px solid #888; }
-    </style>
   </head>
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
+        <style>
+          #_nav ._link { padding: .15em .3em; }
+          
+        </style>
         <nav id="_nav">
           <div class="_nav_layout">
 <a class="_link" href="#" onclick="event.preventDefault();theme.change();"><i class="_itext"><i class="itext">&bull;</i></i></a>
@@ -59,6 +59,7 @@
                 <u>underlined</u>
                 <a>anchor</a>
                 <a href="" onclick="event.preventDefault();undefined" id="newlink">hyperlink</a>
+                <a class="_fresh" href="" onclick="event.preventDefault();undefined">fresh</a>
                 <a href="" onclick="event.preventDefault();undefined">visited</a>
                 <a class="_no_color" href="" onclick="event.preventDefault();undefined">no-color</a>
               </div>
@@ -66,8 +67,8 @@
                 document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
                 
               </script>
-              <div class="_p"><a class="_link">link</a>
-                <a class="_link" href="" onclick="event.preventDefault();undefined">link</a>
+              <div class="_p"><a class="_hover_link">hyperlink</a>
+                <a class="_link">hyperlink</a>
               </div>
               <hr>
               <details>
