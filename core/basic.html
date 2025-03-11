@@ -7,11 +7,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Basic Elements | Ace Template</title>
-    <meta name="description" content="Styles for basic HTML elements."/>
+    <meta name="description" content="Basic styles for Ace Template."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="Basic Elements | Ace Template"/>
-    <meta property="og:description" content="Styles for basic HTML elements."/>
+    <meta property="og:description" content="Basic styles for Ace Template."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/core/basic.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -32,6 +32,7 @@
       <div class="_view_layout">
         <style>
           #_nav ._link { padding: .15em .3em; }
+          #_nav ._link:hover { outline: 1px solid #888; }
           
         </style>
         <nav id="_nav">
@@ -39,6 +40,8 @@
 <a class="_link" href="#" onclick="event.preventDefault();theme.change();"><i class="_itext"><i class="itext">&bull;</i></i></a>
 <a class="_link" href="index.html">Core</a>
 <a class="_link" href="basic.html">Basic</a>
+<a class="_link" href="links.html">Links</a>
+<a class="_link" href="test.html">Test</a>
             <hr>
           </div>
         </nav>
@@ -46,7 +49,7 @@
           <div class="_header_layout">
             <h1 class="_h1" id="_heading">Basic Elements
             </h1>
-            <p>Styles for basic HTML elements.</p>
+            <p>Basic styles for Ace Template.</p>
             <hr>
           </div>
         </header>
@@ -67,9 +70,6 @@
                 document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
                 
               </script>
-              <div class="_p"><a class="_hover_link">hyperlink</a>
-                <a class="_link">hyperlink</a>
-              </div>
               <hr>
               <details>
                 <summary>The visible summary or title.</summary>
@@ -112,6 +112,9 @@
                 text
                 <sub>sub</sub>
                 <sup>sup</sup>
+                HTg_
+                <sub>_gy</sub>
+                <sup>"T^"</sup>
               </div>
               <div class="_p"><span class="_uppercase">uppercase</span>
                 <span class="_capitalize">capitalized text</span>

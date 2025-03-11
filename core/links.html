@@ -6,14 +6,14 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Core | Ace Template</title>
-    <meta name="description" content="The core structure of Ace Template."/>
+    <title>Link Elements | Ace Template</title>
+    <meta name="description" content="Link styles for Ace Template."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Core | Ace Template"/>
-    <meta property="og:description" content="The core structure of Ace Template."/>
+    <meta property="og:title" content="Link Elements | Ace Template"/>
+    <meta property="og:description" content="Link styles for Ace Template."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/core/index.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/core/links.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -47,47 +47,43 @@
         </nav>
         <header id="_header">
           <div class="_header_layout">
-            <h1 class="_h1" id="_heading">Core
+            <h1 class="_h1" id="_heading">Link Elements
             </h1>
-            <p>The core structure of Ace Template.</p>
+            <p>Link styles for Ace Template.</p>
             <hr>
           </div>
         </header>
         <main id="_main">
           <div class="_main_layout">
             <article>
-              <div class="_scrollable _full_width _text_left" id="_pageData">
-                <aside>
-                  <div class="_pre_layout">
-                    <pre class="_pre">
-name             = Ace Template
-version          = 0.1.25
-build            = 10.309
-
-author           = Techie Joe
-publisher        = Tidloo Digital
-
-title            = Core | Ace Template
-description      = The core structure of Ace Template.
-
-heading          = Core
-about            = The core structure of Ace Template.
-
-siteUrl          = https://techie-joe.github.io/ace/core/index.html
-og_url           = https://techie-joe.github.io/ace/core/index.html?utm_source=homescreen
-og_title         = Core | Ace Template
-og_description   = The core structure of Ace Template.
-og_type          = website
-og_image         = 
-og_imageAlt      = 
-
-homeUri          = /ace/
-assetsUri        = /ace/assets/
-
-layout           = pages/core/html
-</pre>
-                  </div>
-                </aside>
+              <div class="_p">
+                normal
+                
+                <u>underlined</u>
+                <a>anchor</a>
+                <a href="" onclick="event.preventDefault();undefined" id="newlink">hyperlink</a>
+                <a class="_fresh" href="" onclick="event.preventDefault();undefined">fresh</a>
+                <a href="" onclick="event.preventDefault();undefined">visited</a>
+                <a class="_no_color" href="" onclick="event.preventDefault();undefined">no-color</a>
+              </div>
+              <script>
+                document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
+                
+              </script>
+              <hr>
+              <div class="_p"><a href="" onclick="event.preventDefault();undefined">anchor</a><a href="" onclick="event.preventDefault();undefined">anchor</a><br><a href="" onclick="event.preventDefault();undefined">anchor</a><a href="" onclick="event.preventDefault();undefined">anchor</a></div>
+              <div class="_p"><a class="_link">link</a><a class="_link">link</a><br><a class="_link">link</a><a class="_link">link</a></div>
+              <div class="_p"><a class="_btnlink">btnlink</a><a class="_btnlink">btnlink</a><br><a class="_btnlink">btnlink</a><a class="_btnlink">btnlink</a></div>
+              <div class="_p"><a class="_btnlink _L">btnlink</a><a class="_btnlink _L">btnlink</a><br><a class="_btnlink _L">btnlink</a><a class="_btnlink _L">btnlink</a></div>
+              <div class="_p"><a class="_btnlink _XL">btnlink</a><a class="_btnlink _XL">btnlink</a><br><a class="_btnlink _XL">btnlink</a><a class="_btnlink _XL">btnlink</a></div>
+              <div class="_p _outline">normal<a class="_link">link</a><a class="_btnlink">btnlink</a></div>
+              <div class="_p">
+                normal
+                <a class="_link">link</a>
+                <a class="_hover_link">hover_link</a>
+                <span class="_hover_scale">hover_scale</span>
+                <span class="_hover_scale_a"><a>hover_scale</a></span>
+                <a class="_hover_scale">hover_scale</a>
               </div>
               <hr>
             </article>
