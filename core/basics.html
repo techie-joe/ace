@@ -6,14 +6,14 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Basic Elements | Ace Template</title>
-    <meta name="description" content="Styles for basic elements on Ace Template."/>
+    <title>Basic elements | Ace Template</title>
+    <meta name="description" content="Styles for basic elements are kept nice and tidy."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Basic Elements | Ace Template"/>
-    <meta property="og:description" content="Styles for basic elements on Ace Template."/>
+    <meta property="og:title" content="Basic elements | Ace Template"/>
+    <meta property="og:description" content="Styles for basic elements are kept nice and tidy."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/core/basic.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/core/basics.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -25,31 +25,37 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
     <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/>
     <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+    <style>
+      html{font-family:system-ui,sans-serif}
+      body{margin:0}
+      ._view{overflow-y:scroll;padding:.5rem}
+      ._dark hr{border-color:#666}
+    </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10"/>
+    <style></style>
   </head>
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
         <style>
           #_nav ._link { padding: .15em .3em; }
-          #_nav ._link:hover { outline: 1px solid #888; }
           
         </style>
         <nav id="_nav">
           <div class="_nav_layout">
-<a class="_link" href="#" onclick="event.preventDefault();theme.change();"><i class="_itext"><i class="itext">&bull;</i></i></a>
 <a class="_link" href="index.html">Core</a>
-<a class="_link" href="basic.html">Basic</a>
+<a class="_link" href="basics.html">Basics</a>
 <a class="_link" href="links.html">Links</a>
+<a class="_link" href="icons.html">Icons</a>
 <a class="_link" href="test.html">Test</a>
             <hr>
           </div>
         </nav>
         <header id="_header">
           <div class="_header_layout">
-            <h1 class="_h1" id="_heading">Basic Elements
+            <h1 class="_h1" id="_heading">Basic elements
             </h1>
-            <p>Styles for basic elements on Ace Template.</p>
+            <p>Styles for basic elements are kept nice and tidy.</p>
             <hr>
           </div>
         </header>
@@ -139,25 +145,25 @@
                 <li>un-ordered list</li>
               </ul>
               <ul class="_no_bullet">
-                <li>no-bullet</li>
+                <li>no-bullet list</li>
               </ul>
               <ul class="_no_pad">
-                <li>no-pad</li>
+                <li>no-pad list</li>
               </ul>
               <ul class="_plain">
-                <li>plain</li>
+                <li>plain list</li>
               </ul>
               <ol>
                 <li>ordered list</li>
               </ol>
               <ol class="_no_bullet">
-                <li>no-bullet</li>
+                <li>no-bullet list</li>
               </ol>
               <ol class="_no_pad">
-                <li>no-pad</li>
+                <li>no-pad list</li>
               </ol>
               <ol class="_plain">
-                <li>plain</li>
+                <li>plain list</li>
               </ol>
               <hr>
               <div class="_p">
@@ -237,6 +243,39 @@
             <p>&copy; Copyright 2025 - Techie Joe</p>
           </div>
         </footer>
+      </div>
+    </div>
+    <style>
+      ._nav_layout { margin-right: 2.5rem }
+      #topi { position:absolute;top:0;right:0;width:100% }
+      #topi .abs {
+        position:absolute;
+        top:0;
+        right:15px;
+        padding:5px;
+        font-size:0;
+      }
+      #topi .link i { font-style:normal }
+      #topi .link {
+        font-family:monospace,monospace;
+        font-size:1.3rem;
+        color:inherit;
+        text-decoration:none;
+        text-align:center;
+        display:inline-block;
+        box-sizing:border-box;
+        width:1.5rem;
+        height:1.5rem;
+        margin:.1rem;
+        border:1px solid #888;
+        line-height:1;
+        font-weight:normal;
+        border-radius:.3rem;
+      }
+    </style>
+    <div id="topi">
+      <div class="abs">
+<a class="link" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-10" defer="defer"></script>

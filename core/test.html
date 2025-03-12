@@ -6,12 +6,12 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Testing .. | Ace Template</title>
-    <meta name="description" content="Brewing new styles for Ace Template."/>
+    <title>Test page | Ace Template</title>
+    <meta name="description" content="We keep brewing new styles from time to time."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Testing .. | Ace Template"/>
-    <meta property="og:description" content="Brewing new styles for Ace Template."/>
+    <meta property="og:title" content="Test page | Ace Template"/>
+    <meta property="og:description" content="We keep brewing new styles from time to time."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/core/test.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -25,7 +25,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
     <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/>
     <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
-    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10"/>
+    <style>
+      html{font-family:system-ui,sans-serif}
+      body{margin:0}
+      ._view{overflow-y:scroll;padding:.5rem}
+      ._dark hr{border-color:#666}
+    </style>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10" id="_style"/>
     <style></style>
   </head>
   <body class="_body" id="_body">
@@ -33,30 +39,32 @@
       <div class="_view_layout">
         <style>
           #_nav ._link { padding: .15em .3em; }
-          #_nav ._link:hover { outline: 1px solid #888; }
           
         </style>
         <nav id="_nav">
           <div class="_nav_layout">
-<a class="_link" href="#" onclick="event.preventDefault();theme.change();"><i class="_itext"><i class="itext">&bull;</i></i></a>
 <a class="_link" href="index.html">Core</a>
-<a class="_link" href="basic.html">Basic</a>
+<a class="_link" href="basics.html">Basics</a>
 <a class="_link" href="links.html">Links</a>
+<a class="_link" href="icons.html">Icons</a>
 <a class="_link" href="test.html">Test</a>
             <hr>
           </div>
         </nav>
         <header id="_header">
           <div class="_header_layout">
-            <h1 class="_h1" id="_heading">Testing ..
+            <h1 class="_h1" id="_heading">Test page
             </h1>
-            <p>Brewing new styles for Ace Template.</p>
+            <p>We keep brewing new styles from time to time.</p>
             <hr>
           </div>
         </header>
         <main id="_main">
           <div class="_main_layout">
-            <article></article>
+            <article>
+              <section class="_small _i">// sorry, nothing at the moment tho.</section>
+              <hr>
+            </article>
           </div>
         </main>
         <footer id="_footer">
@@ -64,6 +72,50 @@
             <p>&copy; Copyright 2025 - Techie Joe</p>
           </div>
         </footer>
+      </div>
+    </div>
+    <style>
+      ._nav_layout { margin-right: 2.5rem }
+      #topi { position:absolute;top:0;right:0;width:100% }
+      #topi .abs {
+        position:absolute;
+        top:0;
+        right:15px;
+        padding:5px;
+        font-size:0;
+      }
+      #topi .link i { font-style:normal }
+      #topi .link {
+        font-family:monospace,monospace;
+        font-size:1.3rem;
+        color:inherit;
+        text-decoration:none;
+        text-align:center;
+        display:inline-block;
+        box-sizing:border-box;
+        width:1.5rem;
+        height:1.5rem;
+        margin:.1rem;
+        border:1px solid #888;
+        line-height:1;
+        font-weight:normal;
+        border-radius:.3rem;
+      }
+    </style>
+    <div id="topi">
+      <div class="abs">
+<a class="link" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a>
+        <style>._nav_layout { margin-right: 4.2rem }</style>
+        <script>
+          (()=>{
+            var
+            e = document.getElementById("_style"),
+            m = e.getAttribute("media"),
+            disableStyle = ()=>{ e.setAttribute("media",e.getAttribute("media")==='x'?m:'x') };
+            window.test = { disableStyle };
+          })();
+        </script>
+<a class="link" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-10" defer="defer"></script>
