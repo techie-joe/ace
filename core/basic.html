@@ -7,11 +7,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Basic Elements | Ace Template</title>
-    <meta name="description" content="Basic styles for Ace Template."/>
+    <meta name="description" content="Styles for basic elements on Ace Template."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="Basic Elements | Ace Template"/>
-    <meta property="og:description" content="Basic styles for Ace Template."/>
+    <meta property="og:description" content="Styles for basic elements on Ace Template."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/core/basic.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -49,37 +49,30 @@
           <div class="_header_layout">
             <h1 class="_h1" id="_heading">Basic Elements
             </h1>
-            <p>Basic styles for Ace Template.</p>
+            <p>Styles for basic elements on Ace Template.</p>
             <hr>
           </div>
         </header>
         <main id="_main">
           <div class="_main_layout">
             <article>
-              <div class="_p">
-                normal
+              <style>
+                .box {
+                  display:inline-block;
+                  vertical-align: top;
+                  box-sizing: border-box;
+                  width:100px;
+                  height:50px;
+                  padding:.25rem;
+                }
                 
-                <u>underlined</u>
-                <a>anchor</a>
-                <a href="" onclick="event.preventDefault();undefined" id="newlink">hyperlink</a>
-                <a class="_fresh" href="" onclick="event.preventDefault();undefined">fresh</a>
-                <a href="" onclick="event.preventDefault();undefined">visited</a>
-                <a class="_no_color" href="" onclick="event.preventDefault();undefined">no-color</a>
+              </style>
+              <div class="_idiv _outline">
+                <div class="box _outline">outline</div>
+                <div class="box _border">border</div><br>
+                <div class="box _outline">outline</div>
+                <div class="box _border">border</div><br>
               </div>
-              <script>
-                document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
-                
-              </script>
-              <hr>
-              <details>
-                <summary>The visible summary or title.</summary>
-                <div>The collapsible content as used to create web pages.</div>
-              </details>
-              <hr>
-              <details class="_details">
-                <summary>The visible summary or title.</summary>
-                <div class="_detail">The collapsible content as used to create web pages.</div>
-              </details>
               <hr>
               <div class="_p">
                 normal
