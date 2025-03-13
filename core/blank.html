@@ -6,14 +6,14 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Test page | Ace Template</title>
-    <meta name="description" content="We keep brewing new styles from time to time."/>
+    <title>Blank | Ace Template</title>
+    <meta name="description" content="A blank page to start building."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Test page | Ace Template"/>
-    <meta property="og:description" content="We keep brewing new styles from time to time."/>
+    <meta property="og:title" content="Blank | Ace Template"/>
+    <meta property="og:description" content="A blank page to start building."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/core/test.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/core/blank.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -31,7 +31,7 @@
       ._view{overflow-y:scroll;padding:.5rem}
       ._dark hr{border-color:#666}
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10" id="_style"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10"/>
     <style></style>
   </head>
   <body class="_body" id="_body">
@@ -54,16 +54,48 @@
         </nav>
         <header id="_header">
           <div class="_header_layout">
-            <h1 class="_h1" id="_heading">Test page
+            <h1 class="_h1" id="_heading">Blank
             </h1>
-            <p>We keep brewing new styles from time to time.</p>
+            <p>A blank page to start building.</p>
             <hr>
           </div>
         </header>
         <main id="_main">
           <div class="_main_layout">
             <article>
-              <section class="_small _i">// sorry, nothing at the moment tho.</section>
+              <div class="_scrollable _full_width _text_left" id="_pageData">
+                <aside>
+                  <div class="_pre_layout">
+                    <pre class="_pre">
+name             = Ace Template
+version          = 0.1.25
+build            = 10.309
+
+author           = Techie Joe
+publisher        = Tidloo Digital
+
+title            = Blank | Ace Template
+description      = A blank page to start building.
+
+heading          = Blank
+about            = A blank page to start building.
+
+siteUrl          = https://techie-joe.github.io/ace/core/blank.html
+og_url           = https://techie-joe.github.io/ace/core/blank.html?utm_source=homescreen
+og_title         = Blank | Ace Template
+og_description   = A blank page to start building.
+og_type          = website
+og_image         = 
+og_imageAlt      = 
+
+homeUri          = /ace/
+assetsUri        = /ace/assets/
+
+layout           = pages/core/html
+</pre>
+                  </div>
+                </aside>
+              </div>
               <hr>
             </article>
           </div>
@@ -105,17 +137,6 @@
     </style>
     <div class="_no_print" id="topi">
       <div class="abs _c_base _radius_x5r">
-<a class="link" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a>
-        <style>._nav_layout { margin-right: 4.2rem }</style>
-        <script>
-          (()=>{
-            var
-            e = document.getElementById("_style"),
-            m = e.getAttribute("media"),
-            disableStyle = ()=>{ e.setAttribute("media",e.getAttribute("media")==='x'?m:'x') };
-            window.test = { disableStyle };
-          })();
-        </script>
 <a class="link" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
       </div>
     </div>
