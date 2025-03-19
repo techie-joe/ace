@@ -37,8 +37,8 @@
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
-        <style>#_nav ._link { padding: .15em .3em; }</style>
-        <nav id="_nav">
+        <style>#_nav ._nav_layout { margin:0;padding:.5rem }</style>
+        <nav class="_c_bg_1" id="_nav">
           <div class="_nav_layout">
 <a class="_link" href="index.html">Core</a>
 <a class="_link" href="blank.html">Blank</a>
@@ -49,8 +49,10 @@
 <a class="_link" href="colors.html">Colors</a>
 <a class="_link" href="view.html">View</a>
 <a class="_link" href="flex.html">Flex</a>
+<a class="_link" href="layouts.html">Layouts</a>
+<a class="_link" href="containers.html">Containers</a>
+<a class="_link" href="theme.html">Theme</a>
 <a class="_link" href="test.html">Test</a>
-            <hr>
           </div>
         </nav>
         <header id="_header">
@@ -71,7 +73,7 @@
         </main>
         <footer id="_footer">
           <div class="_footer_layout">
-            <p>&copy; Copyright 2025 - Techie Joe</p>
+            <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
           </div>
         </footer>
       </div>
@@ -105,8 +107,8 @@
       }
     </style>
     <div class="_no_print" id="topi">
-      <div class="abs _c_base _radius_x5r">
-<a class="link" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a>
+      <div class="abs">
+<a class="link _c_base" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a>
         <style>._nav_layout { margin-right: 4.2rem }</style>
         <script>
           (()=>{
@@ -117,7 +119,7 @@
             window.test = { disableStyle };
           })();
         </script>
-<a class="link" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
+<a class="link _c_base" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-10" defer="defer"></script>

@@ -32,7 +32,10 @@
       ._dark hr{border-color:#666}
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10"/>
-    <style></style>
+    <style>
+      ._footer_layout, ._header_layout, ._main_layout
+      { margin:auto; max-width:60em; padding:0 1rem }
+    </style>
     <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <style>
       .gridlines {
@@ -55,8 +58,8 @@
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
-        <style>#_nav ._link { padding: .15em .3em; }</style>
-        <nav id="_nav">
+        <style>#_nav ._nav_layout { margin:0;padding:.5rem }</style>
+        <nav class="_c_bg_1" id="_nav">
           <div class="_nav_layout">
 <a class="_link" href="index.html">Core</a>
 <a class="_link" href="blank.html">Blank</a>
@@ -67,8 +70,10 @@
 <a class="_link" href="colors.html">Colors</a>
 <a class="_link" href="view.html">View</a>
 <a class="_link" href="flex.html">Flex</a>
+<a class="_link" href="layouts.html">Layouts</a>
+<a class="_link" href="containers.html">Containers</a>
+<a class="_link" href="theme.html">Theme</a>
 <a class="_link" href="test.html">Test</a>
-            <hr>
           </div>
         </nav>
         <header id="_header">
@@ -915,7 +920,7 @@
         </main>
         <footer id="_footer">
           <div class="_footer_layout">
-            <p>&copy; Copyright 2025 - Techie Joe</p>
+            <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
           </div>
         </footer>
       </div>
@@ -949,8 +954,8 @@
       }
     </style>
     <div class="_no_print" id="topi">
-      <div class="abs _c_base _radius_x5r">
-<a class="link" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
+      <div class="abs">
+<a class="link _c_base" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-10" defer="defer"></script>
