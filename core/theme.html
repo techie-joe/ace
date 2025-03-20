@@ -40,7 +40,7 @@
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
-        <style>#_nav ._nav_layout { margin:0;padding:.5rem }</style>
+        <style>#_nav ._nav_layout { margin:0;padding:.5rem;line-height: 2em }</style>
         <nav class="_c_bg_1" id="_nav">
           <div class="_nav_layout">
 <a class="_link" href="index.html">Core</a>
@@ -54,6 +54,7 @@
 <a class="_link" href="flex.html">Flex</a>
 <a class="_link" href="layouts.html">Layouts</a>
 <a class="_link" href="containers.html">Containers</a>
+<a class="_link" href="menu.html">Menu</a>
 <a class="_link" href="theme.html">Theme</a>
 <a class="_link" href="test.html">Test</a>
           </div>
@@ -89,9 +90,10 @@
                     #_text_logo ._part_1,
                     #_text_logo ._part_2 { line-height:1 }
                     
-                  </style><a class="_numb" href="#" id="_logo">
+                  </style><a class="_numb" href="#" onclick="event.preventDefault();" id="_logo">
                     <div id="_text_logo"><span class="_part_1">LO</span><span class="_part_2">GO</span></div></a>
                 </div>
+                <div class="_fill"></div>
               </div>
               <hr>
               <section>
@@ -239,7 +241,6 @@
       </div>
     </div>
     <style>
-      ._nav_layout { margin-right: 2.5rem }
       #topi { position:absolute;top:0;right:0;width:100% }
       #topi .abs {
         position:absolute;
