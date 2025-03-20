@@ -37,19 +37,20 @@
       { margin:auto; max-width:60em; padding:0 1rem }
     </style>
     <style>
-      ._view {
-        overflow-x: auto;
-        overflow-y: auto;
-      }
-      
+      ._view { overflow: auto }
+      #menu1 a#_logo:hover { outline:none }
     </style>
   </head>
   <body class="_body" id="_body">
-    <div class="_view" id="menu_">
-      <div class="_view_layout">
-        <style>#_nav ._nav_layout { margin:0;padding:.5rem;line-height: 2em }</style>
-        <nav class="_c_bg_1" id="_nav">
-          <div class="_nav_layout">
+    <div class="_views">
+      <div class="_view _full_view" id="menu_">
+        <div class="_view_layout">
+          <style>
+            #_nav ._nav_layout { margin:0;padding:.5rem }
+            #_nav ._nav_layout a._link { line-height: 2em }
+          </style>
+          <nav class="_c_bg_1" id="_nav">
+            <div class="_nav_layout">
 <a class="_link" href="index.html">Core</a>
 <a class="_link" href="blank.html">Blank</a>
 <a class="_link" href="basics.html">Basics</a>
@@ -57,78 +58,65 @@
 <a class="_link" href="icons.html">Icons</a>
 <a class="_link" href="links.html">Links</a>
 <a class="_link" href="colors.html">Colors</a>
+<a class="_link" href="containers.html">Containers</a>
 <a class="_link" href="view.html">View</a>
 <a class="_link" href="flex.html">Flex</a>
 <a class="_link" href="layouts.html">Layouts</a>
-<a class="_link" href="containers.html">Containers</a>
 <a class="_link" href="menu.html">Menu</a>
 <a class="_link" href="theme.html">Theme</a>
 <a class="_link" href="test.html">Test</a>
-          </div>
-        </nav>
-        <header id="_header">
-          <div class="_header_layout">
-            <h1 class="_h1" id="_heading">Menu
-            </h1>
-            <p id="_about">There are many options of menus available for use.</p>
-            <hr>
-          </div>
-        </header>
-        <main id="_main">
-          <div class="_main_layout">
-            <article>
-              <p>
-<a class="_btnlink" href="#menu_">Menu</a>
-<a class="_btnlink" href="#menu1">Menu 1</a>
-<a class="_btnlink" href="#menu2">Menu 2</a>
-              </p>
-            </article>
-          </div>
-        </main>
-        <footer id="_footer">
-          <div class="_footer_layout">
-            <hr>
-            <p class="_small _system">Copyright 2025 - Techie Joe</p>
-          </div>
-        </footer>
-      </div>
-    </div>
-    <div class="_view" id="menu1">
-      <div class="_view_layout">
-        <section class="_page_layout _mv_2">
-          <div class="_nav_color _radius_x5r">
-            <nav id="_nav">
-              <div class="_nav_layout"><a class="_btnlink" href="#">Buttons</a>
+            </div>
+          </nav>
+          <header id="_header">
+            <div class="_header_layout">
+              <h1 class="_h1" id="_heading">Menu
+              </h1>
+              <p id="_about">There are many options of menus available for use.</p>
+              <hr>
+            </div>
+          </header>
+          <main id="_main">
+            <div class="_main_layout">
+              <article>
+                <section>
+                  <div class="_c_bg_1 _radius_x5r">
+                    <nav class="_clearfix">
+                      <div class="_nav_layout"><a class="_btnlink" href="#">Buttons</a>
 <a class="_link" href="#">Links</a>
 <a class="_link _nav_icon" href="#">&amp;</a>
 <a class="_link" href="#">Icons</a>
 <a class="_link _nav_icon _b" href="#">&bull;&bull;&bull;</a>
 <a class="_link _nav_icon" href="#"><i class="_isvg"><i class="isvg">
-                      <svg viewBox="0 0 24 24">
-                        <path d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i></a>
+                              <svg viewBox="0 0 24 24">
+                                <path d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" fill="currentColor" fill-opacity="1"></path>
+                              </svg></i></i></a>
 <a class="_link _nav_icon" href="#"><i class="_isvg"><i class="isvg">
-                      <svg viewBox="0 0 24 24">
-                        <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i></a>
-              </div>
-            </nav>
-          </div>
-        </section>
-        <div class="_page_layout">
-          <p>
+                              <svg viewBox="0 0 24 24">
+                                <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
+                              </svg></i></i></a>
+                      </div>
+                    </nav>
+                  </div>
+                </section>
+                <p>
 <a class="_btnlink" href="#menu_">Menu</a>
 <a class="_btnlink" href="#menu1">Menu 1</a>
-<a class="_btnlink" href="#menu2">Menu 2</a>
-          </p>
+                </p>
+              </article>
+            </div>
+          </main>
+          <footer id="_footer">
+            <div class="_footer_layout">
+              <hr>
+              <p class="_small _system">Copyright 2025 - Techie Joe</p>
+            </div>
+          </footer>
         </div>
       </div>
-    </div>
-    <div class="_view" id="menu2">
-      <div class="_view_layout">
-        <section>
-          <div class="_flex" id="_navbar">
-            <div class="_f_min _nav_color _text_center">
+      <div class="_view _full_view" id="menu1">
+        <div class="_view_layout">
+          <section class="_flex _c_bg_1" id="_navbar">
+            <div class="_f _text_center">
               <style>
                 #_logo {
                   display:block;
@@ -139,7 +127,7 @@
                 }
                 a#_logo { color:inherit }
                 
-                #_html       a#_logo:hover { background:#bbb; color:#000; transition: none }
+                #_html       a#_logo:hover { background:#bbb; color:#000; transition:none }
                 #_html._dark a#_logo:hover { background:#444; color:#fff; }
                 
                 #_text_logo   { font-size: 2rem; font-weight: 600; }
@@ -150,8 +138,8 @@
               </style><a class="_numb" href="#" onclick="event.preventDefault();" id="_logo">
                 <div id="_text_logo"><span class="_part_1">LO</span><span class="_part_2">GO</span></div></a>
             </div>
-            <div class="_fill _nav_color" style="flex-basis:20rem">
-              <nav id="_nav">
+            <div class="_fill" style="flex-basis:20rem">
+              <nav class="_pa">
                 <div class="_nav_layout">
 <a class="_link" href="#">Product</a>
 <a class="_link" href="#">Services</a>
@@ -161,20 +149,15 @@
                 </div>
               </nav>
             </div>
-            <div class="_f_min _text_right _pa_x5r _nav_color">
-<a class="_navChangeThemeLink _link _nav_icon" href="#"><i class="_isvg"><i class="isvg">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
-                    </svg></i></i></a>
-            </div>
-          </div>
-        </section>
-        <div class="_page_layout">
-          <p>
+          </section>
+          <div id="view_1">
+            <div class="_main_layout">
+              <p>
 <a class="_btnlink" href="#menu_">Menu</a>
 <a class="_btnlink" href="#menu1">Menu 1</a>
-<a class="_btnlink" href="#menu2">Menu 2</a>
-          </p>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -184,7 +167,7 @@
         position:absolute;
         top:0;
         right:15px;
-        padding:5px;
+        padding:.6rem;
         font-size:0;
       }
       #topi .link i { font-style:normal }
