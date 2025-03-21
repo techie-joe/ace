@@ -137,7 +137,7 @@
                     </div>
                     <div class="_radius _pa _bg_2_2 _tc_2_2 _mv">
                       <h3 class="_h6 _tc_2_4">Use High-Quality Images and Graphics</h3>
-                      <p class="_text_justify">Visual elements like images, icons, and graphics add depth and interest to your theme. Invest in high-quality visuals that align with your brand’s style. Use tools like Unsplash or Pexels for free stock photos, and tools like Canva for creating custom graphics.
+                      <p class="_text_justify">Visual elements like images, icons, and graphics add depth and interest to your theme. Invest in high-quality visuals that align with your brand's style. Use tools like Unsplash or Pexels for free stock photos, and tools like Canva for creating custom graphics.
                       </p>
                     </div>
                   </div>
@@ -146,7 +146,7 @@
               <section>
                 <div class="_text_justify _p">
                   <h3 class="_inline _h7">Consistent Branding</h3>
-                  <p class="_inline">: Maintain consistency in your branding elements, such as logos, colors, fonts, and styles. Consistent branding helps build brand recognition and trust. Create a style guide that outlines your brand’s visual identity and design principles.
+                  <p class="_inline">: Maintain consistency in your branding elements, such as logos, colors, fonts, and styles. Consistent branding helps build brand recognition and trust. Create a style guide that outlines your brand's visual identity and design principles.
                   </p>
                 </div>
                 <div class="_text_justify _p">
@@ -190,10 +190,14 @@
                       <h3>Texts and Hyperlinks</h3>
                       <div class="links">
                         <p class="_text_justify">Texts may appear in <span class="_tc_blue">blue</span>, <span class="_tc_purple">purple</span>, <span class="_tc_orange">orange</span> or <span class="_tc_red">red</span>.
-                          Standard color were used on <a class="_stay_fresh _no_wrap" href="#xt" id="normalink">normal hyperlinks</a> and <a class="_no_wrap" href="#">visited links</a>.
-                          You can remove color from a hyperlink using the <code class="_code _no_wrap">_no_color</code> class, to make a <a class="_no_color _no_wrap" href="#">plain hyperlinks</a>.
+                          Standard color were used on <a class="_stay_fresh _no_wrap" href="" onclick="event.preventDefault();" id="normalink">normal hyperlinks</a> and <a class="_no_wrap" href="" onclick="event.preventDefault();">visited links</a>.
+                          You can remove color from a hyperlink using the <code class="_code _no_wrap">_no_color</code> class, to make a <a class="_no_color _no_wrap" href="" onclick="event.preventDefault();">plain hyperlinks</a>.
                         </p>
                       </div>
+                      <script>
+                        document.getElementById('normalink').href+='?t='+(new Date().getTime());
+                        
+                      </script>
                     </div>
                   </div>
                 </div>
@@ -221,9 +225,9 @@
                 <div class="_mv">
                   <h6 class="_h7 _no_margin">Primary Segment</h6>
                   <ul class="_no_bullet _no_pad">
-                    <li><a class="_stay_fresh _no_u" href="#">Put some links</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#">To some posts</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#">Or some pages</a></li>
+                    <li><a class="_stay_fresh _no_u" href="" onclick="event.preventDefault();">Put some links</a></li>
+                    <li><a class="_stay_fresh _no_u" href="" onclick="event.preventDefault();">To some posts</a></li>
+                    <li><a class="_stay_fresh _no_u" href="" onclick="event.preventDefault();">Or some pages</a></li>
                   </ul>
                 </div>
               </div>
@@ -231,9 +235,9 @@
                 <div class="_mv">
                   <h6 class="_h7 _no_margin">Secondary Segment</h6>
                   <ul class="_no_bullet _no_pad">
-                    <li><a class="_stay_fresh _no_u" href="#">Put some links</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#">To some posts</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#">Or some pages</a></li>
+                    <li><a class="_stay_fresh _no_u" href="" onclick="event.preventDefault();">Put some links</a></li>
+                    <li><a class="_stay_fresh _no_u" href="" onclick="event.preventDefault();">To some posts</a></li>
+                    <li><a class="_stay_fresh _no_u" href="" onclick="event.preventDefault();">Or some pages</a></li>
                   </ul>
                 </div>
               </div>

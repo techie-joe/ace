@@ -36,6 +36,7 @@
       ._footer_layout, ._header_layout, ._main_layout
       { margin:auto; max-width:60em; padding:0 1rem }
     </style>
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
   </head>
   <body class="_body" id="_body">
     <div class="_view _full_view">
@@ -78,61 +79,66 @@
                 
                 <u>underlined</u>
                 <a>anchor</a>
-                <a href="" onclick="event.preventDefault();" id="newlink">hyperlink</a>
-                <a href="" onclick="event.preventDefault();">visited</a>
                 <a class="_fresh" href="" onclick="event.preventDefault();">fresh</a>
+                <a href="" onclick="event.preventDefault();" id="normalink">hyperlink</a>
+                <a href="" onclick="event.preventDefault();">visited</a>
                 <a class="_no_color" href="" onclick="event.preventDefault();">no-color</a>
               </div>
               <script>
-                document.getElementById('newlink').setAttribute('href','?t='+new Date().getTime())
+                document.getElementById('normalink').href+='?t='+(new Date().getTime());
                 
               </script>
               <hr>
               <div class="_p"><a href="" onclick="event.preventDefault();"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>hyperlink</a><a href="" onclick="event.preventDefault();"><i class="_itext"><i class="itext">≡</i></i>hyperlink</a><a href="" onclick="event.preventDefault();">hyperlink</a><br><a href="" onclick="event.preventDefault();"><i class="_isvg"><i class="isvg">
+                      </svg></i></i>hyperlink</a><a href="" onclick="event.preventDefault();"><i class="_itext"><i class="itext">≡</i></i>hyperlink</a><a href="" onclick="event.preventDefault();"><i class="_fa"><i class="fas fa-bars"></i></i>hyperlink</a><a href="" onclick="event.preventDefault();">hyperlink</a><br><a href="" onclick="event.preventDefault();"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>hyperlink</a><a href="" onclick="event.preventDefault();"><i class="_itext"><i class="itext">≡</i></i>hyperlink</a><a href="" onclick="event.preventDefault();">hyperlink</a><br>
+                      </svg></i></i>hyperlink</a><a href="" onclick="event.preventDefault();"><i class="_itext"><i class="itext">≡</i></i>hyperlink</a><a href="" onclick="event.preventDefault();"><i class="_fa"><i class="fas fa-bars"></i></i>hyperlink</a><a href="" onclick="event.preventDefault();">hyperlink</a><br>
               </div>
-              <div class="_p"><a class="_link">link</a><a class="_link"><i class="_isvg"><i class="isvg _icon_label">
+              <div class="_p _outline">normal<a class="_link">link</a><a class="_link __icon"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>link</a><a class="_link"><i class="_itext"><i class="itext _icon_label">≡</i></i>link</a><br><a class="_link">link</a><a class="_link"><i class="_isvg"><i class="isvg _icon_label">
+                      </svg></i></i></a><a class="_link __icon"><i class="_itext"><i class="itext">≡</i></i></a><a class="_link __icon"><i class="_fa"><i class="fas fa-bars"></i></i></a></div>
+              <div class="_p"><a class="_link">link</a><a class="_link"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>link</a><a class="_link"><i class="_itext"><i class="itext _icon_label">≡</i></i>link</a><br>
+                      </svg></i></i>link</a><a class="_link"><i class="_itext"><i class="itext">≡</i></i>link</a><a class="_link"><i class="_fa"><i class="fas fa-bars"></i></i>link</a><br><a class="_link">link</a><a class="_link"><i class="_isvg"><i class="isvg">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
+                      </svg></i></i>link</a><a class="_link"><i class="_itext"><i class="itext">≡</i></i>link</a><a class="_link"><i class="_fa"><i class="fas fa-bars"></i></i>link</a><br>
               </div>
-              <div class="_p"><a class="_btnlink">btnlink</a><a class="_btnlink"><i class="_isvg"><i class="isvg _icon_label">
+              <div class="_p _outline">normal<a class="_link">link</a><a class="_btnlink __icon"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>btnlink</a><a class="_btnlink"><i class="_itext"><i class="itext _icon_label">≡</i></i>btnlink</a><br><a class="_btnlink">btnlink</a><a class="_btnlink"><i class="_isvg"><i class="isvg _icon_label">
+                      </svg></i></i></a><a class="_btnlink __icon"><i class="_itext"><i class="itext">≡</i></i></a><a class="_btnlink __icon"><i class="_fa"><i class="fas fa-bars"></i></i></a></div>
+              <div class="_p"><a class="_btnlink">btnlink</a><a class="_btnlink"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>btnlink</a><a class="_btnlink"><i class="_itext"><i class="itext _icon_label">≡</i></i>btnlink</a><br>
+                      </svg></i></i>btnlink</a><a class="_btnlink"><i class="_itext"><i class="itext">≡</i></i>btnlink</a><a class="_btnlink"><i class="_fa"><i class="fas fa-bars"></i></i>btnlink</a><br><a class="_btnlink">btnlink</a><a class="_btnlink"><i class="_isvg"><i class="isvg">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
+                      </svg></i></i>btnlink</a><a class="_btnlink"><i class="_itext"><i class="itext">≡</i></i>btnlink</a><a class="_btnlink"><i class="_fa"><i class="fas fa-bars"></i></i>btnlink</a><br>
               </div>
-              <div class="_p"><a class="_btnlink _L">btnlink</a><a class="_btnlink _L"><i class="_isvg"><i class="isvg _icon_label">
+              <div class="_p"><a class="_btnlink _l">btnlink</a><a class="_btnlink _l"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>btnlink</a><a class="_btnlink _L"><i class="_itext"><i class="itext _icon_label">≡</i></i>btnlink</a><br><a class="_btnlink _L">btnlink</a><a class="_btnlink _L"><i class="_isvg"><i class="isvg _icon_label">
+                      </svg></i></i>btnlink</a><a class="_btnlink _l"><i class="_itext"><i class="itext">≡</i></i>btnlink</a><a class="_btnlink _l"><i class="_fa"><i class="fas fa-bars"></i></i>btnlink</a><br><a class="_btnlink _l">btnlink</a><a class="_btnlink _l"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>btnlink</a><a class="_btnlink _L"><i class="_itext"><i class="itext _icon_label">≡</i></i>btnlink</a><br>
+                      </svg></i></i>btnlink</a><a class="_btnlink _l"><i class="_itext"><i class="itext">≡</i></i>btnlink</a><a class="_btnlink _l"><i class="_fa"><i class="fas fa-bars"></i></i>btnlink</a><br>
               </div>
-              <div class="_p"><a class="_btnlink _XL">btnlink</a><a class="_btnlink _XL"><i class="_isvg"><i class="isvg _icon_label">
+              <div class="_p"><a class="_btnlink _xl">btnlink</a><a class="_btnlink _xl"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>btnlink</a><a class="_btnlink _XL"><i class="_itext"><i class="itext _icon_label">≡</i></i>btnlink</a><br><a class="_btnlink _XL">btnlink</a><a class="_btnlink _XL"><i class="_isvg"><i class="isvg _icon_label">
+                      </svg></i></i>btnlink</a><a class="_btnlink _xl"><i class="_itext"><i class="itext">≡</i></i>btnlink</a><a class="_btnlink _xl"><i class="_fa"><i class="fas fa-bars"></i></i>btnlink</a><br><a class="_btnlink _xl">btnlink</a><a class="_btnlink _xl"><i class="_isvg"><i class="isvg">
                       <svg viewBox="0 0 24 24">
                         <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
-                      </svg></i></i>btnlink</a><a class="_btnlink _XL"><i class="_itext"><i class="itext _icon_label">≡</i></i>btnlink</a><br>
+                      </svg></i></i>btnlink</a><a class="_btnlink _xl"><i class="_itext"><i class="itext">≡</i></i>btnlink</a><a class="_btnlink _xl"><i class="_fa"><i class="fas fa-bars"></i></i>btnlink</a><br>
               </div>
-              <div class="_p _outline">normal<a class="_link">link</a><a class="_btnlink">btnlink</a><a class="_btnlink _L">btnlink</a><a class="_btnlink _XL">btnlink</a></div>
-              <div class="_p _outline">
-                normal
-                <a class="_link">link</a>
-                <a class="_hover_link">hover_link</a>
+              <div class="_p _outline">normal<a class="_link">link</a><a class="_btnlink">btnlink</a><a class="_btnlink _l">btnlink</a><a class="_btnlink _xl">btnlink</a></div>
+              <div class="_p _outline">normal<a class="_link">link</a><a class="_hover_link">hover_link</a>
                 <span class="_hover_scale">hover_scale</span>
                 <span class="_hover_scale_a"><a>hover_scale</a></span>
                 <a class="_hover_scale">hover_scale</a>
