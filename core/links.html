@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
   
-  <!-- Ace Template v0.1.25 b10 | (c) Copyright 2025 - Techie Joe -->
+  <!-- Ace Template v0.1.25 b12 | (c) Copyright 2025 - Techie Joe -->
   <!-- layout:pages/core/html -->
   
   <head>
@@ -31,7 +31,7 @@
       ._view{overflow-y:scroll;padding:.5rem}
       ._dark hr{border-color:#666}
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-12" id="_core_style"/>
     <style>
       ._footer_layout, ._header_layout, ._main_layout
       { margin:auto; max-width:60em; padding:0 1rem }
@@ -48,8 +48,6 @@
         <nav class="_c_bg_1 _no_print" id="_nav">
           <div class="_nav_layout">
 <a class="_link" href="index.html">Core</a>
-<a class="_link" href="blank.html">Blank</a>
-<a class="_link" href="test.html">Test</a>
 <a class="_link" href="basics.html">Basics</a>
 <a class="_link" href="text.html">Text</a>
 <a class="_link" href="icons.html">Icons</a>
@@ -62,6 +60,8 @@
 <a class="_link" href="menu.html">Menu</a>
 <a class="_link" href="layouts.html">Layouts</a>
 <a class="_link" href="theme.html">Theme</a>
+<a class="_link" href="blank.html">Blank</a>
+<a class="_link" href="test.html">Test</a>
           </div>
         </nav>
         <header id="_header">
@@ -182,19 +182,16 @@
       </div>
     </div>
     <style>
-      #topi { position:absolute;top:0;right:0;width:100% }
       #topi .abs {
         position:absolute;
         top:0;
         right:15px;
         padding:.6rem;
-        font-size:0;
       }
       #topi .link i { font-style:normal }
       #topi .link {
         font-family:monospace,monospace;
         font-size:1.3rem;
-        color:inherit;
         text-decoration:none;
         text-align:center;
         display:inline-block;
@@ -208,12 +205,12 @@
         border-radius:.3rem;
       }
     </style>
-    <div class="_no_print" id="topi">
+    <div class="_absolute _full_width _no_print" id="topi">
       <div class="abs">
-<a class="link _c_base" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
+<a class="link _link _c_base" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-10" defer="defer"></script>
+    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-12" defer="defer"></script>
     
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
   
-  <!-- Ace Template v0.1.25 b10 | (c) Copyright 2025 - Techie Joe -->
-  <!-- layout:core/html -->
+  <!-- Ace Template v0.1.25 b12 | (c) Copyright 2025 - Techie Joe -->
+  <!-- layout:pages/core/html -->
   
   <head>
     <meta charset="utf-8"/>
@@ -13,7 +13,7 @@
     <meta property="og:title" content="Test page | Ace Template"/>
     <meta property="og:description" content="We keep brewing new styles from time to time."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/test.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/core/test.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -31,15 +31,40 @@
       ._view{overflow-y:scroll;padding:.5rem}
       ._dark hr{border-color:#666}
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-10" id="_style"/>
-    <style></style>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-12" id="_core_style"/>
+    <style>
+      ._footer_layout, ._header_layout, ._main_layout
+      { margin:auto; max-width:60em; padding:0 1rem }
+    </style>
+    <style>
+      ._footer_layout, ._header_layout, ._main_layout
+      { max-width:none;padding:0;margin:.5rem }
+    </style>
   </head>
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
-        <nav id="_nav">
-          <div class="_nav_layout"><a class="_needjs _link _l __icon" href="#" onclick="event.preventDefault();window.history.back();" title="Back to previous page"><i class="_itext"><i class="itext">←</i></i> Back</a>
-            <hr>
+        <style>
+          #_nav ._nav_layout { margin:0;padding:.5rem }
+          #_nav ._nav_layout a._link { line-height: 1.7em }
+        </style>
+        <nav class="_c_bg_1 _no_print" id="_nav">
+          <div class="_nav_layout">
+<a class="_link" href="index.html">Core</a>
+<a class="_link" href="basics.html">Basics</a>
+<a class="_link" href="text.html">Text</a>
+<a class="_link" href="icons.html">Icons</a>
+<a class="_link" href="links.html">Links</a>
+<a class="_link" href="buttons.html">Buttons</a>
+<a class="_link" href="containers.html">Containers</a>
+<a class="_link" href="colors.html">Colors</a>
+<a class="_link" href="flex.html">Flex</a>
+<a class="_link" href="view.html">View</a>
+<a class="_link" href="menu.html">Menu</a>
+<a class="_link" href="layouts.html">Layouts</a>
+<a class="_link" href="theme.html">Theme</a>
+<a class="_link" href="blank.html">Blank</a>
+<a class="_link" href="test.html">Test</a>
           </div>
         </nav>
         <header id="_header">
@@ -66,19 +91,16 @@
       </div>
     </div>
     <style>
-      #topi { position:absolute;top:0;right:0;width:100% }
       #topi .abs {
         position:absolute;
         top:0;
         right:15px;
         padding:.6rem;
-        font-size:0;
       }
       #topi .link i { font-style:normal }
       #topi .link {
         font-family:monospace,monospace;
         font-size:1.3rem;
-        color:inherit;
         text-decoration:none;
         text-align:center;
         display:inline-block;
@@ -92,12 +114,23 @@
         border-radius:.3rem;
       }
     </style>
-    <div class="_no_print" id="topi">
+    <div class="_absolute _full_width _no_print" id="topi">
       <div class="abs">
-<a class="link _c_base" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
+<a class="link _link _c_base" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a>
+        <style>._nav_layout { margin-right: 4.2rem }</style>
+        <script>
+          (()=>{
+            var
+            e = document.getElementById("_core_style"),
+            m = e.getAttribute("media"),
+            disableStyle = ()=>{ e.setAttribute("media",e.getAttribute("media")==='x'?m:'x') };
+            window.test = { disableStyle };
+          })();
+        </script>
+<a class="link _link _c_base" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">&bull;</a>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-10" defer="defer"></script>
+    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-12" defer="defer"></script>
     
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
