@@ -1,7 +1,7 @@
 ## Change logs
 
-### March 24, 2025 - v0.1.25 b12.321
-- housekeep: core menu
+### March 26, 2025 - v0.1.25 b12.322
+- housekeep: core color
 
 ### Feb 23, 2025 - v0.1.25 b327.23
 - update: theme.v1.0
