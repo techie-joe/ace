@@ -7,11 +7,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Texts | Ace Template</title>
-    <meta name="description" content="Text size and spacing were refined for better adaptability."/>
+    <meta name="description" content="Texts have been optimized to enhance adaptability."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="Texts | Ace Template"/>
-    <meta property="og:description" content="Text size and spacing were refined for better adaptability."/>
+    <meta property="og:description" content="Texts have been optimized to enhance adaptability."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/core/texts.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -59,7 +59,7 @@
           #_nav ._nav_layout { margin:0;padding:.5rem }
           #_nav ._nav_layout a._link { line-height: 1.7em }
         </style>
-        <nav class="_c_bg_1 _no_print" id="_nav">
+        <nav class="_color_1 _no_print" id="_nav">
           <div class="_nav_layout">
 <a class="_link" href="index.html">Core</a>
 <a class="_link" href="basics.html">Basics</a>
@@ -69,17 +69,17 @@
 <a class="_link" href="buttons.html">Buttons</a>
 <a class="_link" href="colors.html">Colors</a>
 <a class="_link" href="containers.html">Containers</a>
-<a class="_link" href="flex.html">Flex</a>
 <a class="_link" href="view.html">View</a>
-<a class="_link" href="menu.html">Menu</a>
+<a class="_link" href="flex.html">Flex</a>
 <a class="_link" href="layouts.html">Layouts</a>
+<a class="_link" href="menu.html">Menu</a>
           </div>
         </nav>
         <header id="_header">
           <div class="_header_layout">
             <h1 class="_h1" id="_heading">Texts
             </h1>
-            <p>Text size and spacing were refined for better adaptability.</p>
+            <p>Texts have been optimized to enhance adaptability.</p>
             <hr>
           </div>
         </header>
@@ -194,21 +194,23 @@
                 </div>
               </section>
               <hr>
-              <section class="gridlinesx _text_center">
-                <p>Helper classes allow you to customize the visual appearance of individual headings. They helps separate visual appearance from semantics, giving you better control over both. Use <code class="_code">_hero_1</code> to <code class="_code">_hero_3</code> or <code class="_code">_h1</code> to <code class="_code">_h7</code> to style your headings, and <code class="_code">_t1</code> to <code class="_code">_t10</code> for other texts.</p>
-                <p class="_hero_3">Text Sample 3</p>
-                <p class="_hero_2">Text Sample 2</p>
-                <p class="_hero_1">Text Sample 1</p>
-                <h1 class="_h1">Text Sample 1</h1>
-                <h2 class="_h2">Text Sample 2</h2>
-                <h3 class="_h3">Text Sample 3</h3>
-                <h4 class="_h4">Text Sample 4</h4>
-                <h5 class="_h5">Text Sample 5</h5>
-                <h6 class="_h6">Text Sample 6</h6>
-                <div class="_h7">Text Sample 7</div>
-                <p>Normal Text</p>
-                <p><span>Normal</span> <span class="_small">Small</span> <span class="_smaller">Smaller</span> <span class="_smallest">Smallest</span>
-                </p>
+              <section class="gridlinesx">
+                <p>Use helper class to customize the visual appearance of headings and texts. They helps separate visual appearance from semantics, giving you better control over both. Use <code class="_code">_hero_1</code> to <code class="_code">_hero_3</code> for large texts, <code class="_code">_h1</code> to <code class="_code">_h7</code> for headings, and <code class="_code">_t1</code> to <code class="_code">_t10</code> for other texts.</p>
+                <div class="_text_center">
+                  <p class="_hero_3">Text Sample 3</p>
+                  <p class="_hero_2">Text Sample 2</p>
+                  <p class="_hero_1">Text Sample 1</p>
+                  <h1 class="_h1">Text Sample 1</h1>
+                  <h2 class="_h2">Text Sample 2</h2>
+                  <h3 class="_h3">Text Sample 3</h3>
+                  <h4 class="_h4">Text Sample 4</h4>
+                  <h5 class="_h5">Text Sample 5</h5>
+                  <h6 class="_h6">Text Sample 6</h6>
+                  <div class="_h7">Text Sample 7</div>
+                  <p>Normal Text</p>
+                  <p><span>Normal</span> <span class="_small">Small</span> <span class="_smaller">Smaller</span> <span class="_smallest">Smallest</span>
+                  </p>
+                </div>
               </section>
               <hr>
               <section>
@@ -255,14 +257,14 @@
       </div>
     </div>
     <style>
-      #topi .abs {
+      #topSwitch .abs {
         position:absolute;
         top:0;
         right:15px;
         padding:.6rem;
       }
-      #topi .link i { font-style:normal }
-      #topi .link {
+      #topSwitch .link i { font-style:normal }
+      #topSwitch .link {
         font-family:monospace,monospace;
         font-size:1.3rem;
         text-decoration:none;
@@ -279,11 +281,11 @@
         border-radius:.3rem;
         vertical-align: middle;
       }
-      #topi .ticon { font-size:1.45rem }
+      #topSwitch .ticon { font-size:1.45rem }
     </style>
-    <div class="_absolute _full_width _no_print" id="topi">
+    <div class="_absolute _full_width _no_print" id="topSwitch">
       <div class="abs">
-<a class="link _link _c_base ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a>
+<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-12" defer="defer"></script>
