@@ -2,7 +2,7 @@
 <html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
   
   <!-- Ace Template v0.1.25 b12 | (c) Copyright 2025 - Techie Joe -->
-  <!-- layout:core/html -->
+  <!-- layout:pages/core/html -->
   
   <head>
     <meta charset="utf-8"/>
@@ -13,7 +13,7 @@
     <meta property="og:title" content="Blank | Ace Template"/>
     <meta property="og:description" content="A blank page to start building."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/blank.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/core/blank.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -32,15 +32,14 @@
       ._dark hr{border-color:#666}
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-12" id="_core_style"/>
+    <style>
+      ._footer_layout, ._header_layout, ._main_layout
+      { margin:auto; max-width:60em; padding:0 1rem }
+    </style>
   </head>
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
-        <nav id="_nav">
-          <div class="_nav_layout"><a class="_needjs _link _l __icon" href="#" onclick="event.preventDefault();window.history.back();" title="Back to previous page"><i class="_itext"><i class="itext">←</i></i> Back</a>
-            <hr>
-          </div>
-        </nav>
         <header id="_header">
           <div class="_header_layout">
             <h1 class="_h1" id="_heading">Blank
@@ -69,8 +68,8 @@ description      = A blank page to start building.
 heading          = Blank
 about            = A blank page to start building.
 
-siteUrl          = https://techie-joe.github.io/ace/blank.html
-og_url           = https://techie-joe.github.io/ace/blank.html?utm_source=homescreen
+siteUrl          = https://techie-joe.github.io/ace/core/blank.html
+og_url           = https://techie-joe.github.io/ace/core/blank.html?utm_source=homescreen
 og_title         = Blank | Ace Template
 og_description   = A blank page to start building.
 og_type          = website
@@ -80,7 +79,7 @@ og_imageAlt      =
 homeUri          = /ace/
 assetsUri        = /ace/assets/
 
-layout           = core/html
+layout           = pages/core/html
 </pre>
                   </div>
                 </aside>
@@ -94,6 +93,38 @@ layout           = core/html
             <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
           </div>
         </footer>
+      </div>
+    </div>
+    <style>
+      #topSwitch .abs {
+        position:absolute;
+        top:0;
+        right:15px;
+        padding:.6rem;
+      }
+      #topSwitch .link i { font-style:normal }
+      #topSwitch .link {
+        font-family:monospace,monospace;
+        font-size:1.3rem;
+        text-decoration:none;
+        text-align:center;
+        display:inline-block;
+        box-sizing:border-box;
+        width:1.5rem;
+        height:1.5rem;
+        margin:.1rem;
+        padding:0;
+        border:1px solid #888;
+        line-height:1;
+        font-weight:normal;
+        border-radius:.3rem;
+        vertical-align: middle;
+      }
+      #topSwitch .ticon { font-size:1.45rem }
+    </style>
+    <div class="_absolute _full_width _no_print" id="topSwitch">
+      <div class="abs">
+<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs link _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close Test Page">&times;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-12" defer="defer"></script>
