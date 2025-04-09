@@ -36,10 +36,20 @@
       ._footer_layout, ._header_layout, ._main_layout
       { margin:auto; max-width:60em; padding:0 1rem }
     </style>
+    <style>
+      ._nav_layout { max-width:60em; }
+      ._main_layout { margin:.5rem auto }
+      
+    </style>
   </head>
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
+        <style>#nav_1 ._nav_layout { margin:0 auto;padding:.5rem }</style>
+        <nav class="_color_1 _no_print" id="nav_1">
+          <div class="_nav_layout"><a class="_link _l" href="" onclick="event.preventDefault();">Product</a><a class="_link _l" href="" onclick="event.preventDefault();">Services</a><a class="_link _l" href="" onclick="event.preventDefault();">Blog</a><a class="_link _l" href="" onclick="event.preventDefault();">Gallery</a><a class="_link _l" href="" onclick="event.preventDefault();">Contact</a>
+          </div>
+        </nav>
         <main id="_main">
           <div class="_main_layout">
             <article>
@@ -55,8 +65,9 @@
                     }
                     a#_logo { color:inherit }
                     
-                    #_html       a#_logo:hover { background:#bbb; color:#000; transition:none }
-                    #_html._dark a#_logo:hover { background:#444; color:#fff; }
+                    #_html       a#_logo:hover  { background-color:#bbb; color:#000; transition:none }
+                    #_html._dark a#_logo:hover  { background-color:#444; color:#fff; }
+                    #_html._a    a#_logo:active { background:none !important; }
                     
                     #_text_logo   { font-size: 2rem; font-weight: 600; }
                     #_text_logo,
@@ -177,10 +188,11 @@
         <footer class="_pt _color_1" id="_footer">
           <div class="_footer_layout">
             <div class="_flex _gap_2">
-              <div class="_f_12_5">
+              <div class="_f_12_8">
                 <div class="_mv">
                   <h6 class="_h7 _no_margin">Official Address</h6>
-                  <div class="_mv">101 Suite, ABC Street,<br>
+                  <div class="_mv _small"><b>Company Name</b>,<br>
+                    101 Suite, ABC Street,<br>
                     ZIP County, State,<br>
                     Country, CC<br>
                   </div>
@@ -192,9 +204,9 @@
                 <div class="_mv">
                   <h6 class="_h7 _no_margin">Primary Segment</h6>
                   <ul class="_plain">
-                    <li><a class="_stay_fresh _no_u" href="#" onclick="event.preventDefault();">Put some links</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#" onclick="event.preventDefault();">To some posts</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#" onclick="event.preventDefault();">Or some pages</a></li>
+                    <li><a class="_link" href="#" onclick="event.preventDefault();">This segment</a></li>
+                    <li><a class="_link" href="#" onclick="event.preventDefault();">Will have links</a></li>
+                    <li><a class="_link" href="#" onclick="event.preventDefault();">To some pages</a></li>
                   </ul>
                 </div>
               </div>
@@ -202,9 +214,9 @@
                 <div class="_mv">
                   <h6 class="_h7 _no_margin">Secondary Segment</h6>
                   <ul class="_plain">
-                    <li><a class="_stay_fresh _no_u" href="#" onclick="event.preventDefault();">Put some links</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#" onclick="event.preventDefault();">To some posts</a></li>
-                    <li><a class="_stay_fresh _no_u" href="#" onclick="event.preventDefault();">Or some pages</a></li>
+                    <li><a class="_link" href="#" onclick="event.preventDefault();">Put some links</a></li>
+                    <li><a class="_link" href="#" onclick="event.preventDefault();">To your posts</a></li>
+                    <li><a class="_link" href="#" onclick="event.preventDefault();">And pages</a></li>
                   </ul>
                 </div>
               </div>
@@ -243,7 +255,7 @@
     </style>
     <div class="_absolute _full_width _no_print" id="topSwitch">
       <div class="abs">
-<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs link _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close Test Page">&times;</a>
+<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="link _link _color" href="./" title="Close this page">&times;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-12" defer="defer"></script>

@@ -7,11 +7,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Layouts | Ace Template</title>
-    <meta name="description" content="Various layouts are available for use."/>
+    <meta name="description" content="Arrange contents with any of these layouts."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="Layouts | Ace Template"/>
-    <meta property="og:description" content="Various layouts are available for use."/>
+    <meta property="og:description" content="Arrange contents with any of these layouts."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/core/layouts.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -37,53 +37,92 @@
       { margin:auto; max-width:60em; padding:0 1rem }
     </style>
     <style>
-      ._footer_layout, ._header_layout, ._main_layout
-      { max-width:none;padding:0;margin:.5rem }
+      ._view { overflow: auto }
+      
+      ._footer_layout, ._header_layout
+      { max-width:none;padding:0;margin:0 }
       
     </style>
   </head>
   <body class="_body" id="_body">
-    <div class="_view _full_view">
-      <div class="_view_layout">
-        <style>
-          #_nav ._nav_layout { margin:0;padding:.5rem }
-          #_nav ._nav_layout a._link { line-height: 1.7em }
-        </style>
-        <nav class="_color_1 _no_print" id="_nav">
-          <div class="_nav_layout">
-<a class="_link" href="index.html">Core</a>
-<a class="_link" href="basics.html">Basics</a>
-<a class="_link" href="texts.html">Texts</a>
-<a class="_link" href="icons.html">Icons</a>
-<a class="_link" href="links.html">Links</a>
-<a class="_link" href="buttons.html">Buttons</a>
-<a class="_link" href="colors.html">Colors</a>
-<a class="_link" href="containers.html">Containers</a>
-<a class="_link" href="view.html">View</a>
-<a class="_link" href="flex.html">Flex</a>
-<a class="_link" href="layouts.html">Layouts</a>
-<a class="_link" href="menu.html">Menu</a>
+    <div class="_views">
+      <div class="_view _full_view" id="view-1">
+        <div class="_view_layout">
+          <header id="_header">
+            <div class="_header_layout">
+              <div class="_ph">
+                <p><b class="_h7">Layouts &mdash; </b> Arrange contents with any of these layouts.</p>
+              </div>
+              <hr>
+            </div>
+          </header>
+          <style>
+            .block { text-align:center }
+            
+            .A_layout { margin:.5rem }
+            
+            .B_layout { max-width:60rem;margin:auto }
+            
+          </style>
+          <div class="block _outline B_layout">
+            <div class="_pa"><b>B_layout </b> <code>{ max-width:60rem; margin:auto }</code>
+            </div>
           </div>
-        </nav>
-        <header id="_header">
-          <div class="_header_layout">
-            <h1 class="_h1" id="_heading">Layouts
-            </h1>
-            <p>Various layouts are available for use.</p>
-            <hr>
+          <div class="block _outline A_layout">
+            <div class="_pa"><b>A_layout </b> <code>{ margin:.5rem }</code>
+            </div>
           </div>
-        </header>
-        <main id="_main">
-          <div class="_main_layout">
-            <article></article>
+          <div class="block _outline DEFAULT_layout">
+            <div class="_pa"><b>DEFAULT_layout </b> <code>{ full-width, auto-height, no-margin }</code>
+            </div>
           </div>
-        </main>
-        <footer id="_footer">
-          <div class="_footer_layout">
-            <hr>
-            <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
+          <hr>
+          <div class="_ma" id="menu">
+            <nav class="_clearfix">
+              <div class="_nav_layout"><a class="_btnlink _l" href="#view-2">Full</a><a class="_btnlink _l" href="#view-3">Float</a>
+              </div>
+            </nav>
           </div>
-        </footer>
+          <footer id="_footer">
+            <div class="_footer_layout">
+              <hr>
+              <div class="_ph">
+                <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="_view _full_view" id="view-2">
+        <div class="_view_layout">
+          <style>
+            .FULL_layout {
+              position:absolute;
+              top:0;left:0;bottom:0;right:0;
+              width:100%;height:100%;
+            }
+            
+          </style>
+          <div class="block _outline FULL_layout">
+            <div class="_pa"><b>FULL_layout </b> <code>{ absolute-full }</code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_view _full_view" id="view-3">
+        <div class="_view_layout">
+          <style>
+            .FLOAT_layout {
+              position:absolute;
+              top:10em;left:10em;bottom:10em;right:10em;
+            }
+            
+          </style>
+          <div class="block _outline FLOAT_layout">
+            <div class="_pa"><b>FLOAT_layout </b> <code>{ absolute-float }</code>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <style>
@@ -115,7 +154,7 @@
     </style>
     <div class="_absolute _full_width _no_print" id="topSwitch">
       <div class="abs">
-<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a>
+<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="link _link _color" href="./" title="Close this page">&times;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-12" defer="defer"></script>
