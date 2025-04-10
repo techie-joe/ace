@@ -61,7 +61,7 @@
             
             .B_layout { max-width:60rem;margin:auto }
             
-            .C_layout { max-width:300px }
+            .C_layout { max-width: 300px; flex-basis: 300px; }
             
             .D_layout { min-width:300px }
             
@@ -72,44 +72,32 @@
           </style>
           <div class="_flex">
             <div class="block _outline _f C_layout">
-              <div class="_pa"><b>C_layout </b> <code>{ max-width:300px }</code>
+              <div class="_pa"><b>C_layout </b><br><code>{ max-width:300px }</code>
               </div>
             </div>
-            <div class="block _outline _f D_layout">
-              <div class="_pa"><b>D_layout </b> <code>{ min-width:300px }</code>
+            <div class="block _outline _fill D_layout">
+              <div class="_pa"><b>D_layout </b><br><code>{ min-width:300px }</code>
               </div>
             </div>
             <div class="block _outline _f C_layout">
-              <div class="_pa"><b>C_layout </b> <code>{ max-width:300px }</code>
+              <div class="_pa"><b>C_layout </b><br><code>{ max-width:300px }</code>
               </div>
             </div>
           </div>
           <div class="_flex">
-            <div class="block _outline _f D_layout">
-              <div class="_pa"><b>D_layout </b> <code>{ min-width:300px }</code>
+            <div class="block _outline _fill D_layout">
+              <div class="_pa"><b>D_layout </b><br><code>{ min-width:300px }</code>
               </div>
             </div>
             <div class="block _outline _f C_layout">
-              <div class="_pa"><b>C_layout </b> <code>{ max-width:300px }</code>
+              <div class="_pa"><b>C_layout </b><br><code>{ max-width:300px }</code>
               </div>
-            </div>
-          </div>
-          <div class="block _outline B_layout">
-            <div class="_pa"><b>B_layout </b> <code>{ max-width:60rem; margin:auto }</code>
-            </div>
-          </div>
-          <div class="block _outline A_layout">
-            <div class="_pa"><b>A_layout </b> <code>{ margin:.5rem }</code>
-            </div>
-          </div>
-          <div class="block _outline DEFAULT_layout">
-            <div class="_pa"><b>DEFAULT_layout </b> <code>{ full-width, auto-height, no-margin }</code>
             </div>
           </div>
           <hr>
           <div class="_ph" id="menu">
             <nav class="_clearfix">
-              <div class="_nav_layout"><a class="_btnlink _l" href="#view-2">Float</a><a class="_btnlink _l" href="#view-3">Full</a>
+              <div class="_nav_layout"><a class="_btnlink _l" href="#view-2">Common</a><a class="_btnlink _l" href="#view-3">Float</a><a class="_btnlink _l" href="#view-4">Full</a>
               </div>
             </nav>
           </div>
@@ -125,6 +113,22 @@
       </div>
       <div class="_view _full_view" id="view-2">
         <div class="_view_layout">
+          <div class="block _outline B_layout">
+            <div class="_pa"><b>B_layout </b> <code>{ max-width:60rem; margin:auto }</code>
+            </div>
+          </div>
+          <div class="block _outline A_layout">
+            <div class="_pa"><b>A_layout </b> <code>{ margin:.5rem }</code>
+            </div>
+          </div>
+          <div class="block _outline DEFAULT_layout">
+            <div class="_pa"><b>DEFAULT_layout </b> <code>{ full-width, auto-height, no-margin }</code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_view _full_view" id="view-3">
+        <div class="_view_layout">
           <style>
             .FLOAT_layout {
               position:absolute;
@@ -138,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="_view _full_view" id="view-3">
+      <div class="_view _full_view" id="view-4">
         <div class="_view_layout">
           <style>
             .FULL_layout {
