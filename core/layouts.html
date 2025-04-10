@@ -57,13 +57,43 @@
             </div>
           </header>
           <style>
-            .block { text-align:center }
-            
-            .A_layout { margin:.5rem }
+            .A_layout { margin:.5rem; }
             
             .B_layout { max-width:60rem;margin:auto }
             
+            .C_layout { max-width:300px }
+            
+            .D_layout { min-width:300px }
+            
+            .block { margin-top:.5rem; margin-bottom:.5rem; text-align:center }
+            
+            .block_B { text-align:center }
+            
           </style>
+          <div class="_flex">
+            <div class="block _outline _f C_layout">
+              <div class="_pa"><b>C_layout </b> <code>{ max-width:300px }</code>
+              </div>
+            </div>
+            <div class="block _outline _f D_layout">
+              <div class="_pa"><b>D_layout </b> <code>{ min-width:300px }</code>
+              </div>
+            </div>
+            <div class="block _outline _f C_layout">
+              <div class="_pa"><b>C_layout </b> <code>{ max-width:300px }</code>
+              </div>
+            </div>
+          </div>
+          <div class="_flex">
+            <div class="block _outline _f D_layout">
+              <div class="_pa"><b>D_layout </b> <code>{ min-width:300px }</code>
+              </div>
+            </div>
+            <div class="block _outline _f C_layout">
+              <div class="_pa"><b>C_layout </b> <code>{ max-width:300px }</code>
+              </div>
+            </div>
+          </div>
           <div class="block _outline B_layout">
             <div class="_pa"><b>B_layout </b> <code>{ max-width:60rem; margin:auto }</code>
             </div>
@@ -77,9 +107,9 @@
             </div>
           </div>
           <hr>
-          <div class="_ma" id="menu">
+          <div class="_ph" id="menu">
             <nav class="_clearfix">
-              <div class="_nav_layout"><a class="_btnlink _l" href="#view-2">Full</a><a class="_btnlink _l" href="#view-3">Float</a>
+              <div class="_nav_layout"><a class="_btnlink _l" href="#view-2">Float</a><a class="_btnlink _l" href="#view-3">Full</a>
               </div>
             </nav>
           </div>
@@ -96,15 +126,14 @@
       <div class="_view _full_view" id="view-2">
         <div class="_view_layout">
           <style>
-            .FULL_layout {
+            .FLOAT_layout {
               position:absolute;
-              top:0;left:0;bottom:0;right:0;
-              width:100%;height:100%;
+              top:5rem;left:5rem;bottom:5rem;right:5rem;
             }
             
           </style>
-          <div class="block _outline FULL_layout">
-            <div class="_pa"><b>FULL_layout </b> <code>{ absolute-full }</code>
+          <div class="block_B _outline FLOAT_layout">
+            <div class="_pa"><b>FLOAT_layout </b> <code>{ absolute-float }</code>
             </div>
           </div>
         </div>
@@ -112,14 +141,15 @@
       <div class="_view _full_view" id="view-3">
         <div class="_view_layout">
           <style>
-            .FLOAT_layout {
+            .FULL_layout {
               position:absolute;
-              top:10em;left:10em;bottom:10em;right:10em;
+              top:0;left:0;bottom:0;right:0;
+              width:100%;height:100%;
             }
             
           </style>
-          <div class="block _outline FLOAT_layout">
-            <div class="_pa"><b>FLOAT_layout </b> <code>{ absolute-float }</code>
+          <div class="block_B _outline FULL_layout">
+            <div class="_pa"><b>FULL_layout </b> <code>{ absolute-full }</code>
             </div>
           </div>
         </div>
