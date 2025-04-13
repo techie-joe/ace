@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
   
-  <!-- Ace Template v0.1.25 b12 | (c) Copyright 2025 - Techie Joe -->
+  <!-- Ace Template v0.1.26 b13 | (c) Copyright 2025 - Techie Joe -->
   <!-- layout:pages/core/html -->
   
   <head>
     <meta charset="utf-8"/>
     <title>Containers | Ace Template</title>
-    <meta name="description" content="Containers group contents together."/>
+    <meta name="description" content="Group contents together using containers."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="Containers | Ace Template"/>
-    <meta property="og:description" content="Containers group contents together."/>
+    <meta property="og:description" content="Group contents together using containers."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/core/containers.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -31,7 +31,7 @@
       ._view{overflow-y:scroll;padding:.5rem}
       ._dark hr{border-color:#666}
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.25-12" id="_core_style"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.26-13" id="_core_style"/>
     <style>
       ._footer_layout, ._header_layout, ._main_layout
       { margin:auto; max-width:60em; padding:0 1rem }
@@ -44,16 +44,38 @@
   <body class="_body" id="_body">
     <div class="_view _full_view">
       <div class="_view_layout">
-        <style>#_nav ._nav_layout { margin:0;padding:.5rem }</style>
-        <nav class="_color_1 _no_print" id="_nav">
-          <div class="_nav_layout"><a class="_link _l" href="index.html">Core</a><a class="_link _l" href="basics.html">Basics</a><a class="_link _l" href="texts.html">Texts</a><a class="_link _l" href="icons.html">Icons</a><a class="_link _l" href="links.html">Links</a><a class="_link _l" href="buttons.html">Buttons</a><a class="_link _l" href="colors.html">Colors</a><a class="_link _l" href="containers.html">Containers</a><a class="_link _l" href="flex.html">Flex</a>
+        <style>
+          .flexmenu ._nav_layout { margin:0 }
+          #_nav ._nav_layout { margin:0 }
+          #navlogo {
+            border: 0;
+            padding: .25em 1em;
+            border-radius: 0;
+            margin: 0;
+            line-height: 2;
+            font-size: 1.2em;
+            box-sizing: border-box;
+            width: 100%;
+          }
+          
+        </style>
+        <nav class="_color_1 flexmenu _no_print">
+          <div class="_nav_layout">
+            <div class="_flex">
+              <div class="_f"><a class="_btnlink" href="../" id="navlogo"><b class="_tc_contra">Ace</b><b class="_tc_blue">Template</b></a>
+              </div>
+              <div class="_fill" style="flex-basis:20rem">
+                <div style="margin: .6rem .6rem"><a class="_link _l" href="index.html">Core</a><a class="_link _l" href="basics.html">Basics</a><a class="_link _l" href="texts.html">Texts</a><a class="_link _l" href="icons.html">Icons</a><a class="_link _l" href="links.html">Links</a><a class="_link _l" href="buttons.html">Buttons</a><a class="_link _l" href="colors.html">Colors</a><a class="_link _l" href="containers.html">Containers</a><a class="_link _l" href="flex.html">Flex</a>
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
         <header id="_header">
           <div class="_header_layout">
             <h1 class="_h1" id="_heading">Containers
             </h1>
-            <p>Containers group contents together.</p>
+            <p>Group contents together using containers.</p>
             <hr>
           </div>
         </header>
@@ -119,7 +141,7 @@
 <a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.25-12" defer="defer"></script>
+    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.26-13" defer="defer"></script>
     
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
