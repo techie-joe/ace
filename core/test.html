@@ -33,41 +33,21 @@
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.26-13" id="_core_style"/>
     <style>
-      ._footer_layout, ._header_layout, ._main_layout
-      { margin:auto; max-width:60em; padding:0 1rem }
-    </style>
-    <style>
-      ._footer_layout, ._header_layout, ._main_layout
-      { max-width:none;padding:0;margin:.5rem }
-    </style>
-  </head>
-  <body class="_body" id="_body">
-    <div class="_view _full_view">
-      <div class="_view_layout">
-        <header id="_header">
-          <div class="_header_layout">
-            <div class="_p"><b class="_h7">Test page &mdash; </b> Try new things from time to time.</div>
-            <hr>
-          </div>
-        </header>
-        <main id="_main">
-          <div class="_main_layout">
-            <article>
-              <section class="_small _i">// test goes here ..</section>
-            </article>
-          </div>
-        </main>
-      </div>
-    </div>
-    <style>
-      #topSwitch .abs {
-        position:absolute;
-        top:0;
-        right:15px;
-        padding:.6rem;
+      #_navlogo {
+        border: 0;
+        padding: .25em 1em;
+        border-radius: 0;
+        margin: 0;
+        line-height: 2;
+        font-size: 1.2em;
+        box-sizing: border-box;
+        width: 100%;
       }
-      #topSwitch .link i { font-style:normal }
-      #topSwitch .link {
+    </style>
+    <style>
+      ._view { position:relative }
+      #_topRightNav { position:fixed; top:0; left:auto; right:15px }
+      #_topRightNav ._link {
         font-family:monospace,monospace;
         font-size:1.3rem;
         text-decoration:none;
@@ -83,12 +63,43 @@
         font-weight:normal;
         border-radius:.3rem;
         vertical-align: middle;
+        i { font-style:normal }
       }
-      #topSwitch .ticon { font-size:1.45rem }
+      #_topRightNav ._nav_layout { margin: .6rem 1rem }
+      #_topRightNav .ticon { font-size:1.5em }
+      
     </style>
-    <div class="_absolute _full_width _no_print" id="topSwitch">
-      <div class="abs">
-<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="link _link _color" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a><a class="link _link _color" href="./" title="Close this page">&times;</a>
+  </head>
+  <body class="_body" id="_body">
+    <div class="_view _full_view">
+      <div class="_view_layout">
+        <header id="_header">
+          <div class="_header_layout">
+            <nav class="_fixed _no_print" id="_topRightNav">
+              <div class="_nav_layout"><a class="_link _color" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a><a class="_link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/core/" title="Back to parent page">&times;</a>
+              </div>
+            </nav>
+            <div class="_pageHeader _defaultHeader">
+              <div class="_p">
+                <h1 class="_h7 _inblock _m0" id="_heading">Test page
+                </h1>
+<span id="_about">&mdash; Try new things from time to time.</span>
+              </div>
+              <hr/>
+            </div>
+          </div>
+        </header>
+        <main id="_main">
+          <div class="_main_layout">
+            <article>
+              <section class="_small _i">// test goes here ..</section>
+            </article>
+          </div>
+        </main>
+        <aside id="_aside">
+          <div class="_aside_layout">
+          </div>
+        </aside>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.26-13" defer="defer"></script>

@@ -33,22 +33,41 @@
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.26-13" id="_core_style"/>
     <style>
-      ._footer_layout, ._header_layout, ._main_layout
-      { margin:auto; max-width:60em; padding:0 1rem }
+      #_navlogo {
+        border: 0;
+        padding: .25em 1em;
+        border-radius: 0;
+        margin: 0;
+        line-height: 2;
+        font-size: 1.2em;
+        box-sizing: border-box;
+        width: 100%;
+      }
     </style>
     <style>
       ._footer_layout, ._header_layout
-      { max-width:none;padding:0;margin:0 }
+      { max-width:none;margin:0 }
+    </style>
+    <style>
+      ._footer_layout, ._header_layout
+      { padding:0 }
+      ._pageHeader { padding:0 1rem }
     </style>
   </head>
   <body class="_body" id="_body">
     <div class="_views">
+      <nav class="_fixed _no_print" id="_topRightNav">
+        <div class="_nav_layout"><a class="_link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/core/" title="Back to parent page">&times;</a>
+        </div>
+      </nav>
       <div class="_view _full_view" id="view-1">
         <div class="_view_layout">
           <header id="_header">
             <div class="_header_layout">
-              <div class="_ph">
-                <p><b class="_h7">Layouts &mdash; </b> Arrange layouts easily.</p>
+              <div class="_pageHeader _simpleHeader">
+                <h1 class="_h1" id="_heading">Layouts
+                </h1>
+                <p id="_about">Arrange layouts easily.</p>
               </div>
               <hr>
             </div>
@@ -96,37 +115,36 @@
           </footer>
         </div>
       </div>
-    </div>
-    <style>
-      #topSwitch .abs {
-        position:absolute;
-        top:0;
-        right:15px;
-        padding:.6rem;
-      }
-      #topSwitch .link i { font-style:normal }
-      #topSwitch .link {
-        font-family:monospace,monospace;
-        font-size:1.3rem;
-        text-decoration:none;
-        text-align:center;
-        display:inline-block;
-        box-sizing:border-box;
-        width:1.5rem;
-        height:1.5rem;
-        margin:.1rem;
-        padding:0;
-        border:1px solid #888;
-        line-height:1;
-        font-weight:normal;
-        border-radius:.3rem;
-        vertical-align: middle;
-      }
-      #topSwitch .ticon { font-size:1.45rem }
-    </style>
-    <div class="_absolute _full_width _no_print" id="topSwitch">
-      <div class="abs">
-<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="link _link _color" href="./" title="Close this page">&times;</a>
+      <div class="_view _full_view" id="view-2">
+        <div class="_view_layout">
+          <style>
+            .FLOAT_layout {
+              position:absolute;
+              top:5rem;left:5rem;bottom:5rem;right:5rem;
+            }
+            
+          </style>
+          <div class="block _outline FLOAT_layout">
+            <div class="_pa"><b>FLOAT_layout </b> <code>{ absolute-float }</code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="_view _full_view" id="view-4">
+        <div class="_view_layout">
+          <style>
+            .FULL_layout {
+              position:absolute;
+              top:0;left:0;bottom:0;right:0;
+              width:100%;height:100%;
+            }
+            
+          </style>
+          <div class="block _outline FULL_layout">
+            <div class="_pa"><b>FULL_layout </b> <code>{ absolute-full }</code>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.26-13" defer="defer"></script>

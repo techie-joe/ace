@@ -7,11 +7,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Menu | Ace Template</title>
-    <meta name="description" content="Build any type of menus."/>
+    <meta name="description" content="Build all types of menus."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="Menu | Ace Template"/>
-    <meta property="og:description" content="Build any type of menus."/>
+    <meta property="og:description" content="Build all types of menus."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/core/menu.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -33,8 +33,36 @@
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.26-13" id="_core_style"/>
     <style>
-      ._footer_layout, ._header_layout, ._main_layout
-      { margin:auto; max-width:60em; padding:0 1rem }
+      #_navlogo {
+        border: 0;
+        padding: .25em 1em;
+        border-radius: 0;
+        margin: 0;
+        line-height: 2;
+        font-size: 1.2em;
+        box-sizing: border-box;
+        width: 100%;
+      }
+    </style>
+    <style>
+      ._header_layout {
+        padding: 0;
+        margin: 0;
+      }
+      ._pageHeader,
+      ._footer_layout, ._main_layout
+      { 
+        margin-left:auto;
+        margin-right:auto;
+        max-width:60em;
+      }
+      ._pageHeader {
+        padding: 0 1rem;
+      }
+      #_navbar ._nav_layout {
+        margin:0;
+        padding:0;
+      }
     </style>
     <style>
       ._view { overflow: auto }
@@ -42,16 +70,25 @@
       .flatmenu ._nav_layout { margin:0 .5rem }
       .flatmenu .btn { border-radius:0;margin:0;vertical-align:top;line-height:2 }
       .flatmenu .btn.__icon { padding:0 .5em; font-size:1.25em }
+      
     </style>
   </head>
   <body class="_body" id="_body">
     <div class="_views">
       <div class="_view _full_view" id="common">
         <div class="_view_layout">
+          <nav class="_absolute _no_print" id="_topRightNav">
+            <div class="_nav_layout"><a class="_link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/core/" title="Back to parent page">&times;</a>
+            </div>
+          </nav>
           <header id="_header">
             <div class="_header_layout">
-              <div class="_p"><b class="_h7">Menu &mdash; </b> Build any type of menus.</div>
-              <hr>
+              <div class="_pageHeader _simpleHeader">
+                <h1 class="_h1" id="_heading">Menu
+                </h1>
+                <p id="_about">Build all types of menus.</p>
+                <hr/>
+              </div>
             </div>
           </header>
           <main id="_main">
@@ -200,38 +237,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <style>
-      #topSwitch .abs {
-        position:absolute;
-        top:0;
-        right:15px;
-        padding:.6rem;
-      }
-      #topSwitch .link i { font-style:normal }
-      #topSwitch .link {
-        font-family:monospace,monospace;
-        font-size:1.3rem;
-        text-decoration:none;
-        text-align:center;
-        display:inline-block;
-        box-sizing:border-box;
-        width:1.5rem;
-        height:1.5rem;
-        margin:.1rem;
-        padding:0;
-        border:1px solid #888;
-        line-height:1;
-        font-weight:normal;
-        border-radius:.3rem;
-        vertical-align: middle;
-      }
-      #topSwitch .ticon { font-size:1.45rem }
-    </style>
-    <div class="_absolute _full_width _no_print" id="topSwitch">
-      <div class="abs">
-<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="link _link _color" href="./" title="Close this page">&times;</a>
       </div>
     </div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.26-13" defer="defer"></script>

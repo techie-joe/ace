@@ -33,27 +33,35 @@
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core/html.css?v=0.1.26-13" id="_core_style"/>
     <style>
-      ._footer_layout, ._header_layout, ._main_layout
-      { margin:auto; max-width:60em; padding:0 1rem }
+      #_navlogo {
+        border: 0;
+        padding: .25em 1em;
+        border-radius: 0;
+        margin: 0;
+        line-height: 2;
+        font-size: 1.2em;
+        box-sizing: border-box;
+        width: 100%;
+      }
     </style>
-    <style>
-      ._view { overflow: auto }
-      
-      ._footer_layout, ._header_layout, ._main_layout
-      { max-width:none;padding:0;margin:0 }
-      
-    </style>
+    <style>._view { overflow: auto }</style>
   </head>
   <body class="_body" id="_body">
     <div class="_views">
+      <nav class="_fixed _no_print" id="_topRightNav">
+        <div class="_nav_layout"><a class="_link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/core/" title="Back to parent page">&times;</a>
+        </div>
+      </nav>
       <div class="_view _full_view" id="view-1">
         <div class="_view_layout">
           <header id="_header">
             <div class="_header_layout">
-              <div class="_ph">
-                <p><b class="_h7">View #1 &mdash; </b> Better controls over the view-pane.</p>
+              <div class="_pageHeader _simpleHeader _ph">
+                <h1 class="_h1" id="_heading">View
+                </h1>
+                <p id="_about">Better controls over the view-pane.</p>
+                <hr/>
               </div>
-              <hr>
             </div>
           </header>
           <main id="_main">
@@ -72,60 +80,63 @@
       <div class="_view _full_view" id="view-3">
         <div class="_view_layout">
           <style>._html #view-3 {
-              background-color: #20002255;
+              background-color: #494c8e55;
               color:#222;
             }
             ._dark #view-3 { color:inherit }
             
           </style>
-          <div class="_page_layout">
-            <div class="_ph">
-              <h2 class="_h7">View #3</h2>
-            </div>
-            <hr>
-            <aside class="_ma">
-              <div class="_pre_layout">
-                <pre class="_pre">
-name             = Ace Template
-version          = 0.1.26
-build            = 13.329
-
-author           = Techie Joe
-publisher        = Tidloo Digital
-
+          <div class="_ph _p">
+            <h3 class="_inblock _h7 _m0" id="_heading">View #3 </h3>
+          </div>
+          <hr>
+          <article class="_page_layout">
+            <div class="_scrollable _full_width _text_left">
+              <aside>
+                <div class="_pre_layout">
+                  <pre class="_pre">
 title            = View | Ace Template
 description      = Better controls over the view-pane.
 
 heading          = View
 about            = Better controls over the view-pane.
 
+layout           = pages/core/html
+filename         = view.html
 siteUrl          = https://techie-joe.github.io/ace/core/view.html
+
 og_url           = https://techie-joe.github.io/ace/core/view.html?utm_source=homescreen
+og_type          = website
 og_title         = View | Ace Template
 og_description   = Better controls over the view-pane.
-og_type          = website
 og_image         = 
 og_imageAlt      = 
 
 homeUri          = /ace/
 assetsUri        = /ace/assets/
 
-layout           = pages/core/html
+name             = Ace Template
+version          = 0.1.26
+build            = 13.329
+
+author           = Techie Joe
+publisher        = Tidloo Digital
 </pre>
-              </div>
-            </aside>
-          </div>
+                </div>
+              </aside>
+            </div>
+          </article>
         </div>
       </div>
       <style>
         #view-2 {
-          background-color: #00220855;
+          background-color: #3d804d55;
           position: absolute;
           top: 0;
           left: 100%;
         }
         #view-4 {
-          background-color: #00153d55;
+          background-color: #997e4555;
           position: absolute;
           top: 100%;
           left: 100%;
@@ -133,49 +144,19 @@ layout           = pages/core/html
       </style>
       <div class="_view _full_view" id="view-2">
         <div class="_view_layout">
-          <div class="_ph">
-            <h2 class="_h7">View #2</h2>
+          <div class="_ph _p">
+            <h3 class="_inblock _h7 _m0" id="_heading">View #2 </h3>
           </div>
+          <article class="_page_layout"></article>
         </div>
       </div>
       <div class="_view _full_view" id="view-4">
         <div class="_view_layout">
-          <div class="_ph">
-            <h2 class="_h7">View #4</h2>
+          <div class="_ph _p">
+            <h3 class="_inblock _h7 _m0" id="_heading">View #4 </h3>
           </div>
+          <article class="_page_layout"></article>
         </div>
-      </div>
-    </div>
-    <style>
-      #topSwitch .abs {
-        position:absolute;
-        top:0;
-        right:15px;
-        padding:.6rem;
-      }
-      #topSwitch .link i { font-style:normal }
-      #topSwitch .link {
-        font-family:monospace,monospace;
-        font-size:1.3rem;
-        text-decoration:none;
-        text-align:center;
-        display:inline-block;
-        box-sizing:border-box;
-        width:1.5rem;
-        height:1.5rem;
-        margin:.1rem;
-        padding:0;
-        border:1px solid #888;
-        line-height:1;
-        font-weight:normal;
-        border-radius:.3rem;
-        vertical-align: middle;
-      }
-      #topSwitch .ticon { font-size:1.45rem }
-    </style>
-    <div class="_absolute _full_width _no_print" id="topSwitch">
-      <div class="abs">
-<a class="link _link _color ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="link _link _color" href="./" title="Close this page">&times;</a>
       </div>
     </div>
     <aside id="_widgets">

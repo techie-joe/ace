@@ -1,6 +1,8 @@
 ## Change logs
 
-### April 10, 2025 - v0.1.25 b12.328
+### April 13, 2025 - v0.1.26 b13.329
+- new header blocks
+- overflow and content alignment.
 - housekeep: core theme, color and layout
 
 ### Feb 23, 2025 - v0.1.25 b327.23
