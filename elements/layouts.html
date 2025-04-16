@@ -49,21 +49,29 @@
       
     </style>
     <style>
-      ._footer_layout, ._header_layout
+      ._footer_layout,
+      ._header_layout,
+      ._main_layout
       { padding:0 }
-      ._pageHeader { padding:0 1rem }
+      
+      ._pageHeader,
+      ._pageFooter
+      { padding:0 1rem }
+      
+      .block { text-align:center }
+      
     </style>
   </head>
   <body class="_body" id="_body">
     <div class="_views" id="_views">
-      <nav class="_fixed _no_print" id="_topRightNav">
-        <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/elements/" title="Back to parent page">&times;</a>
-        </div>
-      </nav>
-      <div class="_view _full_view" id="view-1">
+      <div class="_view _full_view">
         <div class="_view_layout">
           <header id="_header">
             <div class="_header_layout">
+              <nav class="_no_print" id="_topRightNav">
+                <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/elements/" title="Back to parent page">&times;</a>
+                </div>
+              </nav>
               <div class="_pageHeader _simpleHeader">
                 <h1 class="_h1" id="_heading">Layouts
                 </h1>
@@ -72,78 +80,91 @@
               <hr>
             </div>
           </header>
-          <style>.block { text-align:center }</style>
-          <div class="_flex">
-            <div class="block _outline _f" style="flex:1 1 300px;">
-              <div class="_pa"><b>E_layout </b><br><code>{ flex:1 1 300px }</code>
-              </div>
+          <main id="_main">
+            <div class="_main_layout">
+              <article class="_article">
+                <div class="_absolute" id="_top"></div>
+                <nav class="_text_center _color_2 _pa_x5r _ma _radius_x5r _fixed" id="menu" style="top:auto;bottom:2rem;z-index:1000">
+                  <div class="_nav_layout"><a class="_btnlink _xl" href="#_top">Common</a><a class="_btnlink _xl" href="#FULL_layout">Full</a><a class="_btnlink _xl" href="#FLOAT_layout">Float</a>
+                  </div>
+                </nav>
+                <section class="_full_view" id="COMMON_layout">
+                  <div class="_flex">
+                    <div class="block _outline _f" style="flex:1 1 300px;">
+                      <div class="_pa"><b>E_layout </b><br><code>{ flex:1 1 300px }</code>
+                      </div>
+                    </div>
+                    <div class="block _outline _fill" style="flex:100 1 300px;">
+                      <div class="_pa"><b>D_layout </b><br><code>{ flex:100 1 300px }</code>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="_flex">
+                    <div class="block _outline _f" style="flex:0 0 300px;">
+                      <div class="_pa"><b>C_layout </b><br><code>{ flex:0 0 300px }</code>
+                      </div>
+                    </div>
+                    <div class="block _outline _fill" style="flex:1 1 300px;">
+                      <div class="_pa"><b>D_layout </b><br><code>{ flex:1 1 300px }</code>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block _outline" style="max-width:60rem;margin:auto;">
+                    <div class="_pa"><b>B_layout </b><br><code>{ max-width:60rem; margin:auto }</code>
+                    </div>
+                  </div>
+                  <div class="block _outline" style="margin:0 5%;">
+                    <div class="_pa"><b>A_layout </b><br><code>{ margin:10% }</code>
+                    </div>
+                  </div>
+                  <div class="block _outline DEFAULT_layout">
+                    <div class="_pa"><b>DEFAULT_layout </b><br><code>{ full-width, auto-height, no-margin }</code>
+                    </div>
+                  </div>
+                </section>
+                <hr>
+                <section id="FULL_layout">
+                  <style>
+                    .FULL_layout
+                    { position:relative; width:100%;height:100vh }
+                    
+                  </style>
+                  <div class="block _outline FULL_layout">
+                    <div class="_pa"><b>FULL_layout </b><br><code>{ absolute-full }</code>
+                    </div>
+                  </div>
+                </section>
+                <hr>
+                <section id="FLOAT_layout">
+                  <style>
+                    .FLOAT_layout
+                    { position:absolute;top:5rem;left:5rem;bottom:5rem;right:5rem; }
+                    
+                  </style>
+                  <div class="FULL_layout">
+                    <div class="block _outline FLOAT_layout">
+                      <div class="_pa"><b>FLOAT_layout </b><br> <code>{ absolute-float }</code>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </article>
             </div>
-            <div class="block _outline _fill" style="flex:100 1 300px;">
-              <div class="_pa"><b>D_layout </b><br><code>{ flex:100 1 300px }</code>
-              </div>
+          </main>
+          <aside id="_aside">
+            <div class="_aside_layout">
             </div>
-          </div>
-          <div class="_flex">
-            <div class="block _outline _f" style="flex:0 0 300px;">
-              <div class="_pa"><b>C_layout </b><br><code>{ flex:0 0 300px }</code>
-              </div>
-            </div>
-            <div class="block _outline _fill" style="flex:1 1 300px;">
-              <div class="_pa"><b>D_layout </b><br><code>{ flex:1 1 300px }</code>
-              </div>
-            </div>
-          </div>
-          <div class="block _outline" style="max-width:60rem;margin:auto;">
-            <div class="_pa"><b>B_layout </b><br><code>{ max-width:60rem; margin:auto }</code>
-            </div>
-          </div>
-          <div class="block _outline" style="margin:0 5%;">
-            <div class="_pa"><b>A_layout </b><br><code>{ margin:10% }</code>
-            </div>
-          </div>
-          <div class="block _outline DEFAULT_layout">
-            <div class="_pa"><b>DEFAULT_layout </b><br><code>{ full-width, auto-height, no-margin }</code>
-            </div>
-          </div>
+          </aside>
           <footer id="_footer">
             <div class="_footer_layout">
               <hr>
-              <div class="_ph">
-                <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
+              <div class="_pageFooter _defaultFooter">
+                <div class="_ph">
+                  <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
+                </div>
               </div>
             </div>
           </footer>
-        </div>
-      </div>
-      <div class="_view _full_view" id="view-2">
-        <div class="_view_layout">
-          <style>
-            .FLOAT_layout {
-              position:absolute;
-              top:5rem;left:5rem;bottom:5rem;right:5rem;
-            }
-            
-          </style>
-          <div class="block _outline FLOAT_layout">
-            <div class="_pa"><b>FLOAT_layout </b> <code>{ absolute-float }</code>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="_view _full_view" id="view-4">
-        <div class="_view_layout">
-          <style>
-            .FULL_layout {
-              position:absolute;
-              top:0;left:0;bottom:0;right:0;
-              width:100%;height:100%;
-            }
-            
-          </style>
-          <div class="block _outline FULL_layout">
-            <div class="_pa"><b>FULL_layout </b> <code>{ absolute-full }</code>
-            </div>
-          </div>
         </div>
       </div>
     </div>
