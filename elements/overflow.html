@@ -7,11 +7,11 @@
   <head>
     <meta charset="utf-8"/>
     <title>Overflow | Ace Template</title>
-    <meta name="description" content="Controls container overflows."/>
+    <meta name="description" content="Several overflow use cases."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
     <meta property="og:title" content="Overflow | Ace Template"/>
-    <meta property="og:description" content="Controls container overflows."/>
+    <meta property="og:description" content="Several overflow use cases."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/elements/overflow.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -48,6 +48,109 @@
       #_navbar { margin: -.5rem -1rem 0 }
       
     </style>
+    <style>
+      .oo {
+        display:inline-block;
+        width:12rem;
+      }
+      .o {
+        display:inline-block;
+        width:12rem;
+        height:12rem;
+        margin:0 .5rem .5rem 0;
+        vertical-align:top;
+      }
+      .top {
+        position:absolute;
+        top:0;left:0;
+      }
+      .t { font-size:.8em;margin:.4em }
+      .s { font-size:.8em;margin:0 .4em }
+      .p { font-size:.8em;padding:.4em;line-height:1 }
+      .a {
+        display:inline-block;
+        padding:.6rem;
+      }
+      .b {
+        display:inline-block;
+        outline: 1px solid tomato;
+        color:tomato !important;
+        text-decoration:none !important;
+        text-align:center;
+        font-size:.8em;
+        padding:.2em .4em;
+      }
+      ._clip_end {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      ._ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      ._mask {
+        white-space: nowrap;
+        mask: linear-gradient(to left, transparent 0%, black 20%);
+      }
+      ._mask_2 {
+        white-space: nowrap;
+        mask: linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 100%);
+      }
+      ._clip_shape {
+        width: 100%;
+        clip-path: circle(50% at 50% 50%);
+      }
+      ._snap { scroll-snap-type: x mandatory }
+      ._snap ._snap-item { scroll-snap-align: center }
+      
+      /* -------------------------------------------------------- */
+      
+      ._hover_show { display:block;margin:1px }
+      ._hover_show.__active ._trigger,
+      ._hover_show ._trigger {
+        cursor:pointer;
+        transition: background-color .2s;
+      }
+      ._hover_show ._item { position:relative }
+      ._hover_show.__absolute ._content { position:absolute }
+      ._hover_show ._content {
+        overflow:hidden;
+        transition:max-height .2s ease .4s;
+        max-height:0px;
+      }
+      ._hover_show.__active ._trigger,
+      ._hover_show:hover ._trigger { background-color:#8883 }
+      ._hover_show.__active ._content,
+      ._hover_show:hover ._content { max-height:100px }
+      
+      ._a a._hover_show:visited,
+      ._a a._hover_show:hover,
+      ._a a._hover_show { color:inherit;text-decoration:none }
+      
+    </style>
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <style>
+      .btn { border:0 }
+      .flatmenu ._nav_layout { margin:.5rem 0 }
+      .flatmenu .btn { border-radius:0;margin:0;vertical-align:top;line-height:2 }
+      .flatmenu .btn.__icon { padding:0 .5em; font-size:1.25em }
+      .flatmenu ._btnlink ._fa { margin-right:0 }
+      
+      .flatmenu ._hover_show__on_focus,
+      .flatmenu ._hover_show {
+        display:inline-block;
+        margin:0;
+      }
+      
+      #mainmenu {
+        margin:-.5rem 0 .5rem;
+        overflow:hidden;width:0;max-height:0px;
+        transition:width .2s ease, max-height .2s ease;
+      }
+      #mainmenu.open { width:100%;max-height:100px; }
+      
+    </style>
   </head>
   <body class="_body" id="_body">
     <div class="_views" id="_views">
@@ -63,7 +166,7 @@
                 <div class="_p">
                   <h1 class="_h7 _inblock _m0" id="_heading">Overflow
                   </h1>
-<span id="_about">&mdash; Controls container overflows.</span>
+<span id="_about">&mdash; Several overflow use cases.</span>
                 </div>
                 <hr/>
               </div>
@@ -71,40 +174,89 @@
           </header>
           <main id="_main">
             <div class="_main_layout">
-              <article>
-                <div class="_scrollable _full_width _text_left" id="_pageData">
-                  <aside class="_pre_layout">
-                    <pre class="_pre">
-title            = Overflow | Ace Template
-description      = Controls container overflows.
-
-heading          = Overflow
-about            = Controls container overflows.
-
-layout           = elements/_html
-filename         = overflow.html
-siteUrl          = https://techie-joe.github.io/ace/elements/overflow.html
-
-og_url           = https://techie-joe.github.io/ace/elements/overflow.html?utm_source=homescreen
-og_type          = website
-og_title         = Overflow | Ace Template
-og_description   = Controls container overflows.
-og_image         = 
-og_imageAlt      = 
-
-homeUri          = /ace/
-assetsUri        = /ace/assets/
-
-name             = Ace Template
-version          = 0.1.27
-build            = 14.333
-
-author           = Techie Joe
-publisher        = Tidloo Digital
-</pre>
-                  </aside>
-                </div>
-              </article>
+              <artcile class="_article">
+                <section>
+                  <nav class="_color_1 flatmenu">
+                    <div class="_nav_layout"><a class="_btnlink _l btn __icon" onclick="event.preventDefault();toggleMainMenu();"><i class="_isvg"><i class="isvg">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M5,6H19V8H5V6M5,11H19V13H5V11M5,16H19V18H5V16Z" fill="currentColor" fill-opacity="1"></path>
+                            </svg></i></i></a>
+                      <div class="_hover_show __absolute" id="m2"><a class="_trigger _btnlink _l btn __absolute" href="#" onclick="event.preventDefault();">Menu <i class="_fa"><i class="fas fa-caret-down"></i></i></a>
+                        <div class="_item">
+                          <div class="_content _color_1" style="width:300px;">
+                            <div class="_pa">
+                              <div class="s">// more menues ...</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><a class="_btnlink _l btn __icon" href="#"><i class="_isvg"><i class="isvg">
+                            <svg viewBox="0 0 24 24">
+                              <path d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" fill="currentColor" fill-opacity="1"></path>
+                            </svg></i></i></a>
+                    </div>
+                  </nav>
+                  <div id="mainmenu">
+                    <div class="_color _pa" style="background-color:#0002;height:400px">
+                      <div class="_small">// main menu goes here</div>
+                    </div>
+                  </div>
+                </section>
+                <hr>
+                <div><a class="_btnlink" href="" style="padding:.2rem .4rem">Reset</a></div>
+                <hr>
+                <section class="_mv">
+                  <div class="o _outline">
+                    <div class="t">To reveal more on hover,<br>
+                      use <span class="_mono">._hover_show</span>.
+                    </div><a class="_hover_show __absolute" href="#">
+                      <div class="_trigger p">The absolute type,</div>
+                      <div class="_item">
+                        <div class="_content _color_1">
+                          <div class="p">way too long .. way too long .. way too long .. way too long .. way too long .. way too long .. 
+                          </div>
+                        </div>
+                      </div></a>
+                    <div class="s">would overlay above others.</div>
+                    <div class="t"> 
+                    </div><a class="_hover_show" href="#">
+                      <div class="_trigger p">The default type,</div>
+                      <div class="_item">
+                        <div class="_content _color_1">
+                          <div class="p">way too long .. way too long .. way too long .. way too long .. way too long .. way too long .. 
+                          </div>
+                        </div>
+                      </div></a>
+                    <div class="s">would shove other content.</div>
+                  </div>
+                  <div class="o _outline">
+                    <div class="t">To clip in a certain shape,<br>
+                      use <span class="_mono">._clip</span>
+                    </div>
+                    <div class="t _clip_shape _color_1">way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..way too long ..
+                    </div>
+                  </div>
+                  <div class="o _outline _relative _scrollable">
+                    <div class="top" id="t1"></div>
+                    <div class="t">When <a href="#i1">the item</a> is <br> out off the view,</div>
+                    <div class="t">use <span class="_mono">._scrollable</span>.</div>
+                    <div class="a" id="i1" style="position:absolute;bottom:-50%;right:-50%;"><a class="b" href="#t1">Click Me</a></div>
+                  </div>
+                  <div class="o _outline">
+                    <div class="t _clip_end">To cut-off the rest of the text without any indication,</div>
+                    <div class="t">use <span class="_mono">._clipend</span>.</div>
+                    <div class="t _ellipsis">To add dots at the end of the line like this,</div>
+                    <div class="t">use <span class="_mono">._ellipsis</span>.</div>
+                    <div class="t _tc_red">Only works for a single line.</div>
+                  </div>
+                  <div class="o _outline">
+                    <div class="t _mask">To mask the end of the line with some gradient,</div>
+                    <div class="t">use <span class="_mono">._mask</span>.</div>
+                    <div class="t _mask_2">To mask the both ends of the line with some gradient,</div>
+                    <div class="t">use <span class="_mono">._mask_2</span>.</div>
+                    <div class="t _tc_red">Only works for a single line.</div>
+                  </div>
+                </section>
+              </artcile>
             </div>
           </main>
           <aside id="_aside">
@@ -124,6 +276,14 @@ publisher        = Tidloo Digital
     </div>
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.27-14" defer="defer"></script>
+    <script>
+      var mainMenuIs = 'closed';
+      function toggleMainMenu(){
+        mainMenuIs = mainMenuIs=='closed'?'open':'closed';
+        var e = document.getElementById('mainmenu');
+        if(e){ e.className = mainMenuIs }
+      }
+    </script>
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
   </body>
