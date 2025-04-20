@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html class="_nojs _scrollbar _a" id="_html" lang="en"><!-- layout:html -->
+<html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
+  
+  <!-- Ace Builder v0.2.0 b1 | (c) Copyright 2025 - Techie Joe -->
+  <!-- layout:index_2/_html -->
+  
   <head>
     <meta charset="utf-8"/>
-    <title>Ace Builder by Techie Joe</title>
+    <title>Ace Builder</title>
     <meta name="description" content="A power-tool for building websites and web applications."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Ace Builder by Techie Joe"/>
+    <meta property="og:title" content="Ace Builder | Ace Builder"/>
     <meta property="og:description" content="A power-tool for building websites and web applications."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/index.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -19,26 +23,49 @@
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/ace/icons/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/ace/icons/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
-    <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/><!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+    <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/>
+    <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
     <style>
-      html{font-family:system-ui,sans-serif;background-color:#ddd;color:#666}
-      hr{border:0;border-bottom:1px solid #999}
+      html{font-family:system-ui,sans-serif}
       body{margin:0}
-      ._view{overflow-y:scroll}
-      ._view_layout{margin:.5rem}
-      @media(prefers-color-scheme:dark){html{background-color:#222;color:#999}a{color:#7a8eea}}
+      ._view{overflow-y:scroll;padding:.5rem}
+      ._dark hr{border-color:#666}
+    </style>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/core_2/html.css?v=0.2.0-1" id="_core_style"/>
+    <style>
+      #_navlogo {
+        border: 0;
+        padding: .25em 1em;
+        border-radius: 0;
+        margin: 0;
+        line-height: 2;
+        font-size: 1.2em;
+        box-sizing: border-box;
+        width: 100%;
+      }
+    </style>
+    <style>
+      #_navbar { margin: -.5rem -1rem 0 }
       
     </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/ace.css?v=0.1.24&b=327.22"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/basic_style.css?v=0.1.24&b=327.22"/>
     <style>
-      #_header ._header_layout { padding: 2rem 1rem; margin-top:0; }
-      @media (max-width: 530px) {
-      #_header ._header_layout { padding: 3rem 1rem 2rem; }
-      }
+      ._pageHeader,
+      ._pageFooter,
+      #_main ._article
+      { max-width:60em;margin:.5rem auto }
       
-      #_header ._header_layout { position:relative }
-      #_header ._header_layout:before {
+    </style>
+    <style>
+      #_navbar ._nav_layout
+      { max-width:60em;margin:auto }
+      
+    </style>
+    <style>
+      #_heading { margin-top:0 }
+      #_about { margin-bottom:2em }
+      ._simpleHeader { margin:-.5rem auto 0;padding:3rem 0 2rem }
+      #_header ._pageHeader { position:relative }
+      #_header ._pageHeader:before {
         content: 'A';
         font-family: serif;
         font-weight: bold;
@@ -51,61 +78,36 @@
         opacity: 0.1;
         user-select: none;
       }
-      #_main,
-      #intro { position:relative; z-index:1 }
-      
-      #intro { max-width: 25em; }
-      
-      #intro ._hero_1 span { line-height:1 }
-      
-      #topi { position: absolute; top: 3.3rem; right: 5rem; }
-      #topi ._isvg { height: 2.5em; min-width: 2.5em; }
-      @media (max-width: 530px) {
-      #topi { top: 1rem; right: 1rem; }
-      #topi ._isvg { height: 1.5em; min-width: 1.5em; }
-      }
-      #topi ._link { padding:.5em }
-      
-      html   #_header { background: #ccc; }
-      ._dark #_header { background: #111; }
-      
-      html   #_header h1 { color: #000; }
-      ._dark #_header h1 { color: #fff; }
-      
-      #_html .pages ul { list-style-type: none; padding-inline-start: 0; }
-      
-      #_html       .viewdemo { background-color: #1b36b0; color:#fff; border-color: #3046a8; }
-      #_html._dark .viewdemo { background-color: #7a8eea; color:#000; border-color: #5f72c5; }
-      .download, .viewdemo { min-width: 6em; margin: .5em .3em; }
       
     </style>
   </head>
-  <body id="_body">
-    <div id="_contents">
-      <div class="_view">
+  <body class="_body" id="_body">
+    <div class="_views" id="_views">
+      <div class="_view _full_view">
         <div class="_view_layout">
-          <aside id="acelinks"></aside>
-          <header id="_header" style="margin:-.5rem -.5rem 0">
+          <header class="_color_1" id="_header">
             <div class="_header_layout">
-              <div id="intro" style="margin-top:3em;margin-bottom:2em">
-                <h1 class="_hero_2 _mb0"><span class="t1">Ace</span> <span class="t2 _tc_primary">Builder</span></h1>
-                <p class="_text_justify _mt0">A power-tool for building websites and web applications.</p>
-                <p class="_smaller _system">by <a class="_stay_fresh" href="https://github.com/techie-joe/" target="page_author">Techie Joe</a>
-                </p>
-              </div>
-              <div class="_no_print _needjs" id="topi"><a class="_needjs _link _nav_icon _hover_scale" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
-                    </svg></i></a>
+              <div id="__acelinks"></div>
+              <nav class="_no_print" id="_topRightNav">
+                <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a>
+                </div>
+              </nav>
+              <div class="_pageHeader _simpleHeader">
+                <div id="intro" style="margin-top:3em;margin-bottom:2em">
+                  <h1 class="_hero_3 _mb0" id="_heading"><span class="t1">Ace</span> <span class="t2 _tc_blue">Builder</span></h1>
+                  <p class="_t5 _mt0" id="_about">A power-tool for building websites and web applications.</p>
+                  <p class="_smaller _system">by <a class="_stay_fresh" href="https://github.com/techie-joe/" target="page_author">Techie Joe</a>
+                  </p>
+                </div>
               </div>
             </div>
           </header>
           <main id="_main">
             <div class="_main_layout">
-              <article>
+              <article class="_article">
                 <section class="_mv_2">
                   <p class="_text_justify" style="min-height:5rem">Our builder comes with <b class="_h7">pre-made components</b> and <b class="_h7">helper classes</b>, giving you an easy building experience. We have simplified web creation to make it accessible to everyone, even those without technical expertise. Dive in and start building your website right away. With a variety of customization options, you can create a professional and unique website tailored to your needs.</p>
-                  <div class="_mv _nav_color _radius_x5r _pa_x5r _ph _no_print"><a class="_btnlink viewdemo" href="/ace/components/" title="Explore Core Components"><span class="_btnlabel">Explore</span></a>
+                  <div class="_mv _color_1 _radius_x5r _pa_x5r _ph _no_print"><a class="_btnlink _xl __primary viewdemo" href="/ace/components/" title="Explore Core Components">Explore</a>
                   </div>
                 </section>
                 <hr>
@@ -120,7 +122,7 @@
                       </div>
                       <div class="_f_12_4">
                         <ul class="_no_margin">
-                          <li><a class="_link" href="/ace/basic/intro.html">Basic Template</a></li>
+                          <li><a class="_link" href="undefinedintro.html">Basic Template</a></li>
                         </ul>
                       </div>
                     </div>
@@ -132,10 +134,10 @@
                     <section class="_mb_2">
                       <h2>Available in light and dark</h2>
                       <p class="_text_justify">Make your website readily available in both light and dark color schemes. Our tools helps switch between the two by using the keyboard shortcut <code class="_code _no_wrap">Ctrl + Alt + T</code>. You may also use a button or a script to programmatically execute <code class="_code _no_wrap">theme.change()</code>.</p>
-                      <p class="_no_print _needjs"><a class="_needjs _btnlink" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg">
-                            <svg viewBox="0 0 24 24">
-                              <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
-                            </svg></i> <span class="_btnlabel">Change Theme</span></a>
+                      <p class="_no_print _needjs"><a class="_needjs _btnlink _l" href="#" onclick="event.preventDefault();theme.change();" title="Change Theme (Ctrl+Alt+T)"><i class="_isvg"><i class="isvg">
+                              <svg viewBox="0 0 24 24">
+                                <path d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" fill="currentColor" fill-opacity="1"></path>
+                              </svg></i></i> Change Theme</a>
                       </p>
                     </section>
                   </div>
@@ -143,70 +145,81 @@
                     <section class="_mb_2">
                       <h2>Good design, even in print</h2>
                       <p class="_text_justify">You will want a website that looks great when printed. Our websites excel on paper. Enjoy good design and functionality, viewed digitally or in print. Elevate your professionalism with a website that stand out in every medium.</p>
-                      <p class="_no_print _needjs"><a class="_btnlink" href="#" title="Print Page (Ctrl+P)" onclick="event.preventDefault();window.print();"><i class="_isvg">
-                            <svg viewBox="0 0 24 24">
-                              <path d="M18,3H6V7H18M19,12A1,1 0 0,1 18,11A1,1 0 0,1 19,10A1,1 0 0,1 20,11A1,1 0 0,1 19,12M16,19H8V14H16M19,8H5A3,3 0 0,0 2,11V17H6V21H18V17H22V11A3,3 0 0,0 19,8Z" fill="currentColor" fill-opacity="1"></path>
-                            </svg></i> <span class="_btnlabel">Print Page</span></a>
+                      <p class="_no_print _needjs"><a class="_btnlink _l" href="#" title="Print Page (Ctrl+P)" onclick="event.preventDefault();window.print();"><i class="_isvg"><i class="isvg">
+                              <svg viewBox="0 0 24 24">
+                                <path d="M18,3H6V7H18M19,12A1,1 0 0,1 18,11A1,1 0 0,1 19,10A1,1 0 0,1 20,11A1,1 0 0,1 19,12M16,19H8V14H16M19,8H5A3,3 0 0,0 2,11V17H6V21H18V17H22V11A3,3 0 0,0 19,8Z" fill="currentColor" fill-opacity="1"></path>
+                              </svg></i></i> Print Page</a>
                       </p>
                     </section>
                   </div>
                 </div>
-                <hr>
               </article>
             </div>
           </main>
+          <aside id="_aside">
+            <div class="_aside_layout">
+            </div>
+          </aside>
           <footer id="_footer">
             <div class="_footer_layout">
-              <div class="_pa _nav_color _radius_x5r">
-                <div class="_flex _gap">
-                  <div class="_f_fit">
-                    <p class="_small _mono" style="margin:0 -.3em;"><a class="_link _b" href="https://techie-joe.github.io/ace/">LIVE</a>|<a class="_link _b" href="http://localhost/ace/">LOCAL</a><span id="sourceref"></span>
-                    </p>
-                    <p class="_smaller _mono">Ace Builder by Techie Joe <br/>
-                      Version: 0.1.24 - <span class="_no_wrap">b327.22</span>
-                    </p>
-                  </div>
-                  <div class="_f_12_4">
-                    <div class="_smaller _text_justify"><span class="_no_wrap">&bull; Our special thanks goes to</span> Matt at <a class="_no_color" href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">SVGBackgrounds</a> for free SVG images.</div>
+              <section class="_pageFooter">
+                <div class="_mono _text_right">
+                  <hr/>
+                  <div class="_p _small"><a class="_link _b" href="http://localhost/ace/">LOCAL</a>|<a class="_link _b" href="https://techie-joe.github.io/ace/index.html">LIVE</a><span id="__sourceref"></span>
                   </div>
                 </div>
-              </div>
-              <hr>
-              <section class="_p _small"> <a class="_link" href="LICENSE.txt" target="ace_license">License</a> <a class="_link" href="README.md" target="ace_readme">Readme</a> <a class="_link" href="CHANGELOGS.md" target="ace_changelogs">Changes</a>
+                <hr>
+                <div class="_p _small">
+                  <div class="_flex _gap">
+                    <div class="_f" style="flex: 0 6 14em">Ace Builder &mdash;
+                      <span class="_no_wrap">v0.2.0 - b1.0</span>
+                    </div>
+                    <div class="_f_2_1">
+<a href="README.md" target="ace_readme">Readme</a>
+<a href="LICENSE.txt" target="ace_license">License</a>
+<a href="CHANGELOGS.md" target="ace_changelogs">Changes</a>
+                    </div>
+                  </div>
+                </div>
               </section>
-              <hr>
-              <p class="_small _system">&copy; Copyright 2025 Techie Joe</p>
+              <div class="_pageFooter _defaultFooter">
+                <hr/>
+                <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
+              </div>
             </div>
           </footer>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.24&b=327.22" defer="defer">
-    </script>
+    <div class="_widgets" id="_widgets"></div>
+    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.2.0-1" defer="defer"></script>
     <style id="_needjs">._needjs { display: none !important; }</style>
     <script>
-      document.getElementById('_needjs').innerHTML='';
+      document.getElementById('_needjs').remove();
       
     </script>
     <script>
       (function(w){
-        if( w.location.hostname === 'localhost' ) {
-          if( sourceref ) {
-            sourceref.innerHTML = [
-              '|<a class="_link _b" href="https://github.com/techie-joe/ace/" target="page_source">SOURCE</a>',
-              '|<a class="_link _b" href="https://github.com/techie-joe/_ace/" target="page_builder">BUILDER</a>',
-            ].join('');
-          }
-          if( acelinks ) {
-            acelinks.innerHTML = [
-              '<div class="_relative _no_print"><div class="_pa _absolute" style="z-index:1;">',
-              '<a class="_link _nav_icon" href="../" title="Back to parent page"><span class="_itext">&middot;&middot;</span></a> ',
-              '<a class="_link _nav_icon" href="info.html" title="Info page"><span class="_itext _mono">i</span></a> ',
-              '</div></div>',
-            ].join('');
-          }
+      
+        if( __sourceref && w.location.hostname === 'localhost' ) {
+          __sourceref.innerHTML = [
+            '|<a class="_link _b" href="https://github.com/techie-joe/ace/" target="page_source">SOURCE</a>',
+            '|<a class="_link _b" href="https://github.com/techie-joe/_ace/" target="page_builder">BUILDER</a>',
+          ].join('');
         }
+      
+        if( __acelinks && w.location.hostname === 'localhost' ) {
+          __acelinks.innerHTML = [
+            '<div class="_relative _no_print" style="left:-1rem"><div class="_absolute" style="z-index:1;margin:.6rem 1rem">',
+            '<a class="_btnlink _l __icon" href="../" title="Back to parent page"><span class="_itextx">&middot;&middot;</span></a> ',
+            '<a class="_btnlink _l __icon" href="info.html" title="Info page"><span class="_itextx _mono">i</span></a> ',
+            '</div></div>',
+          ].join('');
+        }
+      
       })(window);
-    </script><!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
+    </script>
+    <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
+    
   </body>
 </html>
