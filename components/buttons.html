@@ -6,14 +6,14 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Starter | Ace Template</title>
-    <meta name="description" content="A starter page with minimum setup."/>
+    <title>Buttons | Ace Template</title>
+    <meta name="description" content="Functional styles for action buttons."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Starter | Ace Template"/>
-    <meta property="og:description" content="A starter page with minimum setup."/>
+    <meta property="og:title" content="Buttons | Ace Template"/>
+    <meta property="og:description" content="Functional styles for action buttons."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/elements/starter.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/components/buttons.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -60,7 +60,10 @@
       { margin:0;padding-left:0;min-height:2.9rem }
       
     </style>
-    <style></style>
+    <style>
+      .o { height:2rem }
+      .buttons ._btnlink { min-width:5em }
+    </style>
   </head>
   <body class="_body" id="_body">
     <div class="_views" id="_views">
@@ -87,19 +90,19 @@
                           box-sizing: border-box;
                           width: 100%;
                         }
-                      </style><a class="_btnlink" href="/ace/" id="_navlogo"><b class="_tc_contra">Ace</b><b class="_tc_blue">Template</b></a>
+                      </style><a class="_btnlink" href="/ace/" id="_navlogo"><b class="_tc_contra">Ace</b> <b class="_tc_blue">Builder</b></a>
                     </div>
                     <div class="_fill" style="flex-basis:20rem">
-                      <div style="margin: .6rem"><a class="_link _l" href="./">Elements</a><a class="_link _l" href="basics.html">Basics</a><a class="_link _l" href="texts.html">Texts</a><a class="_link _l" href="icons.html">Icons</a><a class="_link _l" href="links.html">Links</a><a class="_link _l" href="buttons.html">Buttons</a><a class="_link _l" href="containers.html">Containers</a><a class="_link _l" href="alignment.html">Alignment</a><a class="_link _l" href="flex.html">Flex</a>
+                      <div style="margin: .6rem"><a class="_link _l" href="./">Elements</a><a class="_link _l" href="basics.html">Basics</a><a class="_link _l" href="texts.html">Texts</a><a class="_link _l" href="icons.html">Icons</a><a class="_link _l" href="links.html">Links</a><a class="_btnlink _l __secondary __active" href="buttons.html">Buttons</a><a class="_link _l" href="containers.html">Containers</a><a class="_link _l" href="alignment.html">Alignment</a><a class="_link _l" href="flex.html">Flex</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </nav>
               <div class="_pageHeader _simpleHeader">
-                <h1 class="_h1" id="_heading">Starter
+                <h1 class="_h1" id="_heading">Buttons
                 </h1>
-                <p id="_about">A starter page with minimum setup.</p>
+                <p id="_about">Functional styles for action buttons.</p>
                 <hr/>
               </div>
             </div>
@@ -107,38 +110,12 @@
           <main id="_main">
             <div class="_main_layout">
               <article class="_article">
-                <div class="_scrollable _full_width _text_left">
-                  <aside class="_pre_layout">
-                    <pre class="_pre">
-title            = Starter | Ace Template
-description      = A starter page with minimum setup.
-
-heading          = Starter
-about            = A starter page with minimum setup.
-
-layout           = elements/_html
-filename         = starter.html
-siteUrl          = https://techie-joe.github.io/ace/elements/starter.html
-
-og_url           = https://techie-joe.github.io/ace/elements/starter.html?utm_source=homescreen
-og_type          = website
-og_title         = Starter | Ace Template
-og_description   = A starter page with minimum setup.
-og_image         = 
-og_imageAlt      = 
-
-homeUri          = /ace/
-assetsUri        = /ace/assets/
-
-name             = Ace Template
-version          = 0.1.27
-build            = 14.332
-
-author           = Techie Joe
-publisher        = Tidloo Digital
-</pre>
-                  </aside>
-                </div>
+                <section class="buttons">
+                  <div class="_p"><a class="_btnlink _xl __primary" href="#" onclick="event.preventDefault();">Primary</a><a class="_btnlink _xl __secondary" href="#" onclick="event.preventDefault();">Secondary</a><a class="_btnlink _xl" href="#" onclick="event.preventDefault();">Ordinary</a>
+                  </div>
+                  <div class="_p"><a class="_btnlink _xl __disabled __primary" href="#" onclick="event.preventDefault();">Primary</a><a class="_btnlink _xl __disabled __secondary" href="#" onclick="event.preventDefault();">Secondary</a><a class="_btnlink _xl __disabled" href="#" onclick="event.preventDefault();">Ordinary</a>
+                  </div>
+                </section>
               </article>
             </div>
           </main>

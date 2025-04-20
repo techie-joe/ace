@@ -1,8 +1,8 @@
-# Ace Template
-> Build your website and application on a solid foundation
+# Ace Builder Website
+> A power-tool for building websites and web applications.
 ------------------------------------------------------------------
 
-Title    : Ace Template  
+Title    : Ace Builder Website  
 Version  : 0.1.24  
 Build    : 327.22  
 Author   : Techie Joe  

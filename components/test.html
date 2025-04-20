@@ -6,14 +6,14 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Collapsibles | Ace Template</title>
-    <meta name="description" content="Simplify things with collapsible elements."/>
+    <title>Test page | Ace Template</title>
+    <meta name="description" content="Try new things from time to time."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Collapsibles | Ace Template"/>
-    <meta property="og:description" content="Simplify things with collapsible elements."/>
+    <meta property="og:title" content="Test page | Ace Template"/>
+    <meta property="og:description" content="Try new things from time to time."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/elements/collapsibles.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/components/test.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -48,6 +48,30 @@
       #_navbar { margin: -.5rem -1rem 0 }
       
     </style>
+    <style>
+      #_topRightNav { position:fixed; top:0; left:auto; right:15px }
+      #_topRightNav ._link {
+        font-family:monospace,monospace;
+        font-size:1.3rem;
+        text-decoration:none;
+        text-align:center;
+        display:inline-block;
+        box-sizing:border-box;
+        width:1.5rem;
+        height:1.5rem;
+        margin:.1rem;
+        padding:0;
+        border:1px solid #888;
+        line-height:1;
+        font-weight:normal;
+        border-radius:.3rem;
+        vertical-align: middle;
+      }
+      #_topRightNav ._link i { font-style:normal }
+      #_topRightNav ._nav_layout { margin: .6rem 1rem }
+      #_topRightNav ._ticon { font-size:1.5rem }
+      
+    </style>
   </head>
   <body class="_body" id="_body">
     <div class="_views" id="_views">
@@ -56,14 +80,14 @@
           <header id="_header">
             <div class="_header_layout">
               <nav class="_no_print" id="_topRightNav">
-                <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/elements/" title="Back to parent page">&times;</a>
+                <div class="_nav_layout"><a class="_link _color" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/elements/" title="Back to parent page">&times;</a>
                 </div>
               </nav>
               <div class="_pageHeader _defaultHeader">
                 <div class="_p">
-                  <h1 class="_h7 _inblock _m0" id="_heading">Collapsibles
+                  <h1 class="_h7 _inblock _m0" id="_heading">Test page
                   </h1>
-<span id="_about">&mdash; Simplify things with collapsible elements.</span>
+<span id="_about">&mdash; Try new things from time to time.</span>
                 </div>
                 <hr/>
               </div>
@@ -71,39 +95,8 @@
           </header>
           <main id="_main">
             <div class="_main_layout">
-              <article class="_article">
-                <div class="_scrollable _full_width _text_left" id="_pageData">
-                  <aside class="_pre_layout">
-                    <pre class="_pre">
-title            = Collapsibles | Ace Template
-description      = Simplify things with collapsible elements.
-
-heading          = Collapsibles
-about            = Simplify things with collapsible elements.
-
-layout           = elements/_html
-filename         = collapsibles.html
-siteUrl          = https://techie-joe.github.io/ace/elements/collapsibles.html
-
-og_url           = https://techie-joe.github.io/ace/elements/collapsibles.html?utm_source=homescreen
-og_type          = website
-og_title         = Collapsibles | Ace Template
-og_description   = Simplify things with collapsible elements.
-og_image         = 
-og_imageAlt      = 
-
-homeUri          = /ace/
-assetsUri        = /ace/assets/
-
-name             = Ace Template
-version          = 0.1.27
-build            = 14.333
-
-author           = Techie Joe
-publisher        = Tidloo Digital
-</pre>
-                  </aside>
-                </div>
+              <article>
+                <section class="_small _i">// test goes here ..</section>
               </article>
             </div>
           </main>
@@ -111,19 +104,20 @@ publisher        = Tidloo Digital
             <div class="_aside_layout">
             </div>
           </aside>
-          <footer id="_footer">
-            <div class="_footer_layout">
-              <div class="_pageFooter _defaultFooter">
-                <hr/>
-                <p class="_small _system">&copy; Copyright 2025 - Techie Joe</p>
-              </div>
-            </div>
-          </footer>
         </div>
       </div>
     </div>
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.1.27-14" defer="defer"></script>
+    <script>
+      (()=>{
+        var
+        e = document.getElementById("_core_style"),
+        m = e.getAttribute("media"),
+        disableStyle = ()=>{ e.setAttribute("media",e.getAttribute("media")==='x'?m:'x') };
+        window.test = { disableStyle };
+      })();
+    </script>
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
   </body>
