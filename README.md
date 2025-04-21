@@ -4,7 +4,7 @@
 
 Title     : Ace Builder Website  
 Version   : 0.2.0  
-Build     : 1.1  
+Build     : 1.2  
 Author    : Techie Joe  
 Publisher : Tidloo Digital  
 
@@ -16,4 +16,4 @@ AUTHOR    : https://github.com/techie-joe/
 
 ------------------------------------------------------------------
 
-Copyright (c) 2025 Tidloo Digital
+Copyright (c) 2025 - Techie Joe

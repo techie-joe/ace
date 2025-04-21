@@ -1,6 +1,6 @@
-## Change logs
+## Ace Builder Change Logs
 
-### April 20, 2025 - v0.2.0 b1.1
+### April 21, 2025 - v0.2.0 b1.2
 - rewrite Ace Builder
 
 ### April 15, 2025 - v0.1.27 b14.333
