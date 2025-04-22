@@ -36,23 +36,42 @@
       .o1 { box-shadow: 0 0 0 5px #ff880088 inset; }
       .o2 { box-shadow: 0 0 0 5px #88008888 inset;background-color:#8883 }
       #contents { width:50%;height:150vh }
-      .top { position:absolute;top:0 }
-      .bottom { position:absolute;bottom:0 }
+      #top { position:absolute;top:0 }
+      #bottom { position:absolute;bottom:0 }
+      .fullScreen { height:auto;overflow:auto }
     </style>
   </head>
   <body class="_body" id="_body">
-    <div class="_views o1" id="_views">
-      <div class="_view _full_view">
-        <div class="_view_layout">
-          <div class="_relative o2" id="contents">
-            <div class="top">// top contents</div>
-            <div class="bottom">// bottom contents</div>
+    <div class="_view _full_view o1" id="_view">
+      <div class="_view_layout">
+        <div class="_relative o2" id="contents">
+          <div id="top"></div>
+          <div class="_pa" id="content">
+            <div class="_pageHeader _defaultHeader">
+              <div class="_p">
+                <h1 class="_h7 _inblock _m0" id="_heading">Body test
+                </h1>
+<span id="_about">&mdash; Testing html document body.</span>
+              </div>
+              <hr/>
+            </div><a class="_btnlink _l" href="#" onclick="event.preventDefault();toggleFullScreen()">Full Screen</a>
           </div>
+          <div class="_pa" id="bottom">// bottom content</div>
         </div>
       </div>
     </div>
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.2.0-1" defer="defer"></script>
+    <script>
+      var isFullScreen = false;
+      var eid = '_view';
+      var eclass = '_view _full_view o1';
+      function toggleFullScreen(){
+        var e = document.getElementById(eid);
+        if(!isFullScreen){ e.setAttribute('class',eclass+' fullScreen');isFullScreen=true; }
+        else{ e.setAttribute('class',eclass);isFullScreen=false; }
+      }
+    </script>
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
   </body>
