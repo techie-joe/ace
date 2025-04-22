@@ -40,18 +40,22 @@
       #contents { width:50%;height:30rem;margin:auto }
       .top { position:absolute;top:0 }
       .bottom { position:absolute;bottom:0 }
-      .fullScreen { height:auto;min-height:100%;overflow:auto }
-      .fullScreen .btn { outline:3px solid #880088;outline-offset:5px; }
+      .fullScreen #view { height:auto;min-height:100%;overflow:auto }
+      .fullScreen #btnT { outline:3px solid #880088;outline-offset:5px; }
     </style>
   </head>
   <body class="_body" id="_body">
+    <nav class="_no_print" id="_topRightNav">
+      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close this page">&times;</a>
+      </div>
+    </nav>
+    <nav class="_no_print" id="_topRightNav">
+      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close this page">&times;</a>
+      </div>
+    </nav>
     <div class="_views" id="_views">
-      <div class="_view _full_view o1" id="_view">
+      <div class="_view _full_view o1" id="view">
         <div class="_view_layout">
-          <nav class="_no_print" id="_topRightNav">
-            <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close this page">&times;</a>
-            </div>
-          </nav>
           <div class="_relative o2" id="contents">
             <div class="top _pa"></div>
             <div class="content _pa">
@@ -62,7 +66,7 @@
 <span id="_about">&mdash; Testing mobile full view scrolling.</span>
                 </div>
                 <hr/>
-              </div><a class="_btnlink _l btn" href="#" onclick="event.preventDefault();toggleFullScreen()">Full Screen</a>
+              </div><a class="_btnlink _l" href="#" id="btnT" onclick="event.preventDefault();toggleFullScreen()">Full Screen</a>
               <hr>
               <p>
                 On mobile, top navigation bar adapts to scrolling behavior.
@@ -87,8 +91,8 @@
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.2.0-1" defer="defer"></script>
     <script>
       var isFullScreen = false;
-      var eid = '_view';
-      var eclass = '_view _full_view o1';
+      var eid = '_body';
+      var eclass = '_body';
       function toggleFullScreen(){
         var e = document.getElementById(eid);
         if(!isFullScreen){ e.setAttribute('class',eclass+' fullScreen');isFullScreen=true; }
