@@ -6,12 +6,12 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Body test</title>
-    <meta name="description" content="Testing html document body."/>
+    <title>Test #2</title>
+    <meta name="description" content="Testing mobile full view scrolling."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Body test"/>
-    <meta property="og:description" content="Testing html document body."/>
+    <meta property="og:title" content="Test #2"/>
+    <meta property="og:description" content="Testing mobile full view scrolling."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://techie-joe.github.io/ace/test_2.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
@@ -35,28 +35,43 @@
     <style>
       .o1 { box-shadow: 0 0 0 5px #ff880088 inset; }
       .o2 { box-shadow: 0 0 0 5px #88008888 inset;background-color:#8883 }
-      #contents { width:50%;height:100rem;margin:auto }
-      #top { position:absolute;top:0 }
-      #bottom { position:absolute;bottom:0 }
+      .o3 { box-shadow: 0 0 0 5px #005f88 inset;background-color:#8883 }
+      .o4 { box-shadow: 0 0 0 5px #328800 inset;background-color:#8883 }
+      #contents { width:50%;height:30rem;margin:auto }
+      .top { position:absolute;top:0 }
+      .bottom { position:absolute;bottom:0 }
       .fullScreen { height:auto;overflow:auto }
+      .fullScreen #_topRightNav { right:0 }
     </style>
   </head>
   <body class="_body" id="_body">
     <div class="_view _full_view o1" id="_view">
       <div class="_view_layout">
+        <nav class="_no_print" id="_topRightNav">
+          <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close this page">&times;</a>
+          </div>
+        </nav>
         <div class="_relative o2" id="contents">
-          <div id="top"></div>
-          <div class="_pa" id="content">
+          <div class="top _pa"></div>
+          <div class="content _pa">
             <div class="_pageHeader _defaultHeader">
               <div class="_p">
-                <h1 class="_h7 _inblock _m0" id="_heading">Body test
+                <h1 class="_h7 _inblock _m0" id="_heading">Test #2
                 </h1>
-<span id="_about">&mdash; Testing html document body.</span>
+<span id="_about">&mdash; Testing mobile full view scrolling.</span>
               </div>
               <hr/>
             </div><a class="_btnlink _l" href="#" onclick="event.preventDefault();toggleFullScreen()">Full Screen</a>
           </div>
-          <div class="_pa" id="bottom">// bottom content</div>
+          <div class="bottom _pa">// bottom content</div>
+        </div>
+        <div class="_relative o3" id="contents">
+          <div class="top _pa">// top content</div>
+          <div class="bottom _pa">// bottom content</div>
+        </div>
+        <div class="_relative o4" id="contents">
+          <div class="top _pa">// top content</div>
+          <div class="bottom _pa">// bottom content</div>
         </div>
       </div>
     </div>
