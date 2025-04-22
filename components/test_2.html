@@ -40,7 +40,7 @@
       #contents { width:50%;height:30rem;margin:auto }
       .top { position:absolute;top:0 }
       .bottom { position:absolute;bottom:0 }
-      .fullScreen { height:auto;overflow:auto }
+      .fullScreen { height:auto;min-height:100%;overflow:auto }
       .fullScreen .btn { outline:3px solid #880088;outline-offset:5px; }
     </style>
   </head>
@@ -63,6 +63,12 @@
                 </div>
                 <hr/>
               </div><a class="_btnlink _l btn" href="#" onclick="event.preventDefault();toggleFullScreen()">Full Screen</a>
+              <hr>
+              <p>
+                On mobile, top navigation bar adapts to scrolling behavior.
+                The top navigation bar will be hidden when user start scrolling.
+                You can decide whether to allow view controls to manage the behavior or not.
+              </p>
             </div>
             <div class="bottom _pa">// bottom content</div>
           </div>
