@@ -1,0 +1,58 @@
+._pageHeader { text-align:center }
+._pageFooter { text-align:center }
+
+pre { color:inherit }
+
+body {
+	font-family: system-ui, sans-serif;
+	padding: 2em 0em;
+	border-top: 10px solid #F7CF5E;
+	border-bottom: 10px solid #BD292C;
+	background-color: inherit;
+	color: inherit;
+}
+
+.price {
+	font-weight: bold; 
+}
+
+h1.logo {
+	font-size: 5em;
+	font-family: 'Pacifico', cursive;
+	color: #BD292C;
+	text-shadow: #F7CF5E 5px 5px 0px;
+	transform: rotateZ(-4deg);
+	display: block;
+	cursor:pointer;
+	margin: 0 -30px;
+}
+
+h1.logo:hover {
+	transform: rotateZ(0deg);
+}
+
+.logo span {
+	font-family: system-ui, sans-serif;
+}
+
+#header p {
+	font-size:1.2em;
+}
+
+h3 {
+	font-family: 'Pacifico', cursive;
+}
+
+.v {
+	background-color: #9DBF1A;
+	width: 2em;
+	font-family: sans-serif;
+	color: #023700;
+	text-align: center;
+	height: 2em;
+	font-size: 0.6em;
+	font-weight: 600;
+	line-height: 2em;
+	border-radius: 1em;
+	margin-left: 1em;
+}
