@@ -6,8 +6,8 @@ pre { color:inherit }
 body {
 	font-family: system-ui, sans-serif;
 	padding: 2em 0em;
-	border-top: 10px solid #F7CF5E;
-	border-bottom: 10px solid #BD292C;
+	border-top: 10px solid #CCC;
+	border-bottom: 10px solid #444;
 	background-color: inherit;
 	color: inherit;
 }
@@ -16,27 +16,36 @@ body {
 	font-weight: bold; 
 }
 
-h1.logo {
+.logo {
 	font-size: 5em;
 	font-family: 'Pacifico', cursive;
-	color: #BD292C;
-	text-shadow: #F7CF5E 5px 5px 0px;
-	transform: rotateZ(-4deg);
+	text-shadow: 4px 4px 0px #8888, 5px 5px 8px #0006;
 	display: block;
 	cursor:pointer;
-	margin: 0 -30px;
+	line-height: 1;
+	margin: 20px -30px 30px;
 }
 
-h1.logo:hover {
+.logo {
+	transform: rotateZ(-4deg);
+	transform-origin: center center;
+	display:inline-block;
+}
+
+.logo:hover {
 	transform: rotateZ(0deg);
 }
 
-.logo span {
-	font-family: system-ui, sans-serif;
+.header {
+	margin-top:-.5rem;
 }
 
-#header p {
+.header p {
 	font-size:1.2em;
+}
+
+.header span {
+	white-space: nowrap;
 }
 
 h3 {

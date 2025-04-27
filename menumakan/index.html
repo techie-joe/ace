@@ -6,11 +6,11 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>Menu Makan</title>
+    <title>Menu Makan &trade;</title>
     <meta name="description" content="Senarai makanan menarik untuk anda."/>
     <meta name="author" content="MenuMakan.com"/>
     <meta name="publisher" content="MenuMakan.com"/>
-    <meta property="og:title" content="Menu Makan"/>
+    <meta property="og:title" content="Menu Makan &amp;trade;"/>
     <meta property="og:description" content="Senarai makanan menarik untuk anda."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://menumakan.page.dev/index.html?utm_source=homescreen"/>
@@ -40,12 +40,14 @@
     <div class="_views" id="_views">
       <div class="_view _full_view">
         <div class="_view_layout">
+          <header id="header">
+            <div class="_header_layout">
+            </div>
+          </header>
           <main id="_main">
             <div class="_main_layout">
-              <article class="_article">
-                <div class="container" id="menu">
-                  <div class="_text_center _b _i">Loading menu ...</div>
-                </div>
+              <article class="_article container" id="menu">
+                <div class="_text_center _b _i" id="loading_message" style="margin-bottom:5rem">Loading our menu ...</div>
               </article>
             </div>
           </main>
@@ -68,32 +70,51 @@
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=1.0-0" defer="defer"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.11.0/underscore-min.js"></script>
-    <script type="text/javascript" src="/ace/assets/js/menumakan/main.js"></script><script id="menu-template" type="text/x-handlebars-template">
-      <div id="header" class="row text-center">
-        <div class="col-md-6 offset-md-3 mb-4 _no_overflow">
-          <h1 class="logo mb-2">&#128020;<br>Clucker!</h1>
-          <p>Our grilled chicken is fresh, never frozen and marinated in <span class="_no_wrap">PERi-PERi</span> for 24 hours before being flame-grilled.</p>
+    <script type="text/javascript" src="/ace/assets/js/menumakan/main.js"></script>
+    <script type="text/x-handlebars-template" id="header-template">
+      <style>
+        #_body {
+          border-top-color: {{primary-color.value}};
+          border-bottom-color: {{secondary-color.value}};
+        }
+        #header { background-color: #EEE }
+        ._dark #header { background-color: #111 }
+        .header { background-color: {{primary-color.value}}22 }
+        #header .logo {
+          color: {{header-primary-color.value}};
+          text-shadow: 4px 4px 0px {{header-secondary-color.value}}, 5px 5px 8px #0006;
+        }
+      </style>
+      <div class="_header_layout">
+        <div class="header row text-center">
+          <div class="col-md-6 offset-md-3 mb-4 _no_overflow">
+            <h1 class="logo"><span class="headerA">{{safe header-a.value}}</span><br><span class="headerB">{{safe header-b.value}}</span></h1>
+            <p class="_tc_contra">{{safe description.value}}</p>
+          </div>
+        </div>
+        <div class="_color_1 _pa _text_center">
+          <p>{{safe about.value}}</p>
         </div>
       </div>
+    </script>
+    <script type="text/x-handlebars-template" id="menu-template">
       <div class="row">
-        {{#each this as |category|}}
-          <div class="col-md-6 _mv">
-            <div class="category">
-              <h3 class="mb-4 mt-2">{{@key}}</h3>
-              <ul class="list-unstyled">
-                {{#each this as |item|}}
-                  <li class="item d-flex align-items-center mb-3">
-                    <div class="name">{{item.item}}</div>
-                    {{#if item.isVegetarian}}
-                      <div class="v">V</div>
-                    {{/if}}
-                    <div class="price ml-auto">&dollar;{{item.price}}</div>
-                  </li>
-                {{/each}}
-              </ul>
-            </div>
+        {{#each this as |category|}}<div class="col-md-6 _mv">
+          <div class="category">
+            <h3 class="mb-4 mt-2">{{@key}}</h3>
+            <ul class="list-unstyled">
+              {{#each this as |item|}}
+                <li class="item d-flex align-items-center mb-3">
+                  <div class="name">{{item.item}}</div>
+                  {{#if item.isVegetarian}}
+                    <div class="v">V</div>
+                  {{/if}}
+                  <div class="price ml-auto">&dollar;{{item.price}}</div>
+                </li>
+              {{/each}}
+            </ul>
           </div>
-        {{/each}}
+        </div>{{/each}}
       </div>
     </script>
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->

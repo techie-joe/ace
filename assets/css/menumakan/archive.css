@@ -1,0 +1,19 @@
+.logo .headerB {
+	transform: rotateZ(-4deg);
+	transform-origin: bottom center;
+	display:inline-block;
+}
+
+.logo:hover .headerB {
+	transform: rotateZ(0deg);
+}
+
+.logo .headerA {
+	transform: rotateZ(8deg);
+	transform-origin: bottom center;
+	display:inline-block;
+}
+
+.logo:hover .headerA {
+	transform: rotateZ(-4deg);
+}
