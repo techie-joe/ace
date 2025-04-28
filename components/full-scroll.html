@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
+  
+  <!-- Ace Builder v0.2.0 b1 | (c) Copyright 2025 - Techie Joe -->
+  <!-- layout:core_2/_html -->
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Full Scroll</title>
+    <meta name="description" content="Mobile full view scrolling."/>
+    <meta name="author" content="Techie Joe"/>
+    <meta name="publisher" content="Tidloo Digital"/>
+    <meta property="og:title" content="Full Scroll"/>
+    <meta property="og:description" content="Mobile full view scrolling."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/full-scroll.html?utm_source=homescreen"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:image:alt" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <meta id="_color_scheme" name="color-scheme" content="light dark"/>
+    <meta id="_theme_color" name="theme-color" content="#222222"/>
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/ace/icons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/ace/icons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
+    <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/>
+    <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+    <style>
+      html{font-family:system-ui,sans-serif}
+      body{margin:0}
+      ._view{overflow-y:scroll;padding:.5rem}
+      ._dark hr{border-color:#666}
+    </style>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/core_2/html.css?v=0.2.0-1" id="_core_style"/>
+    <style>
+      .o1 { box-shadow: 0 0 0 5px #ff880088 inset; }
+      .o2 { box-shadow: 0 0 0 5px #88008888 inset;background-color:#8883 }
+      .o3 { box-shadow: 0 0 0 5px #005f88 inset;background-color:#8883 }
+      .o4 { box-shadow: 0 0 0 5px #328800 inset;background-color:#8883 }
+      #contents { width:50%;height:30rem;margin:auto }
+      .top { position:absolute;top:0 }
+      .bottom { position:absolute;bottom:0 }
+      .fullScreen #view { height:auto;min-height:100%;overflow:auto }
+      .fullScreen #btnT { outline:3px solid #880088;outline-offset:5px; }
+    </style>
+  </head>
+  <body class="_body" id="_body">
+    <nav class="_no_print" id="_topRightNav">
+      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close this page">&times;</a>
+      </div>
+    </nav>
+    <nav class="_no_print" id="_topRightNav">
+      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs _link _color" href="#" onclick="event.preventDefault();window.history.back();" title="Close this page">&times;</a>
+      </div>
+    </nav>
+    <div class="_views" id="_views">
+      <div class="_view _full_view o1" id="view">
+        <div class="_view_layout">
+          <div class="_relative o2" id="contents">
+            <div class="top _pa"></div>
+            <div class="content _pa">
+              <div class="_pageHeader _defaultHeader">
+                <div class="_p">
+                  <h1 class="_h7 _inblock _m0" id="_heading">Full Scroll
+                  </h1>
+<span id="_about">&mdash; Mobile full view scrolling.</span>
+                </div>
+                <hr/>
+              </div><a class="_btnlink _l" href="#" id="btnT" onclick="event.preventDefault();toggleFullScreen()">Full Screen</a>
+              <hr>
+              <p>
+                On mobile, top navigation bar adapts to scrolling behavior.
+                The top navigation bar will be hidden when user start scrolling.
+                You can decide whether to allow view controls to manage the behavior or not.
+              </p>
+            </div>
+            <div class="bottom _pa">// bottom content</div>
+          </div>
+          <div class="_relative o3" id="contents">
+            <div class="top _pa">// top content</div>
+            <div class="bottom _pa">// bottom content</div>
+          </div>
+          <div class="_relative o4" id="contents">
+            <div class="top _pa">// top content</div>
+            <div class="bottom _pa">// bottom content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="_widgets" id="_widgets"></div>
+    <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.2.0-1" defer="defer"></script>
+    <script>
+      var isFullScreen = false;
+      var eid = '_body';
+      var eclass = '_body';
+      function toggleFullScreen(){
+        var e = document.getElementById(eid);
+        if(!isFullScreen){ e.setAttribute('class',eclass+' fullScreen');isFullScreen=true; }
+        else{ e.setAttribute('class',eclass);isFullScreen=false; }
+      }
+    </script>
+    <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
+    
+  </body>
+</html>

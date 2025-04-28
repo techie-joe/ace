@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /json/
+
+# If the request is not a real file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect everything else to index.html?p=...
+RewriteRule ^(.+)$ index.html?p=$1 [L,QSA]
