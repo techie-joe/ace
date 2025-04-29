@@ -81,7 +81,7 @@
   </head>
   <body class="_body" id="_body">
     <nav class="_no_print" id="_topRightNav">
-      <div class="_nav_layout"><a class="_link _color" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/components/" title="Back to parent page">&times;</a>
+      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/components/" title="Back to parent page">&times;</a>
       </div>
     </nav>
     <div class="_views" id="_views">
@@ -91,7 +91,7 @@
             <div class="_header_layout">
               <nav class="_color_1 _no_print" id="_navbar">
                 <div class="_nav_layout">
-                  <div style="margin: .6rem"><a class="_link _l" href="/ace/json">Reset</a>
+                  <div style="margin: .6rem"><a class="_link _l" href="/ace/json/">Reset</a>
                   </div>
                 </div>
               </nav>
@@ -109,28 +109,25 @@
             <div class="_main_layout">
               <article class="_article">
                 <section>
-                  <aside class="_pre_layout _small" id="path">
-                    <pre class="_pre"></pre>
-                  </aside>
-                </section>
-                <hr>
-                <section>
-                  <ul class="_small">
-                    <li><a class="_link _l" href="/ace/json">/</a>
-                    </li>
-                    <li><a class="_link _l" href="/ace/json?p=">?p=</a>
-                    </li>
-                    <li><a class="_link _l" href="/ace/json?p=localhost/1">?p=localhost/1</a>
-                    </li>
-                    <li><a class="_link _l" href="index.html?p=localhost/2">index.html?p=localhost/2</a>
-                    </li>
-                    <li><a class="_link _l" href="/ace/json/localhost/3">localhost/3</a>
-                    </li>
-                    <li><a class="_link _l" href="/ace/json/localhost/ace/assets/js/menumakan/settings.json">menumakan/settings.json</a>
-                    </li>
-                    <li><a class="_link _l" href="/ace/json/localhost/ace/assets/js/menumakan/menuItems.json">menumakan/menuItems.json</a>
-                    </li>
-                  </ul>
+                  <details>
+                    <summary class="_color_1 _pa_x5r">
+                      <div class="_inblock _small" id="path">
+                        <div class="_i _tc_orange">Select path</div>
+                      </div>
+                    </summary>
+                    <div>
+                      <ul class="_m0 _small" style="padding-left:1.8em">
+                        <li><a class="_link _l" href="/ace/json/localhost/3">localhost/3</a>
+                        </li>
+                        <li><a class="_link _l" href="/ace/json/localhost/ace/assets/js/menumakan/settings.json">menumakan/settings.json</a>
+                        </li>
+                        <li><a class="_link _l" href="/ace/json/localhost/ace/assets/js/menumakan/menuItems.json">menumakan/menuItems.json</a>
+                        </li>
+                        <li><a class="_link _l" href="/ace/json/api.sheety.co/phill/cluckerRestaurant/menuItems?protocol=https">cluckerRestaurant/menuItems</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
                 </section>
                 <hr>
                 <section>
@@ -174,39 +171,41 @@
           w = window,
           d = document,
           eid = (id)=>document.getElementById(id),
-          pathPre = eid('path'),
-          urlParams = new URLSearchParams(w.location.search);
-        var
-          path = urlParams.get('p');
+          pathPre = eid('path');
       
         function renderJson(url){
-            const
-              jsonPre = eid('json');
+          const
+            jsonPre = eid('json');
       
-            fetchJson(url)
-            .then((json)=>{
-              jsonPre.innerHTML = JSON.stringify(json);
-            })
-            .catch(error => {
-              console.error("Fetch error:", error.message); // Handle errors here
-              jsonPre.innerHTML = '<div class="_i _tc_orange">Missing or invalid data</div>';
-            });
+          jsonPre.innerHTML = 'Loading ...'
+      
+          fetchJson(url)
+          .then((json)=>{
+            jsonPre.innerHTML = JSON.stringify(json);
+          })
+          .catch(error => {
+            console.error("Fetch error:", error.message); // Handle errors here
+            jsonPre.innerHTML = `<div class="_i _tc_orange">Invalid path, no data returned by : ${url}</div>`;
+          });
         }
       
         function fetchJson(url) {
           return fetch(url).then((response)=>response.json())
         }
       
-        if(!path){
-          path = w.location.pathname.substring('/ace/json/'.length);
-        }
+        const
+          aceJson = '/ace/json/',
+          urlParams = new URLSearchParams(w.location.search),
+          protocol = urlParams.get('protocol') || 'http';
+        var
+          path = w.location.pathname;
       
-        if(path){
+        if(path.substring(0,aceJson.length)==aceJson){ path = path.substring(aceJson.length) }
+      
+        if(path && path.length > 0){
+          path = protocol+'://'+path;
           pathPre.innerHTML = path;
-          renderJson('http://'+path);
-        }
-        else {
-          pathPre.innerHTML = '<div class="_i _tc_orange">No path requested</div>';
+          renderJson(path);
         }
       
       })();
