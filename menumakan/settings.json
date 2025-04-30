@@ -1,0 +1,67 @@
+{
+  "settings": [
+    {
+      "key": "title",
+      "value": "Your Brand!",
+      "name": "Title",
+      "category": "Branding",
+      "id": 2
+    },
+    {
+      "key": "description",
+      "value": "The best grilled <span><b>PERi-PERi</b></span> chicken in town!",
+      "name": "Description",
+      "category": "Branding",
+      "id": 3
+    },
+    {
+      "key": "about",
+      "value": "Our grilled chicken is fresh, never frozen and marinated for 24 hours before being flame-grilled to perfection.",
+      "name": "About",
+      "category": "Branding",
+      "id": 4
+    },
+    {
+      "key": "header-a",
+      "value": "Your&#128020;",
+      "name": "Header A",
+      "category": "Branding",
+      "id": 5
+    },
+    {
+      "key": "header-b",
+      "value": "Brand!",
+      "name": "Header B",
+      "category": "Branding",
+      "id": 6
+    },
+    {
+      "key": "primary-color",
+      "value": "#F7CF5E",
+      "name": "Primary Color",
+      "category": "Theme",
+      "id": 7
+    },
+    {
+      "key": "secondary-color",
+      "value": "#BD292C",
+      "name": "Secondary Color",
+      "category": "Theme",
+      "id": 8
+    },
+    {
+      "key": "header-primary-color",
+      "value": "#BD292C",
+      "name": "Header Primary Color",
+      "category": "Theme",
+      "id": 9
+    },
+    {
+      "key": "header-secondary-color",
+      "value": "#F7CF5E",
+      "name": "Header Secondary Color",
+      "category": "Theme",
+      "id": 10
+    }
+  ]
+}

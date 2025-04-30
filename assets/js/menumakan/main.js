@@ -1,3 +1,15 @@
+const devPath = '/ace/menumakan/';
+
+function findMenu() {
+  const path = (() => {
+    var path = window.location.pathname;
+    if (path.substring(0, devPath.length) == devPath) { path = devPath; }
+    return path;
+  })();
+  var menuLocation = document.getElementById("menuLocation").value.toLowerCase();
+  if(menuLocation) { window.location.href = path + menuLocation }
+}
+
 function fetchJson(url) {
   return fetch(url).then((response) => response.json())
 }
@@ -12,13 +24,6 @@ Handlebars.registerHelper('safe', function (text) {
   return new Handlebars.SafeString(unescaped);
 });
 
-const _examples = [
-  // 'api.sheety.co/phill/cluckerRestaurant',
-  // 'api.sheety.co/ed6904a0d8a396880b2772c9bf093d33/restaurantMenu',
-  'localhost/ace/assets/js/menumakan',
-  'localhost/menumakan',
-];
-
 // Wait for page to load
 document.addEventListener('DOMContentLoaded', (event) => {
 
@@ -26,14 +31,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     w = window,
     d = document,
     eid = (id) => d.getElementById(id),
+    hid = (id )=> Handlebars.compile(eid(id).innerHTML),
     dom = {
-      loadingMsg: eid('loadingMsg'),
       header: eid('_header'),
       menu: eid('menu'),
     },
     path = (() => {
       var path = w.location.pathname;
-      const devPath = '/ace/menumakan/';
       if (path.substring(0, devPath.length) == devPath) {
         path = path.substring(devPath.length);
       }
@@ -42,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     lia = (menuPath) => {
       return `<div style="margin:.5em;"><a class="" href="${'http://localhost/ace/menumakan/'}${menuPath || ''}">${menuPath || 'Reset'}</a></div>`;
     };
-  
+
   console.log(`Loading menu : (${path || '(none)'})`);
 
   if (path && path.length > 0) {
@@ -50,8 +54,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // dom.menu.innerHTML = path || '(( none ))';
 
     const
-      headerTemplate = Handlebars.compile(eid('header-template').innerHTML),
-      menuTemplate = Handlebars.compile(eid('menu-template').innerHTML);
+      headerTemplate = hid('header-template'),
+      menuTemplate = hid('menu-template');
 
     const
       path_ = (() => {
@@ -59,16 +63,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
           settings: 'https://' + path + '/settings',
           menuItems: 'https://' + path + '/menuItems',
         };
-        if (path == 'localhost/ace/assets/js/menumakan') {
-          path_.settings = 'http://' + path + '/settings.json';
-          path_.menuItems = 'http://' + path + '/menuItems.json';
-        }
-        else if (path.substring(0, 'localhost'.length) == 'localhost') {
+        if (path.substring(0, 'localhost'.length) == 'localhost') {
           path_.settings = 'http://' + path + '/settings';
           path_.menuItems = 'http://' + path + '/menuItems';
         }
         return path_;
       })();
+    
+    var status = 'loading';
 
     fetchJson(path_.settings)
       .then((json) => {
@@ -100,33 +102,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
       })
       .catch(error => {
         console.error("Fetch error:", error.message); // Handle errors here
-        loadingMsg.innerHTML = [
-          '<h3>Menu Not Found</h3>',
-          `<div class="_tc_orange" style="margin-bottom:4em">Invalid menu entry, no data returned by : <br>${path}</div>`,
+        menu.innerHTML = [
+          hid('intro-template')({
+            error: { message: `No menu found at : ${path}` }
+          }),
         ].join('');
-        loadingMsg.innerHTML += [
-          '<h3>Select your menu</h3>',
-          '<div class="_mv_2 _i">',
-          '<h6>Examples</h6>',
-          lia(_examples[0]),
-          lia(_examples[1]),
-          // lia(_examples[2]),
-          '</div>',
-        ].join('');
+        eid('menuLocation').focus();
+      })
+      .finally(() => {
+        status = 'complete';
       });
+    
+    setTimeout(() => {
+      if (status != 'complete') {
+        menu.innerHTML = '<div class="_text_center _i" style="margin:10em auto">Loading menu ...</div>';
+      }
+    }, 500);
 
   }
   else {
     // console.error(`Menu Not Found > path is : (${path || '(none)'})`);
-    loadingMsg.innerHTML = [
-      '<h3>Select your menu</h3>',
-      '<div class="_mv_2 _i">',
-      '<h6>Examples</h6>',
-      lia(_examples[0]),
-      lia(_examples[1]),
-      // lia(_examples[2]),
-      '</div>',
-    ].join('');
+    menu.innerHTML = hid('intro-template')();
+    eid('menuLocation').focus();
   }
 
   // const
