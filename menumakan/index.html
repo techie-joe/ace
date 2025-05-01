@@ -33,20 +33,8 @@
       ._dark hr{border-color:#666}
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core_2/html.css?v=1.0-0" id="_core_style"/>
-    <style>
-      .input {
-        margin:auto;
-        max-width:25em;
-        border:1px solid #8886;
-      }
-      .input .txt-input {
-        width: 100%;
-        background: none;
-        border: none;
-        padding: 8px 10px;
-      }
-    </style>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/menumakan/html.css?v=1.0-0" id="_menumakan_style"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/menumakan/html.css?v=1.0-0" id="_html_style"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/menumakan/menu.css?v=1.0-0" id="_menu_style"/>
     <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap"/>
   </head>
   <body class="_body" id="_body">
@@ -67,7 +55,7 @@
           </header>
           <main id="_main">
             <div class="_main_layout">
-              <article class="_article container" id="menu"></article>
+              <article class="_article" id="menu"></article>
             </div>
           </main>
           <aside id="_aside">
@@ -89,27 +77,27 @@
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=1.0-0" defer="defer"></script>
     <script type="text/x-handlebars-template" id="intro-template">
-      <form class="_text_center" style="margin:5rem auto;" onsubmit="event.preventDefault();findMenu();">
-        <h3>Open your menu &#128269;</h3>
-        <div class="_color_1 _radius_x5r input">
-          <input class="txt-input" id="menuLocation" type="text" placeholder="Menu location ...">
+      <form class="_p" id="menuLocator" onsubmit="event.preventDefault();findMenu();">
+        <h3 class="title _no_wrap">Open your menu</h3>
+        <div class="input _color_1 _radius_x5r _flex">
+          <input class="input-txt _radius_x5r" id="menuLocation" type="text" placeholder="Type in the menu location ...">
+          <button class="submit _btnlink" onclick="findMenu()">&#128269;</button>
         </div>
         <div class="_tc_orange _p">
           {{#if error}}
           {{error.message}}
           {{/if}}
         </div>
-        <div class="suggestions">
-          <div class="_mv_2 _i"><b>Suggestions</b>
-            <div style="margin:.5em;"><a class="_no_u" href="/ace/menumakan/localhost/ace/menumakan">
-                <u>localhost/ace/menumakan</u> (Demo A)</a>
-            </div>
-            <div style="margin:.5em;"><a class="_no_u" href="/ace/menumakan/localhost/ace/menu_A">
-                <u>localhost/ace/menu_A</u> (Demo B)</a>
-            </div>
-          </div>
-        </div>
       </form>
+      <div class="_p" id="suggestions">
+        <div class="_b _i">Suggestions</div>
+        <div class="item _i"><a class="_no_u" href="/ace/menumakan/localhost/ace/menumakan">(Demo A) 
+            <u>localhost/ace/menumakan</u></a>
+        </div>
+        <div class="item _i"><a class="_no_u" href="/ace/menumakan/localhost/ace/menu_A">(Demo B) 
+            <u>localhost/ace/menu_A</u></a>
+        </div>
+      </div>
     </script>
     <script type="text/x-handlebars-template" id="header-template">
       <style>
