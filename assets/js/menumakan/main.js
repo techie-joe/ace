@@ -117,6 +117,21 @@
 
       dom.header = eid('_header');
       dom.menu = eid('menu');
+      
+      const fadeInViews = (() => {
+        var
+          _handle,
+          _views = eid('_views'),
+          vcss = 'transition:opacity 0.2s ease-in-out;opacity:';
+        return function (delay) {
+          _views.setAttribute('style', vcss + '0');
+          _handle = setTimeout(() => {
+            _views.setAttribute('style', vcss + '1');
+          }, delay);
+        }    
+      })();
+
+      fadeInViews(200);
 
       if (!menu.settings || !menu.menuItems) {
         dom.menu.innerHTML = template.menuMessage({ message: 'Loading menu ...' });
@@ -124,9 +139,9 @@
 
       // =========================================================
       // Wait for menu to load; then render
+
       Promise.all([handle.settings, handle.menuItems])
         .then(() => {
-
 
           if (!menu.settings && !menu.menuItems) {
             const message = `There is no menu at : ${path}`;
@@ -139,46 +154,46 @@
             }
           }
           else {
-
+            
             c.log('Loading completed.');
             // c.log('menu', menu);
             // dom.menu.innerHTML = JSON.stringify(menu);
-
+            
             if (menu.settings) {
-
+              
               // Index settings by their key
               const settings = _.indexBy(menu.settings, 'key');
-
+              
               // Set the html content of the container element
               d.title = settings.title.value + ' | ' + d.title;
               dom.header.innerHTML = template.header(settings);
-
+              
             }
             else {
               c.log('Settings is missing.');
               // dom.header.innerHTML += template.menuMessage({ message: 'Settings is missing' });
             }
-
+            
             if (menu.menuItems) {
-
+              
               // Group menu items by their category
               const menuItems = _.groupBy(menu.menuItems, 'category');
-
+              
               // Set the html content of the container element
               dom.menu.innerHTML = template.menu(menuItems);
-
+              
             }
             else {
               dom.menu.innerHTML = template.menuMessage({ message: 'Menu is missing' });
             }
 
           }
-
+          
         });
-
-    });
-
-  }
+        
+      });
+      
+    }
   else {
 
     c.log('No menu specified.');
