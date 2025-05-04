@@ -13,21 +13,14 @@
   // determine parts of pathname
   // - homepath : paths where index.html is located,
   // - - expected to be in the root of the web server
-  // - - except for special cases:
-  // - - localhost : /easymenu/ and /ace/easymenu/
+  // - - or these special paths: /easymenu/ and /ace/easymenu/
   // - menupath : path to the menu to be fetched
   // =============================================================
   const
-    homepath = (() => {
-      const host = w.location.host;
-      if (host == 'localhost') {
-        return [
-          '/easymenu/',
-          '/ace/easymenu/',
-        ].find(front => pathname.startsWith(front)) || '';
-      }
-      return '';
-    })(),
+    homepath = [
+      '/easymenu/',
+      '/ace/easymenu/',
+    ].find(front => pathname.startsWith(front)) || '',
     menupath = pathname.substring(homepath.length);
 
   // =============================================================
