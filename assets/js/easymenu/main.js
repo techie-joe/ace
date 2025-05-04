@@ -10,25 +10,31 @@
     pathname = w.location.pathname;
 
   // =============================================================
+  // get parameter values from URL
+  // =============================================================
+  const
+    urlParams = new URLSearchParams(w.location.search),
+    param = {
+      p: urlParams.get('p'),
+      protocol: urlParams.get('protocol'),
+    };
+
+  // =============================================================
   // determine parts of pathname
   // - homepath : paths where index.html is located,
   // - - expected to be in the root of the web server
   // - - or these special paths: /easymenu/ and /ace/easymenu/
   // - menupath : path to the menu to be fetched
+  // - - user can specify a menupath in the URL
+  // - - paths after homepath (require functioning url rewrite)
+  // - - or use parameter ?p=(menupath)
   // =============================================================
   const
     homepath = [
       '/easymenu/',
       '/ace/easymenu/',
     ].find(front => pathname.startsWith(front)) || '',
-    menupath = pathname.substring(homepath.length);
-
-  // =============================================================
-  // get parameter values from URL
-  // =============================================================
-  // const
-  //   urlParams = new URLSearchParams(w.location.search),
-  //   param = urlParams.get('param') || 'value';
+    menupath = pathname.substring(homepath.length) || param.p || '';
 
   // =============================================================
   // initialize functions
@@ -49,7 +55,7 @@
   function find() {
     var menuLocation = eid("menuLocation");
     if (menuLocation) {
-      var menuLocationValue = menuLocation.value.toLowerCase();
+      var menuLocationValue = menuLocation.value.trim();
       w.location.href = homepath + menuLocationValue;
     }
   }
@@ -62,7 +68,7 @@
 
   const
     menuhost = menupath.substring(0, menupath.indexOf('/')),
-    menuprotocol = menuhost == 'localhost' ? 'http://' : 'https://',
+    menuprotocol = menuhost == 'localhost' ? 'http://' : (param.protocol || 'https://'),
     path_ = {
       settings: menuprotocol + menupath + '/settings',
       menuItems: menuprotocol + menupath + '/menuItems',
@@ -111,6 +117,7 @@
         template_header = hid('header-template'),
         template_menu = hid('menu-template'),
         dom_header = eid('_header'),
+        dom_main = eid('main'),
         dom_menu = eid('menu'),
         fadeInViews = (() => {
           var
@@ -129,6 +136,7 @@
 
       // Display loading message if settings or menuItems are not loaded yet
       if (!json.settings || !json.menuItems) {
+        dom_main.setAttribute('style', 'display:none !important;');
         dom_menu.innerHTML = template_menuMessage({ message: 'Loading menu ...' });
       }
 
@@ -146,7 +154,9 @@
           if (!json.settings && !json.menuItems) {
             const message = `There is no menu at : ${menupath}`;
             c.log(message);
-            dom_menu.innerHTML = hid('intro-template')({ error: { message } });
+            dom_menu.innerHTML = '';
+            dom_main.setAttribute('style', '');
+            eid('menuLocatorMessage').innerHTML = message;
             dom_menuLocation = eid('menuLocation');
             if (dom_menuLocation) {
               dom_menuLocation.value = menupath;
@@ -194,7 +204,6 @@
 
       registerHandlebars();
 
-      eid('menu').innerHTML = hid('intro-template')();
       eid('menuLocation').focus();
 
     }); // end of DOMContentLoaded

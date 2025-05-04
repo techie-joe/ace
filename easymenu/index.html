@@ -2,7 +2,7 @@
 <html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
   
   <!-- EasyMenu v1.0 b0 | (c) Copyright 2025 - EasyMenu.com -->
-  <!-- layout:menumakan/_html -->
+  <!-- layout:easymenu/_html -->
   
   <head>
     <meta charset="utf-8"/>
@@ -20,10 +20,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
     <meta id="_color_scheme" name="color-scheme" content="light dark"/>
     <meta id="_theme_color" name="theme-color" content="#222222"/>
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/ace/icons/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/ace/icons/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/ace/icons/favicon-16x16.png"/>
-    <link rel="icon" type="image/x-icon" sizes="any" href="/ace/icons/favicon.ico"/>
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/ace/easymenu/icons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/ace/easymenu/icons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/ace/easymenu/icons/favicon-16x16.png"/>
+    <link rel="icon" type="image/x-icon" sizes="any" href="/ace/easymenu/icons/favicon.ico"/>
     <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
     <link rel="stylesheet" media="all" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
     <style>
@@ -55,6 +55,83 @@
           </header>
           <main id="_main">
             <div class="_main_layout">
+              <article class="_article" id="main">
+                <section id="menuLocator">
+                  <form class="_p" onsubmit="event.preventDefault();menu.find();">
+                    <h3 class="title _no_wrap">Open your menu</h3>
+                    <div class="input _color_1 _radius_x5r _flex">
+                      <input class="input-txt _radius_x5r" id="menuLocation" type="text" placeholder="Type in the menu location ...">
+                      <button class="submit _btnlink" onclick="findMenu()" title="Find menu">&#128269;</button>
+                    </div>
+                    <div class="message _tc_red _p _small" id="menuLocatorMessage"></div>
+                  </form>
+                </section>
+                <section class="_flex _gap_2" id="intro">
+                  <div class="_f" style="flex:0 12 330px">
+                    <div class="_p">
+                      <h2 class="_b _t1 _i _p _mb_2">What is this about?</h2>
+                      <div class="_text_justifyx">
+                        <p><strong>Effortless Online Menus for Your Business</strong></p>
+                        <p>
+                          Make your business stand out with a sleek, digital menu.
+EasyMenu simplifies menu creation, helping businesses craft
+                          professional, accessible online menus in just a few clicks.
+                        </p>
+                        <p>
+                          Whether you are a bustling café, a local bakery, or a service provider,
+EasyMenu ensures your customers find what they need, anytime, anywhere.
+                        </p>
+                        <p>
+                          Create a professional digital menu in minutes.
+                          No coding or design skills required.
+                          
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="_f" id="suggestions">
+                    <div class="_p">
+                      <h2 class="_b _t1 _i _p _mb_2">Menu Suggestions</h2>
+                      <div class="item">
+                        <div><a class="_no_u" href="./localhost/ace/easymenu"><span class="_tc_contra _b">(Demo 01)</span> 
+                            <u class="_smaller">localhost/ace/easymenu</u></a>
+                        </div>
+                        <p class="_small _mt0">&#128020; Yer Brand! - Restaurant Menu.</p>
+                      </div>
+                      <div class="item">
+                        <div><a class="_no_u" href="./localhost/ace/easymenu/menu_A"><span class="_tc_contra _b">(Demo 02)</span> 
+                            <u class="_smaller">localhost/ace/easymenu/menu_A</u></a>
+                        </div>
+                        <p class="_small _mt0">&#129412; Unique Brand! - Store Menu.</p>
+                      </div>
+                      <div class="item">
+                        <div><a class="_no_u" href="./localhost/ace/easymenu/menu_C"><span class="_tc_contra _b">(Demo 03)</span> 
+                            <u class="_smaller">localhost/ace/easymenu/menu_C</u></a>
+                        </div>
+                        <p class="_small _mt0">A simple menu.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="_f">
+                    <div class="_p">
+                      <h2 class="_b _i _p _t1 _mb_2">How does it works?</h2>
+                      <div class="_text_justifyx">
+                        <p>EasyMenu transforms your data, into a user-friendly menu.
+                          All we need is the location of your menu, and we will do the rest.
+                        </p>
+                        <p>1. Type in the menu location (URL) above, and click find.</p>
+                        <p>2. If found, your menu will be displayed here.</p>
+                        <p>See sample data:<br>
+                          <a href="./settings" target="menu_settings">settings</a>,
+                          <a href="./menuItems" target="menu_menuItems">menuItems</a>
+                          
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="_pa _mv_2"></div>
+              </article>
               <article class="_article" id="menu"></article>
             </div>
           </main>
@@ -76,38 +153,6 @@
     </div>
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=1.0-0" defer="defer"></script>
-    <script type="text/x-handlebars-template" id="intro-template">
-      <form class="_p" id="menuLocator" onsubmit="event.preventDefault();menu.find();">
-        <h3 class="title _no_wrap">Open your menu</h3>
-        <div class="input _color_1 _radius_x5r _flex">
-          <input class="input-txt _radius_x5r" id="menuLocation" type="text" placeholder="Type in the menu location ...">
-          <button class="submit _btnlink" onclick="findMenu()">&#128269;</button>
-        </div>
-        <div class="message _tc_red _p _small">
-          {{#if error}}
-          {{error.message}}
-          {{/if}}
-        </div>
-      </form>
-      <div class="_p" id="suggestions">
-        <div class="_b _i">Suggestions</div>
-        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu')">(Demo 01) 
-            <u>localhost/ace/easymenu</u></a>
-        </div>
-        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu/menu_A" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu/menu_A')">(Demo A) 
-            <u>localhost/ace/easymenu/menu_A</u></a>
-        </div>
-        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu/menu_B" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu/menu_B')">(Demo B) 
-            <u>localhost/ace/easymenu/menu_B</u></a>
-        </div>
-        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu/menu_C" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu/menu_C')">(Demo C) 
-            <u>localhost/ace/easymenu/menu_C</u></a>
-        </div>
-        <div class="item _i"><a class="_no_u" href="none" onclick="event.preventDefault();menu.locate('none')">(Test None) 
-            <u>none</u></a>
-        </div>
-      </div>
-    </script>
     <script type="text/x-handlebars-template" id="header-template">
       <style>
         #_body {
