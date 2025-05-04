@@ -6,14 +6,14 @@
   
   <head>
     <meta charset="utf-8"/>
-    <title>EasyMenu &trade;</title>
+    <title>EasyMenu&trade;</title>
     <meta name="description" content="Menus Made Easy, Choices Made Delicious!"/>
     <meta name="author" content="EasyMenu.com"/>
     <meta name="publisher" content="Tidloo Digital Inc"/>
-    <meta property="og:title" content="EasyMenu &amp;trade;"/>
+    <meta property="og:title" content="EasyMenu&amp;trade;"/>
     <meta property="og:description" content="Menus Made Easy, Choices Made Delicious!"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://menumakan.page.dev/index.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://easymenu.page.dev/index.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -34,8 +34,8 @@
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core_2/html.css?v=1.0-0" id="_core_style"/>
     <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/menumakan/html.css?v=1.0-0" id="_html_style"/>
-    <link rel="stylesheet" media="all" href="/ace/assets/css/menumakan/menu.css?v=1.0-0" id="_menu_style"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/easymenu/html.css?v=1.0-0" id="_html_style"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/easymenu/menu.css?v=1.0-0" id="_menu_style"/>
   </head>
   <body class="_body" id="_body">
     <div class="_views" id="_views">
@@ -45,7 +45,7 @@
             <div class="_header_layout">
               <div class="_pageHeader _defaultHeader">
                 <div class="_p">
-                  <h1 class="_h7 _inblock _m0" id="_heading">EasyMenu &trade;
+                  <h1 class="_h7 _inblock _m0" id="_heading">EasyMenu&trade;
                   </h1>
 <span id="_about">&mdash; Menus Made Easy, Choices Made Delicious!</span>
                 </div>
@@ -66,7 +66,7 @@
             <div class="_footer_layout">
               <div class="_pageFooter _defaultFooter">
                 <hr>
-                <p class="_small _system"><a class="_link _l" href="/ace/menumakan/">&copy; Copyright 2025 - EasyMenu.com</a>
+                <p class="_small _system"><a class="_link _l" href="/ace/easymenu/">&copy; Copyright 2025 - EasyMenu.com</a>
                 </p>
               </div>
             </div>
@@ -77,13 +77,13 @@
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=1.0-0" defer="defer"></script>
     <script type="text/x-handlebars-template" id="intro-template">
-      <form class="_p" id="menuLocator" onsubmit="event.preventDefault();findMenu();">
+      <form class="_p" id="menuLocator" onsubmit="event.preventDefault();menu.find();">
         <h3 class="title _no_wrap">Open your menu</h3>
         <div class="input _color_1 _radius_x5r _flex">
           <input class="input-txt _radius_x5r" id="menuLocation" type="text" placeholder="Type in the menu location ...">
           <button class="submit _btnlink" onclick="findMenu()">&#128269;</button>
         </div>
-        <div class="message _tc_orange _p _small">
+        <div class="message _tc_red _p _small">
           {{#if error}}
           {{error.message}}
           {{/if}}
@@ -91,26 +91,20 @@
       </form>
       <div class="_p" id="suggestions">
         <div class="_b _i">Suggestions</div>
-        <div class="item _i"><a class="_no_u" href="localhost/ace/menu_A" onclick="event.preventDefault();findMenu('localhost/ace/menu_A')">(Demo A) 
-            <u>localhost/ace/menu_A</u></a>
+        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu')">(Demo 01) 
+            <u>localhost/ace/easymenu</u></a>
         </div>
-        <div class="item _i"><a class="_no_u" href="localhost/ace/menumakan" onclick="event.preventDefault();findMenu('localhost/ace/menumakan')">(Demo B) 
-            <u>localhost/ace/menumakan</u></a>
+        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu/menu_A" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu/menu_A')">(Demo A) 
+            <u>localhost/ace/easymenu/menu_A</u></a>
         </div>
-        <div class="item _i"><a class="_no_u" href="localhost/menumakan/menu_A" onclick="event.preventDefault();findMenu('localhost/menumakan/menu_A')">(Demo C) 
-            <u>localhost/menumakan/menu_A</u></a>
+        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu/menu_B" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu/menu_B')">(Demo B) 
+            <u>localhost/ace/easymenu/menu_B</u></a>
         </div>
-        <div class="item _i"><a class="_no_u" href="localhost/menumakan" onclick="event.preventDefault();findMenu('localhost/menumakan')">(Demo D) 
-            <u>localhost/menumakan</u></a>
+        <div class="item _i"><a class="_no_u" href="localhost/ace/easymenu/menu_C" onclick="event.preventDefault();menu.locate('localhost/ace/easymenu/menu_C')">(Demo C) 
+            <u>localhost/ace/easymenu/menu_C</u></a>
         </div>
-        <div class="item _i"><a class="_no_u" href="none" onclick="event.preventDefault();findMenu('none')">(Test X) 
+        <div class="item _i"><a class="_no_u" href="none" onclick="event.preventDefault();menu.locate('none')">(Test None) 
             <u>none</u></a>
-        </div>
-        <div class="item _i"><a class="_no_u" href="api.sheety.co/phill/cluckerRestaurant" onclick="event.preventDefault();findMenu('api.sheety.co/phill/cluckerRestaurant')"> 
-            <u>api.sheety.co/phill/cluckerRestaurant</u></a>
-        </div>
-        <div class="item _i"><a class="_no_u" href="api.sheety.co/ed6904a0d8a396880b2772c9bf093d33/restaurantMenu" onclick="event.preventDefault();findMenu('api.sheety.co/ed6904a0d8a396880b2772c9bf093d33/restaurantMenu')"> 
-            <u>api.sheety.co/ed6904a0d8a396880b2772c9bf093d33/restaurantMenu</u></a>
         </div>
       </div>
     </script>
@@ -161,7 +155,7 @@
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.11.0/underscore-min.js"></script>
-    <script type="text/javascript" src="/ace/assets/js/menumakan/main.js"></script>
+    <script type="text/javascript" src="/ace/assets/js/easymenu/main.js"></script>
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
   </body>

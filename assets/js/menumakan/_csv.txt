@@ -1,9 +1,0 @@
-2|title|Title|Branding|Clucker!
-3|description|Description|Branding|The best PERi-PERi grilled chicken in town!
-4|about|About|Branding|Our grilled chicken is fresh, never frozen and marinated in PERi-PERi for 24 hours before being flame-grilled.
-5|header-a|Header A|Branding|&#128020;
-6|header-b|Header B|Branding|Clucker!
-7|primary-color|Primary Color|Theme|#F7CF5E
-8|secondary-color|Secondary Color|Theme|#BD292C
-9|header-primary-color|Header Primary Color|Theme|#BD292C
-10|header-secondary-color|Header Secondary Color|Theme|#F7CF5E
