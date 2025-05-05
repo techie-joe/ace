@@ -38,6 +38,10 @@
     <link rel="stylesheet" media="all" href="/ace/assets/css/easymenu/menu.css?v=1.0-0" id="_menu_style"/>
   </head>
   <body class="_body" id="_body">
+    <nav class="_no_print" id="_topRightNav">
+      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/easymenu/" title="Back to parent page">&times;</a>
+      </div>
+    </nav>
     <div class="_views" id="_views">
       <div class="_view _full_view">
         <div class="_view_layout">
@@ -67,12 +71,44 @@
                     <div class="message _tc_red _p _small" id="menuLocatorMessage"></div>
                   </form>
                 </section>
+                <section id="suggestions">
+                  <div class="_text_center">
+                    <h2 class="_b _t1 _i _p">Menu Suggestions</h2>
+                  </div>
+                  <div class="_flex">
+                    <div class="_f">
+                          <div class="item _color_2 _pa _radius_x5r">
+                            <div><a class="_no_u" href="/ace/easymenu/localhost/ace/easymenu"><span class="_tc_contra _b">(Demo 01)</span> 
+                                <u class="_smaller">localhost/ace/easymenu</u></a>
+                            </div>
+                            <div>&#128020; Yer Brand! - Restaurant Menu.</div>
+                          </div>
+                    </div>
+                    <div class="_f">
+                          <div class="item _color_2 _pa _radius_x5r">
+                            <div><a class="_no_u" href="/ace/easymenu/localhost/ace/easymenu/menu_A"><span class="_tc_contra _b">(Demo 02)</span> 
+                                <u class="_smaller">localhost/ace/easymenu/menu_A</u></a>
+                            </div>
+                            <div>&#129412; Unique Brand! - Store Menu.</div>
+                          </div>
+                    </div>
+                    <div class="_f">
+                          <div class="item _color_2 _pa _radius_x5r">
+                            <div><a class="_no_u" href="/ace/easymenu/localhost/ace/easymenu/menu_C"><span class="_tc_contra _b">(Demo 03)</span> 
+                                <u class="_smaller">localhost/ace/easymenu/menu_C</u></a>
+                            </div>
+                            <div>A simple menu.</div>
+                          </div>
+                    </div>
+                  </div>
+                </section>
+                <hr class="_mv_2">
                 <section class="_flex _gap_a_2" id="intro">
-                  <div class="_f" style="flex:1 12 310px;max-width:400px">
+                  <div class="_f_2_1">
                     <div class="_p">
                       <h2 class="_b _t1 _i _p _mb_2">What is it about?</h2>
                       <div class="_text_justifyx">
-                        <p><strong>Effortless Online Menus for Businesses</strong></p>
+                        <p><strong>Instant Online Menus for Businesses</strong></p>
                         <p>EasyMenu simplifies menu creation, enabling businesses to craft
                           sleek, professional online menus in minutes.
                           No coding or design skills required.
@@ -86,30 +122,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="_f" id="suggestions">
-                    <div class="_p">
-                      <h2 class="_b _t1 _i _p _mb_2">Menu Suggestions</h2>
-                      <div class="item">
-                        <div><a class="_no_u" href="/ace/easymenu/localhost/ace/easymenu"><span class="_tc_contra _b">(Demo 01)</span> 
-                            <u class="_smaller">localhost/ace/easymenu</u></a>
-                        </div>
-                        <p class="_small _mt0">&#128020; Yer Brand! - Restaurant Menu.</p>
-                      </div>
-                      <div class="item">
-                        <div><a class="_no_u" href="/ace/easymenu/localhost/ace/easymenu/menu_A"><span class="_tc_contra _b">(Demo 02)</span> 
-                            <u class="_smaller">localhost/ace/easymenu/menu_A</u></a>
-                        </div>
-                        <p class="_small _mt0">&#129412; Unique Brand! - Store Menu.</p>
-                      </div>
-                      <div class="item">
-                        <div><a class="_no_u" href="/ace/easymenu/localhost/ace/easymenu/menu_C"><span class="_tc_contra _b">(Demo 03)</span> 
-                            <u class="_smaller">localhost/ace/easymenu/menu_C</u></a>
-                        </div>
-                        <p class="_small _mt0">A simple menu.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="_f" style="flex:1 12 275px;max-width:400px">
+                  <div class="_f_2_1">
                     <div class="_p">
                       <h2 class="_b _i _p _t1 _mb_2">How does it works?</h2>
                       <div class="_text_justifyx">
@@ -129,7 +142,7 @@
                     </div>
                   </div>
                 </section>
-                <div class="_pa _mv_2"></div>
+                <div class="_pa"></div>
               </article>
             </div>
           </main>

@@ -15,8 +15,9 @@
   const
     urlParams = new URLSearchParams(w.location.search),
     param = {
-      p: urlParams.get('p'),
       protocol: urlParams.get('protocol'),
+      p: urlParams.get('p'),
+      ext: urlParams.get('ext'),
     };
 
   // =============================================================
@@ -34,7 +35,15 @@
       '/easymenu/',
       '/ace/easymenu/',
     ].find(front => pathname.startsWith(front)) || '',
-    menupath = pathname.substring(homepath.length) || param.p || '';
+    menupath = pathname.substring(homepath.length) || param.p || '',
+    menuhost = menupath.substring(0, menupath.indexOf('/')),
+    menuprotocol = [
+      '127.0.0.1',
+      'localhost',
+    ].includes(menuhost) ? 'http://' : (param.protocol || 'https://'),
+    menuextension = [
+      'github.io', // github pages
+    ].find(ends => menuhost.endsWith(ends)) ? '.json' : (param.ext || '');
 
   // =============================================================
   // initialize functions
@@ -67,11 +76,9 @@
   // =============================================================
 
   const
-    menuhost = menupath.substring(0, menupath.indexOf('/')),
-    menuprotocol = menuhost == 'localhost' ? 'http://' : (param.protocol || 'https://'),
     path_ = {
-      settings: menuprotocol + menupath + '/settings',
-      menuItems: menuprotocol + menupath + '/menuItems',
+      settings: menuprotocol + menupath + '/settings' + (menuextension || ''),
+      menuItems: menuprotocol + menupath + '/menuItems' + (menuextension || ''),
     },
     json = {},
     errors = [],

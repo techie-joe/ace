@@ -1,5 +1,5 @@
 # Easy Menu
-> Effortless Online Menus for Businesses.
+> Instant Online Menus for Businesses.
 ------------------------------------------------------------------
 
 Title     : Easy Menu  
@@ -14,7 +14,7 @@ AUTHOR    : https://github.com/techie-joe/
 
 ------------------------------------------------------------------
 
-## Effortless Online Menus for Businesses
+## Instant Online Menus for Businesses
 
 EasyMenu simplifies menu creation, enabling businesses
 to craft sleek, professional online menus in minutes.
