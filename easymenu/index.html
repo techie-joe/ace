@@ -13,7 +13,7 @@
     <meta property="og:title" content="EasyMenu&amp;trade;"/>
     <meta property="og:description" content="Menus Made Easy, Choices Made Delicious!"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://easymenu.tidloo.com/index.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://easymenu.tidloo.com/menu.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -38,10 +38,6 @@
     <link rel="stylesheet" media="all" href="/ace/assets/css/easymenu/menu.css?v=1.0-0" id="_menu_style"/>
   </head>
   <body class="_body" id="_body">
-    <nav class="_no_print" id="_topRightNav">
-      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/easymenu/" title="Back to parent page">&times;</a>
-      </div>
-    </nav>
     <div class="_views" id="_views">
       <div class="_view _full_view">
         <div class="_view_layout">
@@ -64,9 +60,9 @@
                 <section id="menuLocator">
                   <form class="_p" onsubmit="event.preventDefault();menu.find();">
                     <h3 class="title _no_wrap">Open your menu</h3>
-                    <div class="input _color_1 _radius_x5r _flex">
+                    <div class="input _color_1 _radius_x5r">
                       <input class="input-txt _radius_x5r" id="menuLocation" type="text" placeholder="Enter the menu location ...">
-                      <button class="submit _btnlink" onclick="findMenu()" title="Find menu">&#128269;</button>
+                      <button class="submit _btnlink" onclick="menu.find()" title="Find menu">&#128269;</button>
                     </div>
                     <div class="message _tc_red _p _small" id="menuLocatorMessage"></div>
                   </form>
