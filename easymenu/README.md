@@ -1,10 +1,10 @@
 # Easy Menu
-> Instant Online Menus for Businesses.
+> Instant Online Menus for Businesses
 ------------------------------------------------------------------
 
 Title     : Easy Menu  
 Version   : 1.0  
-Build     : 0.11  
+Build     : 0.13  
 Author    : Techie Joe @ Tidloo Digital Inc.  
 Publisher : Tidloo Digital Inc  
 
@@ -17,12 +17,12 @@ AUTHOR    : https://github.com/techie-joe/
 ## Instant Online Menus for Businesses
 
 EasyMenu simplifies menu creation, enabling businesses
-to craft sleek, professional online menus in minutes.
-No coding or design skills required.
+to craft sleek, professional online menus in minutes,
+with no coding or design required.
 
 Suitable for businesses of all kinds — cafes, bakeries,
 restaurants, shops, service providers, and more.
-Just configure your preferences, and you're ready to go!
+Simply configure your preferences, and you're ready to go!
 
 ------------------------------------------------------------------
 

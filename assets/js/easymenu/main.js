@@ -24,7 +24,7 @@
   // determine parts of pathname
   // - homepath : paths where index.html is located,
   // - - expected to be in the root of the web server
-  // - - or these special paths: /easymenu/ and /ace/easymenu/
+  // - - or these special paths: /easymenu/open and /ace/easymenu/open
   // - menupath : path to the menu to be fetched
   // - - user can specify a menupath in the URL
   // - - paths after homepath (require functioning url rewrite)
@@ -32,8 +32,8 @@
   // =============================================================
   const
     homepath = [
-      '/easymenu/',
-      '/ace/easymenu/',
+      '/easymenu/open/',
+      '/ace/easymenu/open/',
     ].find(front => pathname.startsWith(front)) || '',
     menupath = pathname.substring(homepath.length) || param.p || '',
     menuhost = menupath.substring(0, menupath.indexOf('/')),
@@ -159,7 +159,7 @@
           // dom_menu.innerHTML = JSON.stringify(json, null, 2);
 
           if (!json.settings && !json.menuItems) {
-            const message = `There is no menu at : ${menupath}`;
+            const message = `There is nothing at : ${menupath}`;
             c.log(message);
             dom_menu.innerHTML = '';
             dom_main.setAttribute('style', '');

@@ -5,10 +5,3 @@ RewriteRule ^settings$ settings.json [L]
 
 # Rewrite requests to 'menuItems' to serve menuItems.json
 RewriteRule ^menuItems$ menuItems.json [L]
-
-# If the request is not a real file or directory
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Redirect everything else to index.html
-RewriteRule ^(.*)$ index.html [L]

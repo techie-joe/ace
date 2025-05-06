@@ -2,21 +2,21 @@
   "settings": [
     {
       "key": "title",
-      "value": "Unique Brand!",
+      "value": "Unique Shop!",
       "name": "Title",
       "category": "Branding",
       "id": 2
     },
     {
       "key": "description",
-      "value": "The best grilled <span><b>PERi-PERi</b></span> chicken in town!",
+      "value": "You deserve something as <span><b>SPECIAL</b></span> as you!",
       "name": "Description",
       "category": "Branding",
       "id": 3
     },
     {
       "key": "about",
-      "value": "Our grilled chicken is fresh, never frozen and marinated for 24 hours before being flame-grilled to perfection.",
+      "value": "Our mission is to bring you high-quality, distinctive items that reflect personality, creativity, and style.",
       "name": "About",
       "category": "Branding",
       "id": 4
@@ -30,7 +30,7 @@
     },
     {
       "key": "header-b",
-      "value": "🦄Brand!",
+      "value": "&#129412;Shop!",
       "name": "Header B",
       "category": "Branding",
       "id": 6

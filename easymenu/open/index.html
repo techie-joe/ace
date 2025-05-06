@@ -13,7 +13,7 @@
     <meta property="og:title" content="EasyMenu&amp;trade;"/>
     <meta property="og:description" content="Instant Online Menus for Businesses"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://easymenu.tidloo.com/index.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://easymenu.tidloo.com/open/index.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -25,6 +25,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/ace/easymenu/icons/favicon-16x16.png"/>
     <link rel="icon" type="image/x-icon" sizes="any" href="/ace/easymenu/icons/favicon.ico"/>
     <!--[if lt IE 9]><script src="//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" media="all" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
     <style>
       html{font-family:system-ui,sans-serif}
       body{margin:0}
@@ -32,7 +33,9 @@
       ._dark hr{border-color:#666}
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core_2/html.css?v=1.0-0" id="_core_style"/>
+    <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap"/>
     <link rel="stylesheet" media="all" href="/ace/assets/css/easymenu/html.css?v=1.0-0" id="_html_style"/>
+    <link rel="stylesheet" media="all" href="/ace/assets/css/easymenu/menu.css?v=1.0-0" id="_menu_style"/>
   </head>
   <body class="_body" id="_body">
     <nav class="_no_print" id="_topRightNav">
@@ -55,12 +58,50 @@
           </header>
           <main id="_main">
             <div class="_main_layout">
+              <article class="_article" id="menu"></article>
               <article class="_article" id="main">
-                <section class="_text_center _color_1 _pa" id="hero">
-                  <div class="_hero_1 _b _tc_contra">Instant Online Menus for Businesses</div>
+                <section id="menuLocator">
+                  <form class="_p" onsubmit="event.preventDefault();menu.find();">
+                    <h3 class="title _no_wrap">Open your menu</h3>
+                    <div class="input _color_1 _radius_x5r">
+                      <input class="input-txt _radius_x5r" id="menuLocation" type="text" placeholder="Enter the menu location ...">
+                      <button class="submit _btnlink" onclick="menu.find()" title="Find menu">&#128269;</button>
+                    </div>
+                    <div class="message _tc_red _p _small" id="menuLocatorMessage"></div>
+                  </form>
                 </section>
-                <hr>
-                <div class="_pa"></div>
+                <section id="suggestions">
+                  <div class="_text_center">
+                    <h2 class="_b _t1 _i _p">Menu Suggestions</h2>
+                  </div>
+                  <div class="_flex">
+                    <div class="_f">
+                          <div class="item _color_2 _pa _radius_x5r">
+                            <div><a class="_no_u" href="/ace/easymenu/open/localhost/ace/easymenu" target="_blank"><span class="_tc_contra _b">(Demo 01)</span> 
+                                <u class="_smaller">localhost/ace/easymenu</u></a>
+                            </div>
+                            <div>&#128020; Your Brand! - Restaurant Menu.</div>
+                          </div>
+                    </div>
+                    <div class="_f">
+                          <div class="item _color_2 _pa _radius_x5r">
+                            <div><a class="_no_u" href="/ace/easymenu/open/localhost/ace/easymenu/menu_A" target="_blank"><span class="_tc_contra _b">(Demo 02)</span> 
+                                <u class="_smaller">localhost/ace/easymenu/menu_A</u></a>
+                            </div>
+                            <div>&#129412; Unique Shop! - Store Menu.</div>
+                          </div>
+                    </div>
+                    <div class="_f">
+                          <div class="item _color_2 _pa _radius_x5r">
+                            <div><a class="_no_u" href="/ace/easymenu/open/localhost/ace/easymenu/menu_C" target="_blank"><span class="_tc_contra _b">(Demo 03)</span> 
+                                <u class="_smaller">localhost/ace/easymenu/menu_C</u></a>
+                            </div>
+                            <div>A simple menu.</div>
+                          </div>
+                    </div>
+                  </div>
+                </section>
+                <hr class="_mv_2">
                 <section class="_flex _gap_a_2" id="intro">
                   <div class="_f_2_1">
                     <div class="_p">
@@ -92,13 +133,6 @@
                   </div>
                 </section>
                 <div class="_pa"></div>
-                <section class="_text_center _mv_2" id="cta">
-                  <nav>
-                    <div class="_nav_layout"><a class="_btnlink _xl __primary" href="open">Open Menu</a><span class="_inblock _mh_x5r"></span><a class="_btnlink _xl" href="create">Create Menu</a>
-                    </div>
-                  </nav>
-                </section>
-                <div class="_pa"></div>
               </article>
             </div>
           </main>
@@ -120,6 +154,54 @@
     </div>
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=1.0-0" defer="defer"></script>
+    <script type="text/x-handlebars-template" id="header-template">
+      <style>
+        #_body {
+          border-top-color: {{primary-color.value}};
+          border-bottom-color: {{secondary-color.value}};
+        }
+        #_header { background-color: #EEEEEE }
+        ._dark #_header { background-color: #282828 }
+        #_header .logo {
+          color: {{header-primary-color.value}};
+          text-shadow: 4px 4px 0px {{header-secondary-color.value}}, 5px 5px 8px #0006;
+        }
+      </style>
+      <div class="_header_layout">
+        <div class="header row text-center">
+          <div class="col-md-6 offset-md-3 mb-4 _no_overflow">
+            <h1 class="logo"><span class="headerA">{{safe header-a.value}}</span><br><span class="headerB">{{safe header-b.value}}</span></h1>
+            <p class="_tc_contra">{{safe description.value}}</p>
+          </div>
+        </div>
+        <div class="_color_1 _pa _text_center" style="margin:0 -1rem">
+          <p>{{safe about.value}}</p>
+        </div>
+      </div>
+    </script>
+    <script type="text/x-handlebars-template" id="menu-template">
+      <div class="row">
+        {{#each this as |category|}}<div class="col-md-6 _mv">
+          <div class="category">
+            <h3 class="mb-4 mt-2">{{@key}}</h3>
+            <ul class="list-unstyled">
+              {{#each this as |item|}}
+                <li class="item d-flex align-items-center mb-3">
+                  <div class="name">{{item.item}}</div>
+                  {{#if item.isVegetarian}}
+                    <div class="v">V</div>
+                  {{/if}}
+                  <div class="price ml-auto">&dollar;{{item.price}}</div>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>{{/each}}
+      </div>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.11.0/underscore-min.js"></script>
+    <script type="text/javascript" src="/ace/assets/js/easymenu/main.js"></script>
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
   </body>

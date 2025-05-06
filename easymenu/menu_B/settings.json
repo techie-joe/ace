@@ -2,63 +2,63 @@
   "settings": [
     {
       "key": "title",
-      "value": "Unique Brand!",
+      "value": "Demo Store",
       "name": "Title",
       "category": "Branding",
       "id": 2
     },
     {
       "key": "description",
-      "value": "The best grilled <span><b>PERi-PERi</b></span> chicken in town!",
+      "value": "This is your <span><b>Best Tagline</b></span> ever!",
       "name": "Description",
       "category": "Branding",
       "id": 3
     },
     {
       "key": "about",
-      "value": "Our grilled chicken is fresh, never frozen and marinated for 24 hours before being flame-grilled to perfection.",
+      "value": "Write your mission statement here, be it your best effort, a strive for quality or a vouch for a tip-top performance.",
       "name": "About",
       "category": "Branding",
       "id": 4
     },
     {
       "key": "header-a",
-      "value": "Unique",
+      "value": "Demo",
       "name": "Header A",
       "category": "Branding",
       "id": 5
     },
     {
       "key": "header-b",
-      "value": "🦄Brand!",
+      "value": "Store",
       "name": "Header B",
       "category": "Branding",
       "id": 6
     },
     {
       "key": "primary-color",
-      "value": "#533281",
+      "value": "#555",
       "name": "Primary Color",
       "category": "Theme",
       "id": 7
     },
     {
       "key": "secondary-color",
-      "value": "#ff6dc6",
+      "value": "#CCC",
       "name": "Secondary Color",
       "category": "Theme",
       "id": 8
     },
     {
       "key": "header-primary-color",
-      "value": "#ff6dc6",
+      "value": "#CCC",
       "name": "Header Primary Color",
       "category": "Theme",
       "id": 9
     },
     {
       "key": "header-secondary-color",
-      "value": "#533281",
+      "value": "#555",
       "name": "Header Secondary Color",
       "category": "Theme",
       "id": 10
