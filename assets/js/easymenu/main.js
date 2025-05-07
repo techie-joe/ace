@@ -216,7 +216,7 @@
       var hostpath = w.location.host + '/ace/easymenu';
       var host_url = [
         'github.io', // github pages
-      ].find(ends => menuhost.endsWith(ends)) ? '?p=' + hostpath : hostpath;
+      ].find(ends => w.location.host.endsWith(ends)) ? '?p=' + hostpath : hostpath;
       eid('suggestions').innerHTML = hid('suggestions-template')([
         {
           url: host_url,
