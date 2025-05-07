@@ -1,43 +1,21 @@
-
-Copyright (c) 2025 - Techie Joe @ Tidloo Digital Inc.
+----------------------------------------------------------------------------
+(c) Copyright 2025 - Techie Joe @ Tidloo Digital Inc. - All rights reserved.
+----------------------------------------------------------------------------
 
 SOFTWARE : Easy Menu - v1.0
 AUTHOR   : Techie Joe @ Tidloo Digital Inc.
 
 ----------------------------------------------------------------------------
-LICENSE AGREEMENT for Easy Menu
+LICENSE AGREEMENT (Terms of Use)
 ----------------------------------------------------------------------------
 
-This software and its contents are exclusively owned by the author. By using
-this software, you agree to abide the terms and conditions of this license.
+By accessing  or using this software,  you agree to be bound by these terms.
 
-Owning a copy of this license alone OR the software OR parts of it, does not
-imply that a permission is granted. A verifiable record of a direct approval
-from the author is needed before using this software.
-
-----------------------------------------------------------------------------
-
-Permission is granted  to users with a valid approval to use the software as
-explicitly permitted by the author.  Any attempt to access,  use,  or modify
-the software, other than what is permitted, is strictly forbidden.
-
-This license can be terminated if you breach any of the following condition.
-
-1. USERS ARE ALLOWED to utilize the software for the development of websites
-or web applications, that is exclusively owned and maintained by the user.
-
-2. USERS CAN modify and customize the software as fit OR intergrate, combine
-or use the software with any other software.
-
-3. USERS ARE NOT ALLOWED to copy the software OR any part of it, in any form
-to a domain that is not owned or maintained by the user, without an explicit
-verifiable approval from the author.  DO NOT share, distribute, lease, sell,
-rent, license, or sub-license the software, without the author's permission.
+All content of this software is the property of the authors unless otherwise
+stated. Unauthorized use, reproduction, distribution, or modification of any
+content without written permission is strictly prohibited.
 
 ----------------------------------------------------------------------------
-
-This license and the above copyright notice shall be  included in all copies
-or substantial portions of the software.
 
 THE SOFTWARE IS PROVIDED  "AS IS",  WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED,  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, OR
