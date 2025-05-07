@@ -52,6 +52,7 @@
                     <h1 class="_h7 _inblock _m0" id="_heading">EasyMenu&trade;
                     </h1></a>
                 </div>
+                <hr>
               </div>
             </div>
           </header>
@@ -69,37 +70,7 @@
                     <div class="message _tc_red _p _small" id="menuLocatorMessage"></div>
                   </form>
                 </section>
-                <section id="suggestions">
-                  <div class="_text_center">
-                    <h2 class="_b _t1 _i _p">Menu Suggestions</h2>
-                  </div>
-                  <div class="_flex">
-                    <div class="_f">
-                          <div class="item _color_2 _pa _radius_x5r">
-                            <div><a class="_no_u" href="localhost/ace/easymenu"><span class="_tc_contra _b">(Demo 01)</span> 
-                                <u class="_smaller">localhost/ace/easymenu</u></a>
-                            </div>
-                            <div>&#128020; Your Brand! - Restaurant Menu.</div>
-                          </div>
-                    </div>
-                    <div class="_f">
-                          <div class="item _color_2 _pa _radius_x5r">
-                            <div><a class="_no_u" href="localhost/ace/easymenu/menu_A"><span class="_tc_contra _b">(Demo 02)</span> 
-                                <u class="_smaller">localhost/ace/easymenu/menu_A</u></a>
-                            </div>
-                            <div>&#129412; Unique Shop! - Store Menu.</div>
-                          </div>
-                    </div>
-                    <div class="_f">
-                          <div class="item _color_2 _pa _radius_x5r">
-                            <div><a class="_no_u" href="localhost/ace/easymenu/menu_C"><span class="_tc_contra _b">(Demo 03)</span> 
-                                <u class="_smaller">localhost/ace/easymenu/menu_C</u></a>
-                            </div>
-                            <div>A simple menu.</div>
-                          </div>
-                    </div>
-                  </div>
-                </section>
+                <section id="suggestions"></section>
                 <hr class="_mv_2">
                 <section class="_flex _gap_a_2" id="intro">
                   <div class="_f_2_1">
@@ -153,6 +124,19 @@
     </div>
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=1.0-0" defer="defer"></script>
+    <script type="text/x-handlebars-template" id="suggestions-template">
+      <div class="_text_center">
+        <h2 class="_b _t1 _i _p">Menu Suggestions</h2>
+      </div>
+      <div class="_flex">{{#each this as |item|}}
+        <div class="_f_12_3 item _color_2 _pa _radius_x5r">
+          <div><a class="_no_u" href="{{item.menupath}}"><span class="_tc_contra _b">{{item.title}}</span> 
+              <u class="_smaller">{{item.menupath}}</u></a>
+          </div>
+          <div>{{safe item.description}}</div>
+        </div>{{/each}}
+      </div>
+    </script>
     <script type="text/x-handlebars-template" id="header-template">
       <style>
         #_body {
@@ -180,22 +164,26 @@
     </script>
     <script type="text/x-handlebars-template" id="menu-template">
       <div class="row">
-        {{#each this as |category|}}<div class="col-md-6 _mv">
-          <div class="category">
-            <h3 class="mb-4 mt-2">{{@key}}</h3>
-            <ul class="list-unstyled">
-              {{#each this as |item|}}
-                <li class="item d-flex align-items-center mb-3">
-                  <div class="name">{{item.item}}</div>
-                  {{#if item.isVegetarian}}
-                    <div class="v">V</div>
-                  {{/if}}
-                  <div class="price ml-auto">&dollar;{{item.price}}</div>
-                </li>
-              {{/each}}
-            </ul>
+        {{#each this as |category|}}
+          <div class="col-md-6 _mv">
+            <div class="category">
+              <h3 class="mb-4 mt-2">{{@key}}</h3>
+              <ul class="list-unstyled">
+                {{#each this as |item|}}
+                  <li class="item d-flex align-items-center mb-3">
+                    <div class="name">{{item.item}}</div>
+                    {{#if item.isVegetarian}}
+                      <div class="v">V</div>
+                    {{/if}}
+                    <div class="price ml-auto">&dollar;{{item.price}}</div>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
           </div>
-        </div>{{/each}}
+        {{/each}}
+        
+        
       </div>
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>

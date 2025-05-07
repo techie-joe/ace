@@ -24,7 +24,7 @@
   // determine parts of pathname
   // - homepath : paths where index.html is located,
   // - - expected to be in the root of the web server
-  // - - or these special paths: /easymenu/open and /ace/easymenu/open
+  // - - or these special paths: /easymenu/open/ and /ace/easymenu/open/
   // - menupath : path to the menu to be fetched
   // - - user can specify a menupath in the URL
   // - - paths after homepath (require functioning url rewrite)
@@ -212,6 +212,25 @@
       registerHandlebars();
 
       eid('menuLocation').focus();
+
+      var hostpath = w.location.host + '/ace/';
+      eid('suggestions').innerHTML = hid('suggestions-template')([
+        {
+          menupath: hostpath + 'easymenu',
+          title: '(Demo 1)',
+          description: '&#128020; Your Brand! - Restaurant Menu.',
+        },
+        {
+          menupath: hostpath + 'easymenu/menu_A',
+          title: '(Demo 2)',
+          description: '&#129412; Unique Shop! - Store Menu.',
+        },
+        {
+          menupath: hostpath + 'easymenu/menu_C',
+          title: '(Demo 3)',
+          description: 'A simple menu.',
+        },
+      ]);
 
     }); // end of DOMContentLoaded
 
