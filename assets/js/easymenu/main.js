@@ -213,20 +213,26 @@
 
       eid('menuLocation').focus();
 
-      var hostpath = w.location.host + '/ace/';
+      var hostpath = w.location.host + '/ace/easymenu';
+      var host_url = [
+        'github.io', // github pages
+      ].find(ends => menuhost.endsWith(ends)) ? '?p=' + hostpath : hostpath;
       eid('suggestions').innerHTML = hid('suggestions-template')([
         {
-          menupath: hostpath + 'easymenu',
+          url: host_url,
+          path: hostpath,
           title: '(Demo 1)',
           description: '&#128020; Your Brand! - Restaurant Menu.',
         },
         {
-          menupath: hostpath + 'easymenu/menu_A',
+          url: host_url + '/menu_A',
+          path: hostpath + '/menu_A',
           title: '(Demo 2)',
           description: '&#129412; Unique Shop! - Store Menu.',
         },
         {
-          menupath: hostpath + 'easymenu/menu_C',
+          url: host_url + '/menu_C',
+          path: hostpath + '/menu_C',
           title: '(Demo 3)',
           description: 'A simple menu.',
         },
