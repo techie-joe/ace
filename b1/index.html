@@ -2,18 +2,18 @@
 <html class="_html _nojs _scrollbar _a _hidden" id="_html" lang="en">
   
   <!-- Ace Builder v0.2.0 b1 | (c) Copyright 2025 - Techie Joe -->
-  <!-- layout:index_2/_html -->
+  <!-- layout:b1/_test -->
   
   <head>
     <meta charset="utf-8"/>
-    <title>Ace Builder (Info) | Ace Builder</title>
-    <meta name="description" content="Info page."/>
+    <title>B1 : Test page</title>
+    <meta name="description" content="Try new things from time to time."/>
     <meta name="author" content="Techie Joe"/>
     <meta name="publisher" content="Tidloo Digital"/>
-    <meta property="og:title" content="Ace Builder (Info) | Ace Builder"/>
-    <meta property="og:description" content="Info page."/>
+    <meta property="og:title" content="B1 : Test page"/>
+    <meta property="og:description" content="Try new things from time to time."/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://techie-joe.github.io/ace/info.html?utm_source=homescreen"/>
+    <meta property="og:url" content="https://techie-joe.github.io/ace/index.html?utm_source=homescreen"/>
     <meta property="og:image" content=""/>
     <meta property="og:image:alt" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -33,25 +33,39 @@
     </style>
     <link rel="stylesheet" media="all" href="/ace/assets/css/core_2/html.css?v=0.2.0-1" id="_core_style"/>
     <style>
-      #_navlogo {
-        border: 0;
-        padding: .25em 1em;
-        border-radius: 0;
-        margin: 0;
-        line-height: 2;
-        font-size: 1.2em;
-        box-sizing: border-box;
-        width: 100%;
+      #_header ._pageHeader ._p { margin-right:100px }
+      
+      #_topRightNav { position:fixed; top:0; left:auto; right:15px }
+      #_topRightNav ._link {
+        font-family:monospace,monospace;
+        font-size:1.3rem;
+        text-decoration:none;
+        text-align:center;
+        display:inline-block;
+        box-sizing:border-box;
+        width:1.5rem;
+        height:1.5rem;
+        margin:.1rem;
+        padding:0;
+        border:1px solid #888;
+        line-height:1;
+        font-weight:normal;
+        border-radius:.3rem;
+        vertical-align: middle;
       }
-    </style>
-    <style>
-      #_navbar { margin: -.5rem -1rem 0 }
+      #_topRightNav ._link i { font-style:normal }
+      #_topRightNav ._nav_layout { margin:0;padding:.65rem 1rem }
+      #_topRightNav ._ticon { font-size:1.5rem }
+      
+      @media (max-width: 426px){
+        #_topRightNav { right:0 }
+      }
       
     </style>
   </head>
   <body class="_body" id="_body">
     <nav class="_no_print" id="_topRightNav">
-      <div class="_nav_layout"><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_link _color" href="/ace/components/" title="Back to parent page">&times;</a>
+      <div class="_nav_layout"><a class="_link _color" href="#" title="Toggle Style" onclick="event.preventDefault();window.test.disableStyle();">s</a><a class="_link _color _ticon" href="#" title="Change Theme (Ctrl+Alt+T)" onclick="event.preventDefault();theme.change();">☯</a><a class="_needjs _link _color" href="#" onclick="event.preventDefault();(function(w){var h=w.history;w.opener?w.close():h.length&gt;1?h.back():w.location.href='/';})(window)" title="Close this page">&times;</a>
       </div>
     </nav>
     <div class="_views" id="_views">
@@ -61,9 +75,9 @@
             <div class="_header_layout">
               <div class="_pageHeader _defaultHeader">
                 <div class="_p">
-                  <h1 class="_h7 _inblock _m0" id="_heading">Ace Builder (Info)
+                  <h1 class="_h7 _inblock _m0" id="_heading">B1 : Test page
                   </h1>
-<span id="_about">&mdash; Info page.</span>
+<span id="_about">&mdash; Try new things from time to time.</span>
                 </div>
                 <hr/>
               </div>
@@ -71,28 +85,27 @@
           </header>
           <main id="_main">
             <div class="_main_layout">
-              <article class="_article">
-                <section class="_p" id="acelinks"><a class="_needjs _link _l __icon" href="#" onclick="event.preventDefault();(function(w){var h=w.history;w.opener?w.close():h.length&gt;1?h.back():w.location.href='/';})(window)" title="Back to previous page"><i class="_itext"><i class="itext">&larr;</i></i></a><a class="_link _l" href="/ace/" title="Go to Ace Template Home">Ace Builder</a> | <a class="_link _l __icon _no_print" href="---" title="Simulate a real 404">&middot;&middot;&middot;</a><a class="_link _l" href="404.html" title="When a browser lands on a missing page.">404</a><a class="_link _l" href="500.html" title="When your server encounters an error.">500</a>
-                </section>
+              <article>
+                <section class="_small _i">// test goes here ..</section>
                 <hr>
                 <section>
                   <div class="_scrollable _full_width _text_left">
                     <aside class="_pre_layout">
                       <pre class="_pre">
-title            = Ace Builder (Info) | Ace Builder
-description      = Info page.
+title            = B1 : Test page
+description      = Try new things from time to time.
 
-heading          = Ace Builder (Info)
-about            = Info page.
+heading          = B1 : Test page
+about            = Try new things from time to time.
 
-layout           = index_2/_html
-filename         = info.html
-siteUrl          = https://techie-joe.github.io/ace/info.html
+layout           = b1/_test
+filename         = index.html
+siteUrl          = https://techie-joe.github.io/ace/index.html
 
-og_url           = https://techie-joe.github.io/ace/info.html?utm_source=homescreen
+og_url           = https://techie-joe.github.io/ace/index.html?utm_source=homescreen
 og_type          = website
-og_title         = Ace Builder (Info) | Ace Builder
-og_description   = Info page.
+og_title         = B1 : Test page
+og_description   = Try new things from time to time.
 og_image         = 
 og_imageAlt      = 
 
@@ -129,6 +142,15 @@ publisher        = Tidloo Digital
     </div>
     <div class="_widgets" id="_widgets"></div>
     <script type="text/javascript" src="/ace/assets/js/theme_v1.0.js?v=0.2.0-1" defer="defer"></script>
+    <script>
+      (()=>{
+        var
+        e = document.getElementById("_core_style"),
+        m = e.getAttribute("media"),
+        disableStyle = ()=>{ e.setAttribute("media",e.getAttribute("media")==='x'?m:'x') };
+        window.test = { disableStyle };
+      })();
+    </script>
     <!-- IE needs 512+ bytes: https://techie-joe.github.io/library/html5/ie#ie-needs-512-bytes -->
     
   </body>

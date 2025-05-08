@@ -1,5 +1,14 @@
 (() => {
 
+  // can only be used on these domains
+  // const ALLOWED_DOMAINS = [
+  //   'localhost',
+  //   'techie-joe.github.io',
+  //   'themejs.pages.dev',
+  //   'preview.themejs.pages.dev',
+  // ];
+  // if (!(ALLOWED_DOMAINS.indexOf(window.location.hostname) >= 0)) { return }
+
   const
     w = window,
     d = document,
