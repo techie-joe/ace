@@ -8,7 +8,7 @@ Build     : 0.13
 Author    : Techie Joe @ Tidloo Digital Inc.  
 Publisher : Tidloo Digital Inc  
 
-WEBSITE   : https://easymenu.tidloo.com/  
+WEBSITE   : https://easy-menu.pages.dev/  
 
 AUTHOR    : https://github.com/techie-joe/  
 
