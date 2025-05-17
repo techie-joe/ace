@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------
-(c) Copyright 2025 - Techie Joe @ Tidloo Digital Inc. - All rights reserved.
+(c) Copyright 2025 - Techie Joe - All rights reserved.
 ----------------------------------------------------------------------------
 
 SOFTWARE : Easy Menu - v1.0
-AUTHOR   : Techie Joe @ Tidloo Digital Inc.
+AUTHOR   : Techie Joe
 
 ----------------------------------------------------------------------------
 LICENSE AGREEMENT (Terms of Use)

@@ -1,0 +1,15 @@
+# Only one redirect can be defined per line
+# and must follow this format, otherwise it will be ignored.
+# Read: https://developers.cloudflare.com/pages/configuration/redirects/
+# [source] [destination] [code?]
+
+# Rewrite requests to 'settings' to serve settings.json
+/settings /settings.json 301
+/:sub/settings /:sub/settings.json 301
+
+# Rewrite requests to 'menuItems' to serve menuItems.json
+/menuItems /menuItems.json 301
+/:sub/menuItems /:sub/menuItems.json 301
+
+# Redirect everything else to index.html
+/open/* /menu/index.html 301

@@ -1,7 +1,0 @@
-RewriteEngine On
-
-# Rewrite requests to 'settings' to serve settings.json
-RewriteRule ^settings$ settings.json [L]
-
-# Rewrite requests to 'menuItems' to serve menuItems.json
-RewriteRule ^menuItems$ menuItems.json [L]

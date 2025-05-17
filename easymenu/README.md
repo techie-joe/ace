@@ -5,7 +5,7 @@
 Title     : Easy Menu  
 Version   : 1.0  
 Build     : 0.13  
-Author    : Techie Joe @ Tidloo Digital Inc.  
+Author    : Techie Joe  
 Publisher : Tidloo Digital Inc  
 
 WEBSITE   : https://easy-menu.pages.dev/  
@@ -24,4 +24,4 @@ Simply configure your preferences, and you're ready to go!
 
 ------------------------------------------------------------------
 
-Copyright (c) 2025 - Techie Joe @ Tidloo Digital Inc.
+Copyright (c) 2025 - Techie Joe

@@ -1,8 +1,0 @@
-RewriteEngine On
-
-# If the request is not a real file or directory
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Redirect everything else to index.html
-RewriteRule ^(.*)$ index.html [L]

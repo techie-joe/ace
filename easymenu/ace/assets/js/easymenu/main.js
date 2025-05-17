@@ -1,13 +1,12 @@
 (() => {
 
   // can only be used on these domains
-  // const ALLOWED_DOMAINS = [
-  //   'localhost',
-  //   'techie-joe.github.io',
-  //   'themejs.pages.dev',
-  //   'preview.themejs.pages.dev',
-  // ];
-  // if (!(ALLOWED_DOMAINS.indexOf(window.location.hostname) >= 0)) { return }
+  const ALLOWED_DOMAINS = [
+    'localhost',
+    'techie-joe.github.io',
+    'easy-menu.pages.dev',
+  ];
+  if (!(ALLOWED_DOMAINS.find(ends => window.location.host.endsWith(ends)))) { return }
 
   const
     w = window,
@@ -79,6 +78,36 @@
   }
 
   function locate(x) { if (x) { w.location.href = homepath + x; } }
+
+  function renderSuggestions() {
+
+    var hostpath = w.location.host + '/ace/easymenu';
+    var host_url = homepath + ([
+      'github.io', // github pages
+    ].find(ends => w.location.host.endsWith(ends)) ? '?p=' + hostpath : hostpath);
+    eid('suggestions').innerHTML = hid('suggestions-template')([
+      {
+        url: host_url,
+        path: hostpath,
+        title: '(Demo 1)',
+        description: '&#128020; Your Brand! - Restaurant Menu.',
+      },
+      {
+        url: host_url + '/menu_A',
+        path: hostpath + '/menu_A',
+        title: '(Demo 2)',
+        description: '&#129412; Unique Shop! - Store Menu.',
+      },
+      {
+        url: host_url + '/menu_C',
+        path: hostpath + '/menu_C',
+        title: '(Demo 3)',
+        description: 'A simple menu.',
+      },
+    ]);
+
+    
+  }
 
   // =============================================================
   // fetch menu
@@ -178,6 +207,7 @@
               dom_menuLocation.value = menupath;
               dom_menuLocation.focus();
             }
+            renderSuggestions();
           }
           else {
 
@@ -188,7 +218,17 @@
 
               // Set the html content of the container element
               d.title = settings.title.value + ' | ' + d.title;
-              dom_header.innerHTML = template_header(settings);
+              const header_style = `<style>#_body {
+                border-top-color: ${settings['primary-color'].value};
+                border-bottom-color: ${settings['secondary-color'].value};
+              }
+              #_header { background-color: #EEEEEE; }
+              ._dark #_header { background-color: #282828; }
+              #_header .logo {
+                color: ${settings['header-primary-color'].value};
+                text-shadow: 4px 4px 0px ${settings['header-secondary-color'].value}, 5px 5px 8px rgba(0, 0, 0, 0.6);
+              }</style>`;
+              dom_header.innerHTML = header_style + template_header(settings);
 
             }
 
@@ -222,30 +262,7 @@
 
       eid('menuLocation').focus();
 
-      var hostpath = w.location.host + '/ace/easymenu';
-      var host_url = [
-        'github.io', // github pages
-      ].find(ends => w.location.host.endsWith(ends)) ? '?p=' + hostpath : hostpath;
-      eid('suggestions').innerHTML = hid('suggestions-template')([
-        {
-          url: host_url,
-          path: hostpath,
-          title: '(Demo 1)',
-          description: '&#128020; Your Brand! - Restaurant Menu.',
-        },
-        {
-          url: host_url + '/menu_A',
-          path: hostpath + '/menu_A',
-          title: '(Demo 2)',
-          description: '&#129412; Unique Shop! - Store Menu.',
-        },
-        {
-          url: host_url + '/menu_C',
-          path: hostpath + '/menu_C',
-          title: '(Demo 3)',
-          description: 'A simple menu.',
-        },
-      ]);
+      renderSuggestions();
 
     }); // end of DOMContentLoaded
 
