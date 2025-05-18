@@ -4,7 +4,7 @@
   const ALLOWED_DOMAINS = [
     'localhost',
     'techie-joe.github.io',
-    'easy-menu.pages.dev',
+    'easymenu-kpb3.onrender.com',
   ];
   if (!(ALLOWED_DOMAINS.find(ends => window.location.host.endsWith(ends)))) { return }
 
@@ -30,9 +30,7 @@
 
   // =============================================================
   // determine parts of pathname
-  // - homepath : paths where index.html is located,
-  // - - expected to be in the root of the web server
-  // - - or these special paths: /easymenu/open/ and /ace/easymenu/open/
+  // - homepath : paths where open.html is located
   // - menupath : path to the menu to be fetched
   // - - user can specify a menupath in the URL
   // - - paths after homepath (require functioning url rewrite)
@@ -40,10 +38,11 @@
   // =============================================================
   const
     homepath = [
+      '/open/',
       '/easymenu/open/',
       '/ace/easymenu/open/',
     ].find(front => pathname.startsWith(front)) || '',
-    menupath = pathname.substring(homepath.length) || param.p || '',
+    menupath = param.p || pathname.substring(homepath.length) || '',
     menuhost = menupath.substring(0, menupath.indexOf('/')),
     menuprotocol = [
       '127.0.0.1',
@@ -133,6 +132,9 @@
       errors.push(error);
       c.error(error.message);
     };
+
+  c.log('home:', homepath);
+  c.log('menu:', menupath);
 
   // only fetch when menupath exists
   if (menupath && menupath.length > 0) {
