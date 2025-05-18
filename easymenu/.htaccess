@@ -8,4 +8,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Redirect everything else to index.html
-RewriteRule ^open/?(.*)$ menu/index.html?p=$1 [L]
+RewriteRule ^open/?(.*)$ open/index.html?p=$1 [L]
